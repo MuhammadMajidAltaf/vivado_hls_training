@@ -1,0 +1,1892 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Fri Jun 10 20:14:14 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_performance'
+INFO: [HLS 200-10] Opening project 'C:/training/hls/labs/improve_performance/yuv_filter_prj'.
+INFO: [HLS 200-10] Opening solution 'C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 20:14:32 2016...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+
+C:\training\hls\labs\improve_performance\yuv_filter_prj\solution3\impl\verilog>vivado  -notrace -mode batch -source run_vivado.tcl   || exit $? 
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado.tcl -notrace
+[Fri Jun 10 20:14:43 2016] Launched synth_1...
+Run output will be captured here: C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/synth_1/runme.log
+[Fri Jun 10 20:14:43 2016] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log yuv_filter.vds -m64 -mode batch -messageDb vivado.pb -notrace -source yuv_filter.tcl
+
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source yuv_filter.tcl -notrace
+Command: synth_design -top yuv_filter -part xc7z020clg484-1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18440 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 333.469 ; gain = 126.430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'yuv_filter' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.v:12]
+	Parameter ap_const_lv22_0 bound to: 22'b0000000000000000000000 
+	Parameter ap_const_lv8_0 bound to: 8'b00000000 
+	Parameter ap_const_lv16_0 bound to: 16'b0000000000000000 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_rgb2yuv11' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:10]
+	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
+	Parameter ap_ST_pp0_stg0_fsm_1 bound to: 3'b010 
+	Parameter ap_ST_st9_fsm_2 bound to: 3'b100 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv16_0 bound to: 16'b0000000000000000 
+	Parameter ap_const_lv16_1 bound to: 16'b0000000000000001 
+	Parameter ap_const_lv10_0 bound to: 10'b0000000000 
+	Parameter ap_const_lv8_0 bound to: 8'b00000000 
+	Parameter ap_const_lv4_0 bound to: 4'b0000 
+	Parameter ap_const_lv13_0 bound to: 13'b0000000000000 
+	Parameter ap_const_lv6_0 bound to: 6'b000000 
+	Parameter ap_const_lv7_0 bound to: 7'b0000000 
+	Parameter ap_const_lv10_80 bound to: 10'b0010000000 
+	Parameter ap_const_lv32_8 bound to: 8 - type: integer 
+	Parameter ap_const_lv32_F bound to: 15 - type: integer 
+	Parameter ap_const_lv8_10 bound to: 8'b00010000 
+	Parameter ap_const_lv8_80 bound to: 8'b10000000 
+	Parameter ap_const_lv13_19 bound to: 13'b0000000011001 
+	Parameter ap_const_lv16_FFA2 bound to: 16'b1111111110100010 
+	Parameter ap_const_lv15_7A bound to: 15'b000000001111010 
+	Parameter ap_const_lv15_80 bound to: 15'b000000010000000 
+	Parameter ap_const_lv16_FFB6 bound to: 16'b1111111110110110 
+	Parameter ap_const_lv15_7FDA bound to: 15'b111111111011010 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:146]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_6ns_8ns_8ns_13_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 6 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0' (1#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_6ns_8ns_8ns_13_1' (2#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1.v:34]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mul_mul_16ns_16ns_32_1.v:14]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_1_DSP48_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mul_mul_16ns_16ns_32_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_1_DSP48_1' (3#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mul_mul_16ns_16ns_32_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_1' (4#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mul_mul_16ns_16ns_32_1.v:14]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8ns_16ns_16_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8ns_16ns_16_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8ns_16ns_16_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2' (5#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8ns_16ns_16_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8ns_16ns_16_1' (6#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8ns_16ns_16_1.v:34]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8ns_9ns_15_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3' (7#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8ns_9ns_15_1' (8#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1.v:34]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_7s_8ns_9ns_15_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_7s_8ns_9ns_15_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_7s_8ns_9ns_15_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4' (9#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_7s_8ns_9ns_15_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_7s_8ns_9ns_15_1' (10#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_7s_8ns_9ns_15_1.v:34]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:928]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:936]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_rgb2yuv11' (11#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:10]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv_scale' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv_scale.v:10]
+	Parameter ap_ST_st1_fsm_0 bound to: 4'b0001 
+	Parameter ap_ST_st2_fsm_1 bound to: 4'b0010 
+	Parameter ap_ST_pp0_stg0_fsm_2 bound to: 4'b0100 
+	Parameter ap_ST_st7_fsm_3 bound to: 4'b1000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_7 bound to: 7 - type: integer 
+	Parameter ap_const_lv32_E bound to: 14 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv_scale.v:135]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv_scale' (12#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv_scale.v:10]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv2rgb' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:10]
+	Parameter ap_ST_st1_fsm_0 bound to: 4'b0001 
+	Parameter ap_ST_st2_fsm_1 bound to: 4'b0010 
+	Parameter ap_ST_pp0_stg0_fsm_2 bound to: 4'b0100 
+	Parameter ap_ST_st9_fsm_3 bound to: 4'b1000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv16_0 bound to: 16'b0000000000000000 
+	Parameter ap_const_lv16_1 bound to: 16'b0000000000000001 
+	Parameter ap_const_lv10_0 bound to: 10'b0000000000 
+	Parameter ap_const_lv8_0 bound to: 8'b00000000 
+	Parameter ap_const_lv8_80 bound to: 8'b10000000 
+	Parameter ap_const_lv17_1FF30 bound to: 17'b11111111100110000 
+	Parameter ap_const_lv32_10 bound to: 16 - type: integer 
+	Parameter ap_const_lv32_11 bound to: 17 - type: integer 
+	Parameter ap_const_lv2_1 bound to: 2'b01 
+	Parameter ap_const_lv32_8 bound to: 8 - type: integer 
+	Parameter ap_const_lv32_F bound to: 15 - type: integer 
+	Parameter ap_const_lv8_FF bound to: 8'b11111111 
+	Parameter ap_const_lv9_0 bound to: 9'b000000000 
+	Parameter ap_const_lv2_0 bound to: 2'b00 
+	Parameter ap_const_lv32_12 bound to: 18 - type: integer 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+	Parameter ap_const_lv16_FF9C bound to: 16'b1111111110011100 
+	Parameter ap_const_lv9_1F0 bound to: 9'b111110000 
+	Parameter ap_const_lv18_12A bound to: 18'b000000000100101010 
+	Parameter ap_const_lv18_80 bound to: 18'b000000000010000000 
+	Parameter ap_const_lv18_199 bound to: 18'b000000000110011001 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:138]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:217]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:233]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8s_17ns_17_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8s_17ns_17_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8s_17ns_17_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5' (13#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8s_17ns_17_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8s_17ns_17_1' (14#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_8s_8s_17ns_17_1.v:34]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1.v:39]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 5 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 10 - type: integer 
+	Parameter din3_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_DSP48_6' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_DSP48_6' (15#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1' (16#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1.v:39]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_10ns_8s_18s_18_1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_10ns_8s_18s_18_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 10 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_10ns_8s_18s_18_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7' (17#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_10ns_8s_18s_18_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_10ns_8s_18s_18_1' (18#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_10ns_8s_18s_18_1.v:34]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:742]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:748]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:750]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:826]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:828]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:830]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:896]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:904]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv2rgb' (19#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:10]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch1.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch1_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch1.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch1_shiftReg' (20#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch1.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch1' (21#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch1.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch2' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch2.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch2_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch2.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch2_shiftReg' (22#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch2.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch2' (23#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch2.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch3' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch3.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch3_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch3.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch3_shiftReg' (24#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch3.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_channels_ch3' (25#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_channels_ch3.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_width' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_width.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_width_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_width.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_width_shiftReg' (26#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_width.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_width' (27#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_width.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_height' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_height.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_yuv_height_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_height.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_height_shiftReg' (28#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_height.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_yuv_height' (29#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_yuv_height.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_Y_scale_channel' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_Y_scale_channel.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_Y_scale_channel_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_Y_scale_channel.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_Y_scale_channel_shiftReg' (30#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_Y_scale_channel.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_Y_scale_channel' (31#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_Y_scale_channel.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_U_scale_channel' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_U_scale_channel.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_U_scale_channel_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_U_scale_channel.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_U_scale_channel_shiftReg' (32#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_U_scale_channel.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_U_scale_channel' (33#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_U_scale_channel.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_V_scale_channel' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_V_scale_channel.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_V_scale_channel_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_V_scale_channel.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_V_scale_channel_shiftReg' (34#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_V_scale_channel.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_V_scale_channel' (35#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_V_scale_channel.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch1' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch1.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch1_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch1.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch1_shiftReg' (36#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch1.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch1' (37#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch1.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch2' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch2.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch2_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch2.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch2_shiftReg' (38#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch2.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch2' (39#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch2.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch3' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch3.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch3_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch3.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch3_shiftReg' (40#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch3.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_channels_ch3' (41#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_channels_ch3.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_width' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_width.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_width_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_width.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_width_shiftReg' (42#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_width.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_width' (43#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_width.v:45]
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_height' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_height.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FIFO_yuv_filter_p_scale_height_shiftReg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_height.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_height_shiftReg' (44#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_height.v:11]
+INFO: [Synth 8-256] done synthesizing module 'FIFO_yuv_filter_p_scale_height' (45#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/FIFO_yuv_filter_p_scale_height.v:45]
+INFO: [Synth 8-4471] merging register 'yuv_filter_yuv_scale_U0_ap_start_reg' into 'yuv_filter_yuv2rgb_U0_ap_start_reg' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.v:348]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter' (46#1) [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.v:12]
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d0[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_we0 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[21] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[20] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[19] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[18] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[17] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[16] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[15] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[14] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[13] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[12] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[11] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[10] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[9] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[8] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_address1[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_ce1 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_d1[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch1_we1 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d0[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_we0 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[21] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[20] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[19] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[18] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[17] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[16] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[15] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[14] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[13] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[12] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[11] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[10] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[9] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[8] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_address1[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_ce1 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_d1[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch2_we1 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[7] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[6] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[5] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[4] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[3] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[2] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[1] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_d0[0] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_we0 driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[21] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[20] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[19] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[18] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[17] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[16] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[15] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[14] driven by constant 0
+WARNING: [Synth 8-3917] design yuv_filter has port in_channels_ch3_address1[13] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q0[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch2_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q0[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch3_q1[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 366.516 ; gain = 159.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 366.516 ; gain = 159.477
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc]
+Finished Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 677.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'p_neg_i_i_reg_724_reg[3:0]' into 'p_shl3_i_i_reg_719_reg[3:0]' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:856]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_24_reg_673_reg' and it is trimmed from '23' to '22' bits. [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:513]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4471] merging register 'tmp_1_cast_i_reg_290_reg[14:8]' into 'tmp_cast_i_reg_285_reg[14:8]' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv_scale.v:721]
+INFO: [Synth 8-4471] merging register 'tmp_2_cast_i_reg_295_reg[14:8]' into 'tmp_cast_i_reg_285_reg[14:8]' [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv_scale.v:711]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_tmp_s_reg_645_pp0_iter3_reg' and it is trimmed from '23' to '22' bits. [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:469]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_tmp_s_reg_645_pp0_iter2_reg' and it is trimmed from '23' to '22' bits. [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:468]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ap_reg_ppstg_tmp_s_reg_645_pp0_iter1_reg' and it is trimmed from '23' to '22' bits. [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:459]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_s_reg_645_reg' and it is trimmed from '23' to '22' bits. [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_yuv2rgb.v:500]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "icmp1_fu_428_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "icmp_fu_363_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     22 Bit       Adders := 2     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 6     
+	   5 Input     16 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 13    
++---XORs : 
+	   2 Input      8 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               22 Bit    Registers := 5     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 21    
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 14    
+	                1 Bit    Registers := 60    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 79    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module yuv_filter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module yuv_filter_rgb2yuv11 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   5 Input     16 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module yuv_filter_yuv_scale 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module yuv_filter_yuv2rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 3     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               22 Bit    Registers := 4     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module FIFO_yuv_filter_p_yuv_channels_ch1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_yuv_channels_ch2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_yuv_channels_ch3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_yuv_width 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_yuv_height 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_Y_scale_channel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_U_scale_channel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_V_scale_channel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_scale_channels_ch1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_scale_channels_ch2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_scale_channels_ch3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_scale_width 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FIFO_yuv_filter_p_scale_height 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_rgb2yuv11.v:818]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1.v:27]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter_mac_muladd_7s_8ns_9ns_15_1.v:27]
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/bound_reg_654_reg, operation Mode is: (A*B)'.
+DSP Report: register yuv_filter_rgb2yuv11_U0/bound_reg_654_reg is absorbed into DSP yuv_filter_rgb2yuv11_U0/bound_reg_654_reg.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mul_mul_16ns_16ns_32_1_U1/yuv_filter_mul_mul_16ns_16ns_32_1_DSP48_1_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/bound_reg_654_reg.
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p, operation Mode is: C'+A2*(B:0x19).
+DSP Report: register A is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p.
+DSP Report: register C is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/m is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0/yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U/p.
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/p, operation Mode is: (C:0x80)+A2*(B:0x3ffda).
+DSP Report: register A is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/m is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5/yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U/p.
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p, operation Mode is: C+A2*(B:0x3ffb6).
+DSP Report: register A is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/m is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/p, operation Mode is: (C:0x80)+A2*(B:0x7a).
+DSP Report: register A is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/m is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3/yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U/p.
+DSP Report: Generating DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p, operation Mode is: C+A2*(B:0x3ffa2).
+DSP Report: register A is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: operator yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/m is absorbed into DSP yuv_filter_rgb2yuv11_U0/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2/yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U/p.
+DSP Report: Generating DSP yuv_filter_yuv_scale_U0/bound_reg_300_reg, operation Mode is: (A2*B2)'.
+DSP Report: register yuv_filter_yuv_scale_U0/width_reg_275_reg is absorbed into DSP yuv_filter_yuv_scale_U0/bound_reg_300_reg.
+DSP Report: register yuv_filter_yuv_scale_U0/height_reg_280_reg is absorbed into DSP yuv_filter_yuv_scale_U0/bound_reg_300_reg.
+DSP Report: register yuv_filter_yuv_scale_U0/bound_reg_300_reg is absorbed into DSP yuv_filter_yuv_scale_U0/bound_reg_300_reg.
+DSP Report: operator yuv_filter_yuv_scale_U0/yuv_filter_mul_mul_16ns_16ns_32_1_U22/yuv_filter_mul_mul_16ns_16ns_32_1_DSP48_1_U/p is absorbed into DSP yuv_filter_yuv_scale_U0/bound_reg_300_reg.
+DSP Report: Generating DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg, operation Mode is: (C:0x80)+((D:0x1fffff0)+A2)*(B:0x12a).
+DSP Report: register A is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg.
+DSP Report: register yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_U38/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_DSP48_6_U/p is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_U38/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_DSP48_6_U/m is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_U38/yuv_filter_ama_addmuladd_5s_8ns_10ns_9ns_18_1_DSP48_6_U/ad is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_5_reg_682_reg.
+DSP Report: Generating DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/p, operation Mode is: PCIN+(A:0x199)*B2.
+DSP Report: register yuv_filter_yuv2rgb_U0/E_reg_677_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/p.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/p is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/p.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/m is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39/yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U/p.
+DSP Report: Generating DSP yuv_filter_yuv2rgb_U0/bound_reg_626_reg, operation Mode is: (A2*B2)'.
+DSP Report: register yuv_filter_yuv2rgb_U0/width_reg_613_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/bound_reg_626_reg.
+DSP Report: register yuv_filter_yuv2rgb_U0/height_reg_619_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/bound_reg_626_reg.
+DSP Report: register yuv_filter_yuv2rgb_U0/bound_reg_626_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/bound_reg_626_reg.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_mul_mul_16ns_16ns_32_1_U36/yuv_filter_mul_mul_16ns_16ns_32_1_DSP48_1_U/p is absorbed into DSP yuv_filter_yuv2rgb_U0/bound_reg_626_reg.
+DSP Report: Generating DSP yuv_filter_yuv2rgb_U0/tmp_11_reg_690_reg, operation Mode is: ((A:0x3fffff30)*B)'.
+DSP Report: register yuv_filter_yuv2rgb_U0/tmp_11_reg_690_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_11_reg_690_reg.
+DSP Report: operator yuv_filter_yuv2rgb_U0/tmp_11_fu_342_p2 is absorbed into DSP yuv_filter_yuv2rgb_U0/tmp_11_reg_690_reg.
+DSP Report: Generating DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/p, operation Mode is: PCIN+(A:0x3fffff9c)*B2.
+DSP Report: register yuv_filter_yuv2rgb_U0/D_reg_670_reg is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/p.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/p is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/p.
+DSP Report: operator yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/m is absorbed into DSP yuv_filter_yuv2rgb_U0/yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37/yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U/p.
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch1_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch2_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[4]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[3]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[2]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[1]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port in_channels_ch3_q1[0]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[7]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[6]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[5]
+WARNING: [Synth 8-3331] design yuv_filter has unconnected port out_channels_ch1_q0[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 677.977 ; gain = 470.938
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------------+---------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping                           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+---------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|yuv_filter         | (A*B)'                                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|yuv_filter         | C'+A2*(B:0x19)                        | 9      | 6      | 9      | -      | 13     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|yuv_filter         | (C:0x80)+A2*(B:0x3ffda)               | 9      | 7      | 9      | -      | 15     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|yuv_filter         | C+A2*(B:0x3ffb6)                      | 9      | 8      | 16     | -      | 16     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|yuv_filter         | (C:0x80)+A2*(B:0x7a)                  | 9      | 8      | 9      | -      | 15     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|yuv_filter         | C+A2*(B:0x3ffa2)                      | 9      | 8      | 16     | -      | 16     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|yuv_filter         | (A2*B2)'                              | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|yuv_filter         | (C:0x80)+((D:0x1fffff0)+A2)*(B:0x12a) | 9      | 10     | 9      | 5      | 18     | 1    | 0    | 0    | 0    | 0     | 0    | 1    | 
+|yuv_filter         | PCIN+(A:0x199)*B2                     | 10     | 8      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|yuv_filter         | (A2*B2)'                              | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|yuv_filter_yuv2rgb | ((A:0x3fffff30)*B)'                   | 8      | 9      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|yuv_filter         | PCIN+(A:0x3fffff9c)*B2                | 8      | 8      | -      | -      | 17     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++-------------------+---------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[4]' (FDE) to 'yuv_filter_rgb2yuv11_U0/p_neg_i_i_reg_724_reg[4]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[5]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[1]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[6]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[2]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[7]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[3]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[8]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[4]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[9]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[5]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[10]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[6]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[11]' (FDE) to 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[7]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[0]' (FD) to 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[1]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[1]' (FD) to 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[2]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/B_reg_712_reg[0]' (FDE) to 'yuv_filter_rgb2yuv11_U0/p_neg_i_i_reg_724_reg[4]'
+INFO: [Synth 8-3886] merging instance 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[2]' (FD) to 'yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\yuv_filter_yuv_scale_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\yuv_filter_rgb2yuv11_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\yuv_filter_yuv2rgb_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/ap_done_reg_reg) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/x_i_i_reg_272_reg[15]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/x_i_i_reg_272_reg[14]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/tmp_i_i_mid2_v_reg_668_reg[14]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/tmp_i_i_mid2_v_reg_668_reg[15]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[3]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[2]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[1]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[0]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv_scale_U0/ap_done_reg_reg) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv2rgb_U0/ap_done_reg_reg) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv2rgb_U0/x_reg_213_reg[15]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv2rgb_U0/x_reg_213_reg[14]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv2rgb_U0/tmp_mid2_v_reg_640_reg[14]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_yuv2rgb_U0/tmp_mid2_v_reg_640_reg[15]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[4]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[5]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[6]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[7]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[8]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[9]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[10]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/p_shl3_i_i_reg_719_reg[11]) is unused and will be removed from module yuv_filter.
+WARNING: [Synth 8-3332] Sequential element (yuv_filter_rgb2yuv11_U0/B_reg_712_reg[0]) is unused and will be removed from module yuv_filter.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 677.977 ; gain = 470.938
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 677.977 ; gain = 470.938
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 712.055 ; gain = 505.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 726.332 ; gain = 519.293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 746.602 ; gain = 539.563
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[2] | 4      | 16         | 16     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | SRL_SIG_reg[2] | 4      | 16         | 16     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__8     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__10    | SRL_SIG_reg[2] | 4      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__11    | SRL_SIG_reg[2] | 4      | 16         | 16     | 0       | 0      | 0      | 0      | 
+|dsrl__12    | SRL_SIG_reg[2] | 4      | 16         | 16     | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   129|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     1|
+|4     |DSP48E1_2 |     2|
+|5     |DSP48E1_3 |     2|
+|6     |DSP48E1_4 |     1|
+|7     |DSP48E1_5 |     2|
+|8     |DSP48E1_6 |     2|
+|9     |LUT1      |   124|
+|10    |LUT2      |   243|
+|11    |LUT3      |    78|
+|12    |LUT4      |   133|
+|13    |LUT5      |   113|
+|14    |LUT6      |   237|
+|15    |SRL16E    |   136|
+|16    |FDRE      |   546|
+|17    |FDSE      |    71|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+-------------------------------------------------+------+
+|      |Instance                                               |Module                                           |Cells |
++------+-------------------------------------------------------+-------------------------------------------------+------+
+|1     |top                                                    |                                                 |  1822|
+|2     |  U_scale_channel_U                                    |FIFO_yuv_filter_U_scale_channel                  |    21|
+|3     |    U_FIFO_yuv_filter_U_scale_channel_ram              |FIFO_yuv_filter_U_scale_channel_shiftReg         |    10|
+|4     |  V_scale_channel_U                                    |FIFO_yuv_filter_V_scale_channel                  |    21|
+|5     |    U_FIFO_yuv_filter_V_scale_channel_ram              |FIFO_yuv_filter_V_scale_channel_shiftReg         |    10|
+|6     |  Y_scale_channel_U                                    |FIFO_yuv_filter_Y_scale_channel                  |    23|
+|7     |    U_FIFO_yuv_filter_Y_scale_channel_ram              |FIFO_yuv_filter_Y_scale_channel_shiftReg         |    10|
+|8     |  p_scale_channels_ch1_U                               |FIFO_yuv_filter_p_scale_channels_ch1             |    20|
+|9     |    U_FIFO_yuv_filter_p_scale_channels_ch1_ram         |FIFO_yuv_filter_p_scale_channels_ch1_shiftReg    |    10|
+|10    |  p_scale_channels_ch2_U                               |FIFO_yuv_filter_p_scale_channels_ch2             |    20|
+|11    |    U_FIFO_yuv_filter_p_scale_channels_ch2_ram         |FIFO_yuv_filter_p_scale_channels_ch2_shiftReg    |    10|
+|12    |  p_scale_channels_ch3_U                               |FIFO_yuv_filter_p_scale_channels_ch3             |    20|
+|13    |    U_FIFO_yuv_filter_p_scale_channels_ch3_ram         |FIFO_yuv_filter_p_scale_channels_ch3_shiftReg    |    10|
+|14    |  p_scale_height_U                                     |FIFO_yuv_filter_p_scale_height                   |    30|
+|15    |    U_FIFO_yuv_filter_p_scale_height_ram               |FIFO_yuv_filter_p_scale_height_shiftReg          |    18|
+|16    |  p_scale_width_U                                      |FIFO_yuv_filter_p_scale_width                    |    29|
+|17    |    U_FIFO_yuv_filter_p_scale_width_ram                |FIFO_yuv_filter_p_scale_width_shiftReg           |    18|
+|18    |  p_yuv_channels_ch1_U                                 |FIFO_yuv_filter_p_yuv_channels_ch1               |    21|
+|19    |    U_FIFO_yuv_filter_p_yuv_channels_ch1_ram           |FIFO_yuv_filter_p_yuv_channels_ch1_shiftReg      |    10|
+|20    |  p_yuv_channels_ch2_U                                 |FIFO_yuv_filter_p_yuv_channels_ch2               |    21|
+|21    |    U_FIFO_yuv_filter_p_yuv_channels_ch2_ram           |FIFO_yuv_filter_p_yuv_channels_ch2_shiftReg      |    10|
+|22    |  p_yuv_channels_ch3_U                                 |FIFO_yuv_filter_p_yuv_channels_ch3               |    21|
+|23    |    U_FIFO_yuv_filter_p_yuv_channels_ch3_ram           |FIFO_yuv_filter_p_yuv_channels_ch3_shiftReg      |    10|
+|24    |  p_yuv_height_U                                       |FIFO_yuv_filter_p_yuv_height                     |    29|
+|25    |    U_FIFO_yuv_filter_p_yuv_height_ram                 |FIFO_yuv_filter_p_yuv_height_shiftReg            |    18|
+|26    |  p_yuv_width_U                                        |FIFO_yuv_filter_p_yuv_width                      |    31|
+|27    |    U_FIFO_yuv_filter_p_yuv_width_ram                  |FIFO_yuv_filter_p_yuv_width_shiftReg             |    18|
+|28    |  yuv_filter_rgb2yuv11_U0                              |yuv_filter_rgb2yuv11                             |   451|
+|29    |    yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_U0          |yuv_filter_mac_muladd_6ns_8ns_8ns_13_1           |     3|
+|30    |      yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0_U |yuv_filter_mac_muladd_6ns_8ns_8ns_13_1_DSP48_0   |     3|
+|31    |    yuv_filter_mac_muladd_7s_8ns_9ns_15_1_U5           |yuv_filter_mac_muladd_7s_8ns_9ns_15_1            |    24|
+|32    |      yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4_U  |yuv_filter_mac_muladd_7s_8ns_9ns_15_1_DSP48_4    |    24|
+|33    |    yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_U3          |yuv_filter_mac_muladd_8ns_8ns_9ns_15_1           |    17|
+|34    |      yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3_U |yuv_filter_mac_muladd_8ns_8ns_9ns_15_1_DSP48_3   |    17|
+|35    |    yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U2          |yuv_filter_mac_muladd_8s_8ns_16ns_16_1           |     3|
+|36    |      yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U |yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_1 |     3|
+|37    |    yuv_filter_mac_muladd_8s_8ns_16ns_16_1_U4          |yuv_filter_mac_muladd_8s_8ns_16ns_16_1_0         |     2|
+|38    |      yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2_U |yuv_filter_mac_muladd_8s_8ns_16ns_16_1_DSP48_2   |     2|
+|39    |  yuv_filter_yuv2rgb_U0                                |yuv_filter_yuv2rgb                               |   546|
+|40    |    yuv_filter_mac_muladd_10ns_8s_18s_18_1_U39         |yuv_filter_mac_muladd_10ns_8s_18s_18_1           |    11|
+|41    |      yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7_U |yuv_filter_mac_muladd_10ns_8s_18s_18_1_DSP48_7   |    11|
+|42    |    yuv_filter_mac_muladd_8s_8s_17ns_17_1_U37          |yuv_filter_mac_muladd_8s_8s_17ns_17_1            |    21|
+|43    |      yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5_U  |yuv_filter_mac_muladd_8s_8s_17ns_17_1_DSP48_5    |    21|
+|44    |  yuv_filter_yuv_scale_U0                              |yuv_filter_yuv_scale                             |   517|
++------+-------------------------------------------------------+-------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 320 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 746.602 ; gain = 164.617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 746.602 ; gain = 539.563
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+164 Infos, 239 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 746.602 ; gain = 476.719
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 746.602 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 20:15:35 2016...
+[Fri Jun 10 20:15:39 2016] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:56 . Memory (MB): peak = 284.301 ; gain = 5.609
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 522.402 ; gain = 238.102
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 522.402 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 985.906 ; gain = 463.504
+[Fri Jun 10 20:15:59 2016] Launched impl_1...
+Run output will be captured here: C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/runme.log
+[Fri Jun 10 20:15:59 2016] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log yuv_filter.vdi -applog -m64 -messageDb vivado.pb -mode batch -source yuv_filter.tcl -notrace
+
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source yuv_filter.tcl -notrace
+Command: open_checkpoint C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/yuv_filter.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 260.762 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/.Xil/Vivado-18376-XHDCBALAKR30/dcp/yuv_filter.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/.Xil/Vivado-18376-XHDCBALAKR30/dcp/yuv_filter.xdc]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.1 (64-bit) build 1538259
+open_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 519.348 ; gain = 262.266
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 523.660 ; gain = 4.313
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 1c7da2f22
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c7da2f22
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 983.160 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 1c7da2f22
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.199 . Memory (MB): peak = 983.160 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 365 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: 10626b89d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.344 . Memory (MB): peak = 983.160 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 983.160 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 10626b89d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.362 . Memory (MB): peak = 983.160 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 10626b89d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 983.160 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 983.160 ; gain = 463.813
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/yuv_filter_drc_opted.rpt.
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 Pre-Place Cells
+Phase 1.1.1 Pre-Place Cells | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.1.2 IO and Clk Clean Up
+Phase 1.1.2 IO and Clk Clean Up | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.930 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.1.3 Implementation Feasibility check On IDelay
+Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.935 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.1.4 Commit IO Placement
+Phase 1.1.4 Commit IO Placement | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.940 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c2d871ce
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.941 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Init Lut Pin Assignment
+Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: 19a1a7dc6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 1.2.1 Place Init Design | Checksum: 1189c9e37
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 1.2 Build Placer Netlist Model | Checksum: 1189c9e37
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 1.3 Constrain Clocks/Macros
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1189c9e37
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1189c9e37
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 12953ea66
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 12953ea66
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 132878bdb
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1f69996c9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 1f69996c9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 209ecf615
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 209ecf615
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 1d092a4c3
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 1bf2a8ca8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 1bf2a8ca8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 1bf2a8ca8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1bf2a8ca8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 updateClock Trees: PCOPT
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 111724e46
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4.1.2 Post Placement Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.902. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 10d8e8ea9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 10d8e8ea9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 10d8e8ea9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4.3 Post Placement Cleanup
+Phase 4.3 Post Placement Cleanup | Checksum: 10d8e8ea9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4.4 Placer Reporting
+Phase 4.4 Placer Reporting | Checksum: 10d8e8ea9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+
+Phase 4.5 Final Placement Cleanup
+Phase 4.5 Final Placement Cleanup | Checksum: 49603302
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 49603302
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Ending Placer Task | Checksum: 2a8dcbe9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1004.121 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+37 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.252 . Memory (MB): peak = 1004.121 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1004.121 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1004.121 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: 11c0c0edd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.934 . Memory (MB): peak = 1004.121 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Ending Physical Synthesis Task | Checksum: 538b6f0e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1004.121 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.310 . Memory (MB): peak = 1004.121 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: eebc01f ConstDB: 0 ShapeSum: b74ff0d RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch1_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch1_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch2_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch2_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_height[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_height[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_width[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_width[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in_channels_ch3_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in_channels_ch3_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "V_scale[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "V_scale[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "Y_scale[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "Y_scale[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "U_scale[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "U_scale[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 94c23ba1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 94c23ba1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 94c23ba1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 94c23ba1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1130.219 ; gain = 126.098
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 2376fd5c3
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 1130.219 ; gain = 126.098
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.847  | TNS=0.000  | WHS=-0.183 | THS=-9.914 |
+
+Phase 2 Router Initialization | Checksum: 225d935fb
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 145ef3aed
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 105
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 1665eae79
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.620  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1fb7d20f8
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+Phase 4 Rip-up And Reroute | Checksum: 1fb7d20f8
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 20ec794c2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.771  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 20ec794c2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 20ec794c2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+Phase 5 Delay and Skew Optimization | Checksum: 20ec794c2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 213fb91a5
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.771  | TNS=0.000  | WHS=0.035  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 20ee1a153
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+Phase 6 Post Hold Fix | Checksum: 20ee1a153
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.185461 %
+  Global Horizontal Routing Utilization  = 0.404581 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1a38646ad
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1a38646ad
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 17b84c31b
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.771  | TNS=0.000  | WHS=0.035  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 17b84c31b
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1130.219 ; gain = 126.098
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1130.219 ; gain = 126.098
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.355 . Memory (MB): peak = 1130.219 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/project.runs/impl_1/yuv_filter_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 20:17:17 2016...
+[Fri Jun 10 20:17:20 2016] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:21 . Memory (MB): peak = 995.938 ; gain = 6.371
+INFO: [Netlist 29-17] Analyzing 141 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/.Xil/Vivado-12420-XHDCBALAKR30/dcp/yuv_filter.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/yuv_filter.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/improve_performance/yuv_filter_prj/solution3/impl/verilog/.Xil/Vivado-12420-XHDCBALAKR30/dcp/yuv_filter.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.221 . Memory (MB): peak = 1087.352 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.222 . Memory (MB): peak = 1087.352 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1186.566 ; gain = 1.195
+
+
+Implementation tool: Xilinx Vivado v.2016.1
+Project:             yuv_filter_prj
+Solution:            solution3
+Device target:       xc7z020clg484-1
+Report date:         Fri Jun 10 20:17:24 +0530 2016
+
+#=== Resource usage ===
+SLICE:          294
+LUT:            773
+FF:             617
+DSP:             12
+BRAM:             0
+SRL:             68
+#=== Final timing ===
+CP required:    10.000
+CP achieved:    9.228
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 20:17:24 2016...

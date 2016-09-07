@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue Aug 09 12:03:15 2016
+# Process ID: 21464
+# Current directory: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/xsim.dir/axi_interfaces/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/webtalk.log
+# Journal file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/xsim.dir/axi_interfaces/webtalk/xsim_webtalk.tcl -notrace

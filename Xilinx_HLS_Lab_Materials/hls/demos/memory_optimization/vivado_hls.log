@@ -1,0 +1,35 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2016.1
+  Build 1538259 on Fri Apr 08 16:12:49 MDT 2016
+  Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Wed Jun 15 16:56:52 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/memory_optimization'
+INFO: [HLS 200-10] Creating and opening project 'C:/training/hls/demos/memory_optimization/dct_prj'.
+INFO: [HLS 200-10] Adding design file 'dct.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'dct_test.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'in.dat' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.golden.dat' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/training/hls/demos/memory_optimization/dct_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+   Compiling(apcc) ../../../../dct_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Wed Jun 15 16:56:55 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/memory_optimization/dct_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/150681713043265
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../dct.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Wed Jun 15 16:56:57 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/memory_optimization/dct_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/214281715601866
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+    *** *** *** *** 
+    Results are good 
+    *** *** *** *** 
+INFO: [SIM 211-1] CSim done with 0 errors.

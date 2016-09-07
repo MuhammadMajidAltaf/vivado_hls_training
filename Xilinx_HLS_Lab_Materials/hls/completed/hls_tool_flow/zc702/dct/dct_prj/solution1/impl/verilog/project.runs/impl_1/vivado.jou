@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May 31 15:48:49 2016
+# Process ID: 15024
+# Current directory: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1
+# Command line: vivado.exe -log dct.vdi -applog -messageDb vivado.pb -mode batch -source dct.tcl -notrace
+# Log file: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/dct.vdi
+# Journal file: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source dct.tcl -notrace

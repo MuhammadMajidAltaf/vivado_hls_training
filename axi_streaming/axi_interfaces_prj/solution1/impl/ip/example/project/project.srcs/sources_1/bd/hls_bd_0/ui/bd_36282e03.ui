@@ -1,0 +1,103 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port d_i_6_ce0 -pg 1 -y 580 -defaultsOSRD
+preplace port d_o_1 -pg 1 -y 320 -defaultsOSRD
+preplace port d_i_1_ce0 -pg 1 -y 480 -defaultsOSRD
+preplace port d_o_2 -pg 1 -y 340 -defaultsOSRD
+preplace port d_i_3_ce0 -pg 1 -y 520 -defaultsOSRD
+preplace port reset_rtl -pg 1 -y 390 -defaultsOSRD
+preplace port d_o_3 -pg 1 -y 360 -defaultsOSRD
+preplace port d_i_5_ce0 -pg 1 -y 560 -defaultsOSRD
+preplace port d_i_0_ce0 -pg 1 -y 460 -defaultsOSRD
+preplace port d_o_4 -pg 1 -y 380 -defaultsOSRD
+preplace port d_o_5 -pg 1 -y 400 -defaultsOSRD
+preplace port d_i_2_ce0 -pg 1 -y 500 -defaultsOSRD
+preplace port d_o_6 -pg 1 -y 420 -defaultsOSRD
+preplace port CLK_IN1_D -pg 1 -y 370 -defaultsOSRD
+preplace port d_i_7_ce0 -pg 1 -y 600 -defaultsOSRD
+preplace port d_i_4_ce0 -pg 1 -y 540 -defaultsOSRD
+preplace port d_o_7 -pg 1 -y 440 -defaultsOSRD
+preplace port d_o_0 -pg 1 -y 300 -defaultsOSRD
+preplace portBus d_i_2_address0 -pg 1 -y 680 -defaultsOSRD
+preplace portBus d_i_7_address0 -pg 1 -y 780 -defaultsOSRD
+preplace portBus d_i_5_address0 -pg 1 -y 740 -defaultsOSRD
+preplace portBus d_i_2_q0 -pg 1 -y 540 -defaultsOSRD
+preplace portBus d_i_3_address0 -pg 1 -y 700 -defaultsOSRD
+preplace portBus d_i_0_address0 -pg 1 -y 640 -defaultsOSRD
+preplace portBus d_i_6_address0 -pg 1 -y 760 -defaultsOSRD
+preplace portBus d_i_4_q0 -pg 1 -y 580 -defaultsOSRD
+preplace portBus d_i_7_q0 -pg 1 -y 640 -defaultsOSRD
+preplace portBus d_i_6_q0 -pg 1 -y 620 -defaultsOSRD
+preplace portBus d_i_4_address0 -pg 1 -y 720 -defaultsOSRD
+preplace portBus d_i_1_address0 -pg 1 -y 660 -defaultsOSRD
+preplace portBus d_i_3_q0 -pg 1 -y 560 -defaultsOSRD
+preplace portBus d_i_1_q0 -pg 1 -y 520 -defaultsOSRD
+preplace portBus d_i_0_q0 -pg 1 -y 500 -defaultsOSRD
+preplace portBus d_i_5_q0 -pg 1 -y 600 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 130 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -y 460 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -y 190 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 3 -y 370 -defaultsOSRD
+preplace inst hls_ip_0 -pg 1 -lvl 6 -y 540 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 350 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 380 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 360 -defaultsOSRD
+preplace netloc hls_ip_0_d_o_7 1 6 1 NJ
+preplace netloc d_i_2_q0_1 1 0 6 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
+preplace netloc hls_ip_0_d_i_2_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_2_address0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_0_ce0 1 6 1 NJ
+preplace netloc d_i_4_q0_1 1 0 6 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ
+preplace netloc d_i_0_q0_1 1 0 6 NJ 500 NJ 510 NJ 500 NJ 500 NJ 500 NJ
+preplace netloc microblaze_0_intr 1 2 1 NJ
+preplace netloc d_i_1_q0_1 1 0 6 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ
+preplace netloc microblaze_0_Clk 1 1 5 220 250 580 250 860 240 1340 460 N
+preplace netloc microblaze_0_intc_axi 1 2 4 600 260 NJ 260 NJ 270 1640
+preplace netloc microblaze_0_interrupt 1 3 1 850
+preplace netloc hls_ip_0_d_i_5_address0 1 6 1 NJ
+preplace netloc microblaze_0_ilmb_1 1 4 1 N
+preplace netloc hls_ip_0_d_i_4_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_o_0 1 6 1 NJ
+preplace netloc CLK_IN1_D_1 1 0 1 NJ
+preplace netloc microblaze_0_axi_dp 1 4 1 1320
+preplace netloc d_i_3_q0_1 1 0 6 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc hls_ip_0_d_i_3_address0 1 6 1 NJ
+preplace netloc hls_ip_0_d_o_1 1 6 1 NJ
+preplace netloc d_i_7_q0_1 1 0 6 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ
+preplace netloc hls_ip_0_d_i_7_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_7_address0 1 6 1 NJ
+preplace netloc d_i_6_q0_1 1 0 6 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ
+preplace netloc hls_ip_0_d_i_6_ce0 1 6 1 NJ
+preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 2 3 550 90 NJ 90 NJ
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 560 270 NJ 270 NJ
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1650
+preplace netloc hls_ip_0_d_o_2 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_5_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_1_address0 1 6 1 NJ
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 570 130 NJ 130 1310 480 NJ
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 590 120 NJ
+preplace netloc clk_wiz_1_locked 1 1 1 230
+preplace netloc hls_ip_0_d_o_3 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_6_address0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_4_address0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_3_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_o_4 1 6 1 NJ
+preplace netloc microblaze_0_dlmb_1 1 4 1 N
+preplace netloc hls_ip_0_d_o_5 1 6 1 NJ
+preplace netloc microblaze_0_debug 1 3 1 840
+preplace netloc mdm_1_debug_sys_rst 1 1 3 230 110 NJ 110 820
+preplace netloc hls_ip_0_d_o_6 1 6 1 NJ
+preplace netloc hls_ip_0_interrupt 1 1 6 230 830 NJ 830 NJ 830 NJ 830 NJ 830 1990
+preplace netloc d_i_5_q0_1 1 0 6 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ
+preplace netloc hls_ip_0_d_i_1_ce0 1 6 1 NJ
+preplace netloc hls_ip_0_d_i_0_address0 1 6 1 NJ
+preplace netloc reset_rtl_1 1 0 2 20 320 NJ
+levelinfo -pg 1 0 120 390 710 1080 1490 1820 2010 -top 0 -bot 840
+",
+}
+{
+   da_axi4_cnt: "1",
+   da_mb_cnt: "1",
+}

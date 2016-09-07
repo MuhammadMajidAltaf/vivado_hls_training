@@ -1,0 +1,355 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Fri Jun 10 19:55:11 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        yuv_filter_prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     11.36|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |  min  |   max   |  min  |   max   |   Type   |
+    +-------+---------+-------+---------+----------+
+    |  40015|  2457615|  40008|  2457608| dataflow |
+    +-------+---------+-------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 6.38ns
+ST_1: V_scale_read [1/1] 0.00ns
+:0  %V_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %V_scale)
+
+ST_1: U_scale_read [1/1] 0.00ns
+:1  %U_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %U_scale)
+
+ST_1: Y_scale_read [1/1] 0.00ns
+:2  %Y_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %Y_scale)
+
+ST_1: p_scale_height [1/1] 0.00ns
+:3  %p_scale_height = alloca i16, align 2
+
+ST_1: p_scale_width [1/1] 0.00ns
+:4  %p_scale_width = alloca i16, align 2
+
+ST_1: p_yuv_height [1/1] 0.00ns
+:5  %p_yuv_height = alloca i16, align 2
+
+ST_1: p_yuv_width [1/1] 0.00ns
+:6  %p_yuv_width = alloca i16, align 2
+
+ST_1: V_scale_channel [1/1] 0.00ns
+:7  %V_scale_channel = alloca i8, align 1
+
+ST_1: U_scale_channel [1/1] 0.00ns
+:8  %U_scale_channel = alloca i8, align 1
+
+ST_1: Y_scale_channel [1/1] 0.00ns
+:9  %Y_scale_channel = alloca i8, align 1
+
+ST_1: p_yuv_channels_ch1 [1/1] 0.00ns
+:25  %p_yuv_channels_ch1 = alloca i8, align 1
+
+ST_1: p_yuv_channels_ch2 [1/1] 0.00ns
+:28  %p_yuv_channels_ch2 = alloca i8, align 1
+
+ST_1: p_yuv_channels_ch3 [1/1] 0.00ns
+:31  %p_yuv_channels_ch3 = alloca i8, align 1
+
+ST_1: p_scale_channels_ch1 [1/1] 0.00ns
+:34  %p_scale_channels_ch1 = alloca i8, align 1
+
+ST_1: p_scale_channels_ch2 [1/1] 0.00ns
+:37  %p_scale_channels_ch2 = alloca i8, align 1
+
+ST_1: p_scale_channels_ch3 [1/1] 0.00ns
+:40  %p_scale_channels_ch3 = alloca i8, align 1
+
+ST_1: stg_23 [2/2] 6.38ns
+:49  call fastcc void @yuv_filter_rgb2yuv11([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16* %in_width, i16* %in_height, i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch3, i16* %p_yuv_width, i16* %p_yuv_height, i8 %Y_scale_read, i8 %U_scale_read, i8 %V_scale_read, i8* %Y_scale_channel, i8* %U_scale_channel, i8* %V_scale_channel)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_24 [1/2] 0.00ns
+:49  call fastcc void @yuv_filter_rgb2yuv11([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16* %in_width, i16* %in_height, i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch3, i16* %p_yuv_width, i16* %p_yuv_height, i8 %Y_scale_read, i8 %U_scale_read, i8 %V_scale_read, i8* %Y_scale_channel, i8* %U_scale_channel, i8* %V_scale_channel)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_25 [2/2] 0.00ns
+:60  call fastcc void @yuv_filter_yuv_scale(i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch3, i16* %p_yuv_width, i16* %p_yuv_height, i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch3, i16* %p_scale_width, i16* %p_scale_height, i8* %Y_scale_channel, i8* %U_scale_channel, i8* %V_scale_channel)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_26 [1/2] 0.00ns
+:60  call fastcc void @yuv_filter_yuv_scale(i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch3, i16* %p_yuv_width, i16* %p_yuv_height, i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch3, i16* %p_scale_width, i16* %p_scale_height, i8* %Y_scale_channel, i8* %U_scale_channel, i8* %V_scale_channel)
+
+
+ <State 5>: 0.00ns
+ST_5: stg_27 [2/2] 0.00ns
+:71  call fastcc void @yuv_filter_yuv2rgb(i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch3, i16* %p_scale_width, i16* %p_scale_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3, i16* %out_width, i16* %out_height)
+
+
+ <State 6>: 0.00ns
+ST_6: stg_28 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_6: stg_29 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch1), !map !0
+
+ST_6: stg_30 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch2), !map !7
+
+ST_6: stg_31 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch3), !map !11
+
+ST_6: stg_32 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_width), !map !15
+
+ST_6: stg_33 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_height), !map !21
+
+ST_6: stg_34 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch1), !map !25
+
+ST_6: stg_35 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch2), !map !29
+
+ST_6: stg_36 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch3), !map !33
+
+ST_6: stg_37 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_width), !map !37
+
+ST_6: stg_38 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_height), !map !41
+
+ST_6: stg_39 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Y_scale), !map !45
+
+ST_6: stg_40 [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecBitsMap(i8 %U_scale), !map !51
+
+ST_6: stg_41 [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecBitsMap(i8 %V_scale), !map !55
+
+ST_6: stg_42 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @yuv_filter_str) nounwind
+
+ST_6: empty [1/1] 0.00ns
+:26  %empty = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @p_yuv_OC_channels_OC_ch1_OC_cha, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch1)
+
+ST_6: empty_30 [1/1] 0.00ns
+:27  %empty_30 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_31 [1/1] 0.00ns
+:29  %empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @p_yuv_OC_channels_OC_ch2_OC_cha, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch2)
+
+ST_6: empty_32 [1/1] 0.00ns
+:30  %empty_32 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_33 [1/1] 0.00ns
+:32  %empty_33 = call i32 (...)* @_ssdm_op_SpecChannel([26 x i8]* @p_yuv_OC_channels_OC_ch3_OC_cha, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch3, i8* %p_yuv_channels_ch3)
+
+ST_6: empty_34 [1/1] 0.00ns
+:33  %empty_34 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_35 [1/1] 0.00ns
+:35  %empty_35 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @p_scale_OC_channels_OC_ch1_OC_c, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch1)
+
+ST_6: empty_36 [1/1] 0.00ns
+:36  %empty_36 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_37 [1/1] 0.00ns
+:38  %empty_37 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @p_scale_OC_channels_OC_ch2_OC_c, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch2)
+
+ST_6: empty_38 [1/1] 0.00ns
+:39  %empty_38 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_39 [1/1] 0.00ns
+:41  %empty_39 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @p_scale_OC_channels_OC_ch3_OC_c, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch3, i8* %p_scale_channels_ch3)
+
+ST_6: empty_40 [1/1] 0.00ns
+:42  %empty_40 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_41 [1/1] 0.00ns
+:43  %empty_41 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @Y_scale_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i8* %Y_scale_channel, i8* %Y_scale_channel)
+
+ST_6: empty_42 [1/1] 0.00ns
+:44  %empty_42 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %Y_scale_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_43 [1/1] 0.00ns
+:45  %empty_43 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @U_scale_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i8* %U_scale_channel, i8* %U_scale_channel)
+
+ST_6: empty_44 [1/1] 0.00ns
+:46  %empty_44 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %U_scale_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_45 [1/1] 0.00ns
+:47  %empty_45 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @V_scale_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i8* %V_scale_channel, i8* %V_scale_channel)
+
+ST_6: empty_46 [1/1] 0.00ns
+:48  %empty_46 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %V_scale_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_47 [1/1] 0.00ns
+:50  %empty_47 = call i32 (...)* @_ssdm_op_SpecChannel([18 x i8]* @p_yuv_OC_channels_OC_ch1_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch1, i8* %p_yuv_channels_ch1)
+
+ST_6: empty_48 [1/1] 0.00ns
+:51  %empty_48 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_49 [1/1] 0.00ns
+:52  %empty_49 = call i32 (...)* @_ssdm_op_SpecChannel([18 x i8]* @p_yuv_OC_channels_OC_ch2_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch2, i8* %p_yuv_channels_ch2)
+
+ST_6: empty_50 [1/1] 0.00ns
+:53  %empty_50 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_51 [1/1] 0.00ns
+:54  %empty_51 = call i32 (...)* @_ssdm_op_SpecChannel([18 x i8]* @p_yuv_OC_channels_OC_ch3_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_yuv_channels_ch3, i8* %p_yuv_channels_ch3)
+
+ST_6: empty_52 [1/1] 0.00ns
+:55  %empty_52 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_yuv_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_53 [1/1] 0.00ns
+:56  %empty_53 = call i32 (...)* @_ssdm_op_SpecChannel([19 x i8]* @p_yuv_OC_width_OC_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i16* %p_yuv_width, i16* %p_yuv_width)
+
+ST_6: empty_54 [1/1] 0.00ns
+:57  %empty_54 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %p_yuv_width, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_55 [1/1] 0.00ns
+:58  %empty_55 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @p_yuv_OC_height_OC_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i16* %p_yuv_height, i16* %p_yuv_height)
+
+ST_6: empty_56 [1/1] 0.00ns
+:59  %empty_56 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %p_yuv_height, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_57 [1/1] 0.00ns
+:61  %empty_57 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @p_scale_OC_channels_OC_ch1_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch1)
+
+ST_6: empty_58 [1/1] 0.00ns
+:62  %empty_58 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_59 [1/1] 0.00ns
+:63  %empty_59 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @p_scale_OC_channels_OC_ch2_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch2)
+
+ST_6: empty_60 [1/1] 0.00ns
+:64  %empty_60 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_61 [1/1] 0.00ns
+:65  %empty_61 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @p_scale_OC_channels_OC_ch3_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2457600, i8* %p_scale_channels_ch3, i8* %p_scale_channels_ch3)
+
+ST_6: empty_62 [1/1] 0.00ns
+:66  %empty_62 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_scale_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_63 [1/1] 0.00ns
+:67  %empty_63 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @p_scale_OC_width_OC_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i16* %p_scale_width, i16* %p_scale_width)
+
+ST_6: empty_64 [1/1] 0.00ns
+:68  %empty_64 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %p_scale_width, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: empty_65 [1/1] 0.00ns
+:69  %empty_65 = call i32 (...)* @_ssdm_op_SpecChannel([22 x i8]* @p_scale_OC_height_OC_channel_st, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i16* %p_scale_height, i16* %p_scale_height)
+
+ST_6: empty_66 [1/1] 0.00ns
+:70  %empty_66 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %p_scale_height, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+
+ST_6: stg_81 [1/2] 0.00ns
+:71  call fastcc void @yuv_filter_yuv2rgb(i8* %p_scale_channels_ch1, i8* %p_scale_channels_ch2, i8* %p_scale_channels_ch3, i16* %p_scale_width, i16* %p_scale_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3, i16* %out_width, i16* %out_height)
+
+ST_6: stg_82 [1/1] 0.00ns
+:72  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

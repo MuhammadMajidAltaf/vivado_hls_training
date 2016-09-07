@@ -1,0 +1,35 @@
+Vivado Simulator 2016.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fir_top -prj fir.prj --lib ieee_proposed=./ieee_proposed -s fir 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/AESL_axi_slave_fir_io.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_fir_io
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fir_top
+INFO: [VRFC 10-2458] undeclared symbol ap_clk, assumed default net type wire [C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir.autotb.v:120]
+INFO: [VRFC 10-2458] undeclared symbol ap_rst_n, assumed default net type wire [C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir.autotb.v:121]
+INFO: [VRFC 10-2458] undeclared symbol ap_rst_n_n, assumed default net type wire [C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir.autotb.v:126]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_c_rom
+INFO: [VRFC 10-311] analyzing module fir_c
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir_fir_io_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_fir_io_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hlx_flow/KC705/fir/fir_prj/solution1/sim/verilog/fir_shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_shift_reg_ram
+INFO: [VRFC 10-311] analyzing module fir_shift_reg
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fir_shift_reg_ram
+Compiling module xil_defaultlib.fir_shift_reg(DataWidth=32,Addre...
+Compiling module xil_defaultlib.fir_c_rom
+Compiling module xil_defaultlib.fir_c(DataWidth=7,AddressRange=1...
+Compiling module xil_defaultlib.fir_fir_io_s_axi(C_S_AXI_ADDR_WI...
+Compiling module xil_defaultlib.fir_default
+Compiling module xil_defaultlib.AESL_axi_slave_fir_io
+Compiling module xil_defaultlib.apatb_fir_top
+Built simulation snapshot fir

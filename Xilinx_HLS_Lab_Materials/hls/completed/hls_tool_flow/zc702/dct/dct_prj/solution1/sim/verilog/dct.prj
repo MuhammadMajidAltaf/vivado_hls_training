@@ -1,0 +1,10 @@
+verilog xil_defaultlib "AESL_automem_input_r.v"
+verilog xil_defaultlib "AESL_automem_output_r.v"
+verilog xil_defaultlib "dct.autotb.v"
+verilog xil_defaultlib "dct.v"
+verilog xil_defaultlib "dct_dct_1d2.v"
+verilog xil_defaultlib "dct_dct_1d2_dct_coeff_table.v"
+verilog xil_defaultlib "dct_dct_2d.v"
+verilog xil_defaultlib "dct_dct_2d_row_outbuf.v"
+verilog xil_defaultlib "dct_mac_muladd_15s_16s_32ns_32_1.v"
+

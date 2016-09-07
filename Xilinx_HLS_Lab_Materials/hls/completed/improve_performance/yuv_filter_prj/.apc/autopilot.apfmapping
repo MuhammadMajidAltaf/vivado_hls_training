@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="yuv_filter.c" path="C:\training\hls\labs\improve_performance\yuv_filter.c"/>
+  </source>
+  <testbench>
+    <originFiles name="test_data" path="C:\training\hls\labs\improve_performance\test_data"/>
+    <originFiles name="yuv_filter_test.c" path="C:\training\hls\labs\improve_performance\yuv_filter_test.c"/>
+    <originFiles name="image_aux.c" path="C:\training\hls\labs\improve_performance\image_aux.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

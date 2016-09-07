@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Fri Aug 05 16:35:00 2016
+# Process ID: 33264
+# Current directory: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/impl/ip/example
+# Command line: vivado.exe -notrace -mode batch -source ipi_example.tcl -tclargs xc7k160tfbg484-1 ../xilinx_com_hls_axi_interfaces_1_0.zip
+# Log file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/impl/ip/example/vivado.log
+# Journal file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/impl/ip/example\vivado.jou
+#-----------------------------------------------------------
+source ipi_example.tcl -notrace

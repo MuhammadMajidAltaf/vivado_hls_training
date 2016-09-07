@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Wed Jun 01 16:45:11 2016
+# Process ID: 10788
+# Current directory: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/impl/ip/vivado.log
+# Journal file: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

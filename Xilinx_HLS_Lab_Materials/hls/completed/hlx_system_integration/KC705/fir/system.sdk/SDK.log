@@ -1,0 +1,81 @@
+12:17:53 INFO  : Launching XSDB server: xsdb.bat -interactive C:\training\hls\labs\hlx_flow\KC705\fir\system.sdk\temp_xsdb_launch_script.tcl
+12:17:56 INFO  : XSDB server has started successfully.
+12:18:00 INFO  : Processing command line option -hwspec C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper.hdf.
+12:18:28 INFO  : Saving repository preferences.
+12:18:28 INFO  : Reading in cores from local repositories: 
+		 C:\training\hls\labs\hlx_flow\KC705\fir\fir_prj\solution1\impl\ip
+12:18:28 INFO  : Cleaning BSP projects in the workspace.
+12:22:46 INFO  : Saving repository preferences.
+13:24:34 INFO  : Launching XSDB server: xsdb.bat -interactive C:\training\hls\labs\hlx_flow\KC705\fir\system.sdk\temp_xsdb_launch_script.tcl
+13:24:36 INFO  : XSDB server has started successfully.
+13:24:37 INFO  : Restoring local repository preferences: 
+		 C:\training\hls\labs\hlx_flow\KC705\fir\fir_prj\solution1\impl\ip
+13:24:37 INFO  : Processing command line option -hwspec C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper.hdf.
+13:24:37 INFO  : Checking for hwspec changes in the project microblaze_design_wrapper_hw_platform_0.
+13:24:38 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461914700751,  Project:1461912342057
+13:24:38 INFO  : The hardware specification for project 'microblaze_design_wrapper_hw_platform_0' is different from C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper.hdf.
+13:24:38 INFO  : Copied contents of C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper.hdf into \microblaze_design_wrapper_hw_platform_0\system.hdf.
+13:24:38 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:24:44 INFO  : 
+13:24:46 INFO  : Updating hardware inferred compiler options for fir_test_application.
+13:26:09 INFO  : Clearing existing target manager status.
+13:27:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:27:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A" && level==0} -index 0' command is executed.
+13:27:59 INFO  : FPGA configured successfully with bitstream "C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper_hw_platform_0/download.bit"
+13:28:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A" && level==0} -index 0' command is executed.
+13:28:37 INFO  : 'fpga -state' command is executed.
+13:28:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:28:37 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:37 INFO  : Hardware design information is loaded from 'C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper_hw_platform_0/system.hdf'.
+13:28:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:38 INFO  : Processor reset is completed for 'microblaze_0'.
+13:28:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:38 INFO  : The application 'C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/fir_test_application/Debug/fir_test_application.elf' is downloaded to processor 'microblaze_0'.
+13:28:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+loadhw C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+dow C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/fir_test_application/Debug/fir_test_application.elf
+----------------End of Script----------------
+
+13:28:38 INFO  : Memory regions updated for context MicroBlaze #0
+13:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:39 INFO  : 'con' command is executed.
+13:28:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+con
+----------------End of Script----------------
+
+13:28:57 INFO  : Disconnected from the channel tcfchan#1.
+13:28:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A" && level==0} -index 0' command is executed.
+13:28:57 INFO  : 'fpga -state' command is executed.
+13:28:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:28:58 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:58 INFO  : Hardware design information is loaded from 'C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper_hw_platform_0/system.hdf'.
+13:28:58 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:58 INFO  : Processor reset is completed for 'microblaze_0'.
+13:28:59 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:59 INFO  : The application 'C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/fir_test_application/Debug/fir_test_application.elf' is downloaded to processor 'microblaze_0'.
+13:28:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+loadhw C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/microblaze_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+dow C:/training/hls/labs/hlx_flow/KC705/fir/system.sdk/fir_test_application/Debug/fir_test_application.elf
+----------------End of Script----------------
+
+13:28:59 INFO  : Memory regions updated for context MicroBlaze #0
+13:28:59 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:59 INFO  : 'con' command is executed.
+13:28:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203337337A"} -index 0
+con
+----------------End of Script----------------
+
+14:45:36 INFO  : Launching XSDB server: xsdb.bat -interactive C:\training\hls\labs\hlx_flow\KC705\fir\system.sdk\temp_xsdb_launch_script.tcl
+14:45:36 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

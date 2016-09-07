@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dct.c" path="C:\training\hls\labs\hls_cli_flow\dct\kintex7\dct.c"/>
+  </source>
+  <testbench>
+    <originFiles name="out.golden.dat" path="C:\training\hls\labs\hls_cli_flow\dct\kintex7\out.golden.dat"/>
+    <originFiles name="in.dat" path="C:\training\hls\labs\hls_cli_flow\dct\kintex7\in.dat"/>
+    <originFiles name="dct_test.c" path="C:\training\hls\labs\hls_cli_flow\dct\kintex7\dct_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

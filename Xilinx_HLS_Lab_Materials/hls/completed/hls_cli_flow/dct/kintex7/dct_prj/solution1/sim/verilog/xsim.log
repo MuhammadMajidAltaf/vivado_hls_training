@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# xsim v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Wed Jun 01 16:31:48 2016
+# Process ID: 8696
+# Current directory: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/dct/xsim_script.tcl}
+# Log file: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/dct/xsim_script.tcl
+# xsim {dct} -autoloadwcfg -tclbatch {dct.tcl}
+Vivado Simulator 2016.1
+Time resolution is 1 ps
+source dct.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [0.00%] @ "29495000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 29535 ns : File "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v" Line 264
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jun 01 16:32:15 2016...

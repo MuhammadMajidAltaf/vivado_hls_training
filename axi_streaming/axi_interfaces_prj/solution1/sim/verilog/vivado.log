@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue Aug 09 12:03:39 2016
+# Process ID: 34072
+# Current directory: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/vivado.log
+# Journal file: C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Tools/Xilinx/Vivado/2016.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 734.816 ; gain = 157.727
+# open_wave_database axi_interfaces.wdb
+open_wave_config C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/axi_interfaces.wcfg
+open_wave_config C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/axi_interfaces.wcfg
+ERROR: [Wavedata 42-52] WCFG file 'C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution1/sim/verilog/axi_interfaces.wcfg' is already open.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 09 13:51:22 2016...

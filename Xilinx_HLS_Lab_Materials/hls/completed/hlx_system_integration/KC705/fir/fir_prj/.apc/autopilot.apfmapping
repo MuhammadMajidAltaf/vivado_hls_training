@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.c" path="C:\training\hls\completed\hlx_system_integration\fir\fir.c"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="C:\training\hls\completed\hlx_system_integration\fir\fir_test.c"/>
+    <originFiles name="out.gold.8.dat" path="C:\training\hls\completed\hlx_system_integration\fir\out.gold.8.dat"/>
+    <originFiles name="out.gold.dat" path="C:\training\hls\completed\hlx_system_integration\fir\out.gold.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,46 @@
+Vivado Simulator 2016.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_dct_top -prj dct.prj --lib ieee_proposed=./ieee_proposed -s dct 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_dct_top
+INFO: [VRFC 10-2458] undeclared symbol ap_clk, assumed default net type wire [C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v:88]
+INFO: [VRFC 10-2458] undeclared symbol ap_rst, assumed default net type wire [C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v:89]
+INFO: [VRFC 10-2458] undeclared symbol ap_rst_n, assumed default net type wire [C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v:105]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_1d2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_dct_1d2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_1d2_dct_coeff_table.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_dct_1d2_dct_coeff_table_rom
+INFO: [VRFC 10-311] analyzing module dct_dct_1d2_dct_coeff_table
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_2d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_dct_2d
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_2d_row_outbuf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_dct_2d_row_outbuf_ram
+INFO: [VRFC 10-311] analyzing module dct_dct_2d_row_outbuf
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dct_mac_muladd_15s_16s_32ns_32_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module dct_mac_muladd_15s_16s_32ns_32_1
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dct_dct_2d_row_outbuf_ram
+Compiling module xil_defaultlib.dct_dct_2d_row_outbuf(DataWidth=...
+Compiling module xil_defaultlib.dct_dct_1d2_dct_coeff_table_rom
+Compiling module xil_defaultlib.dct_dct_1d2_dct_coeff_table(Data...
+Compiling module xil_defaultlib.dct_mac_muladd_15s_16s_32ns_32_1...
+Compiling module xil_defaultlib.dct_mac_muladd_15s_16s_32ns_32_1...
+Compiling module xil_defaultlib.dct_dct_1d2
+Compiling module xil_defaultlib.dct_dct_2d
+Compiling module xil_defaultlib.dct
+Compiling module xil_defaultlib.AESL_automem_input_r
+Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.apatb_dct_top
+Built simulation snapshot dct

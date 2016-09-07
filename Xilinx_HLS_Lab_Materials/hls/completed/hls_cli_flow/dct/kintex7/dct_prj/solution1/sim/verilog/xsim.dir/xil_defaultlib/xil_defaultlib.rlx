@@ -1,0 +1,11 @@
+0.2
+2016.1
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/AESL_automem_input_r.v,1464778905,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/AESL_automem_output_r.v,1464778905,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.autotb.v,1464778905,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct.v,1464778177,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_1d2.v,1464778176,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_1d2_dct_coeff_table.v,1464778178,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_2d.v,1464778176,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_dct_2d_row_outbuf.v,1464778178,verilog,,,ieee_proposed=./ieee_proposed,,,,,,
+C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/sim/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v,1464778177,verilog,,,ieee_proposed=./ieee_proposed,,,,,,

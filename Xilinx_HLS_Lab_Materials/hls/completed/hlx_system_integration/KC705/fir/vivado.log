@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Mon May 09 13:24:27 2016
+# Process ID: 39404
+# Current directory: C:/training/hls/completed/hlx_system_integration/fir
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37984 C:\training\hls\completed\hlx_system_integration\fir\system.xpr
+# Log file: C:/training/hls/completed/hlx_system_integration/fir/vivado.log
+# Journal file: C:/training/hls/completed/hlx_system_integration/fir\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/training/hls/completed/hlx_system_integration/fir/system.xpr
+INFO: [Project 1-313] Project file moved from 'C:/training/hls/labs/hlx_flow/KC705/fir' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/training/hls/completed/hlx_system_integration/fir/fir_prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.1/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 949.035 ; gain = 249.789
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 09 13:25:01 2016...

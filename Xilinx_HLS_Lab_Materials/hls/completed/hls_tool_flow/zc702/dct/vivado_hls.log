@@ -1,0 +1,1261 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Tue May 31 15:46:49 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/hls_tool_flow/zc702/dct'
+INFO: [HLS 200-10] Opening project 'C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj'.
+INFO: [HLS 200-10] Opening solution 'C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 15:47:02 2016...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+
+C:\training\hls\labs\hls_tool_flow\zc702\dct\dct_prj\solution1\impl\verilog>vivado  -notrace -mode batch -source run_vivado.tcl   || exit $? 
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado.tcl -notrace
+[Tue May 31 15:47:11 2016] Launched synth_1...
+Run output will be captured here: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/synth_1/runme.log
+[Tue May 31 15:47:12 2016] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log dct.vds -m64 -mode batch -messageDb vivado.pb -notrace -source dct.tcl
+
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source dct.tcl -notrace
+Command: synth_design -top dct -part xc7z020clg484-1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13868 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 328.773 ; gain = 121.934
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'dct' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.v:12]
+	Parameter ap_ST_st1_fsm_0 bound to: 8'b00000001 
+	Parameter ap_ST_st2_fsm_1 bound to: 8'b00000010 
+	Parameter ap_ST_st3_fsm_2 bound to: 8'b00000100 
+	Parameter ap_ST_st4_fsm_3 bound to: 8'b00001000 
+	Parameter ap_ST_st5_fsm_4 bound to: 8'b00010000 
+	Parameter ap_ST_st6_fsm_5 bound to: 8'b00100000 
+	Parameter ap_ST_st7_fsm_6 bound to: 8'b01000000 
+	Parameter ap_ST_st8_fsm_7 bound to: 8'b10000000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_5 bound to: 5 - type: integer 
+	Parameter ap_const_lv32_6 bound to: 6 - type: integer 
+	Parameter ap_const_lv4_0 bound to: 4'b0000 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv32_4 bound to: 4 - type: integer 
+	Parameter ap_const_lv32_7 bound to: 7 - type: integer 
+	Parameter ap_const_lv4_8 bound to: 4'b1000 
+	Parameter ap_const_lv4_1 bound to: 4'b0001 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.v:70]
+INFO: [Synth 8-638] synthesizing module 'dct_dct_2d_row_outbuf' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d_row_outbuf.v:46]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'dct_dct_2d_row_outbuf_ram' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d_row_outbuf.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d_row_outbuf.v:22]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_2d_row_outbuf_ram' (1#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d_row_outbuf.v:9]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_2d_row_outbuf' (2#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d_row_outbuf.v:46]
+INFO: [Synth 8-638] synthesizing module 'dct_dct_2d' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:10]
+	Parameter ap_ST_st1_fsm_0 bound to: 11'b00000000001 
+	Parameter ap_ST_st2_fsm_1 bound to: 11'b00000000010 
+	Parameter ap_ST_st3_fsm_2 bound to: 11'b00000000100 
+	Parameter ap_ST_st4_fsm_3 bound to: 11'b00000001000 
+	Parameter ap_ST_st5_fsm_4 bound to: 11'b00000010000 
+	Parameter ap_ST_st6_fsm_5 bound to: 11'b00000100000 
+	Parameter ap_ST_st7_fsm_6 bound to: 11'b00001000000 
+	Parameter ap_ST_st8_fsm_7 bound to: 11'b00010000000 
+	Parameter ap_ST_st9_fsm_8 bound to: 11'b00100000000 
+	Parameter ap_ST_st10_fsm_9 bound to: 11'b01000000000 
+	Parameter ap_ST_st11_fsm_10 bound to: 11'b10000000000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv32_4 bound to: 4 - type: integer 
+	Parameter ap_const_lv32_6 bound to: 6 - type: integer 
+	Parameter ap_const_lv32_8 bound to: 8 - type: integer 
+	Parameter ap_const_lv32_9 bound to: 9 - type: integer 
+	Parameter ap_const_lv4_0 bound to: 4'b0000 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_5 bound to: 5 - type: integer 
+	Parameter ap_const_lv32_7 bound to: 7 - type: integer 
+	Parameter ap_const_lv32_A bound to: 10 - type: integer 
+	Parameter ap_const_lv4_8 bound to: 4'b1000 
+	Parameter ap_const_lv4_1 bound to: 4'b0001 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:73]
+INFO: [Synth 8-638] synthesizing module 'dct_dct_1d2' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2.v:10]
+	Parameter ap_ST_st1_fsm_0 bound to: 5'b00001 
+	Parameter ap_ST_st2_fsm_1 bound to: 5'b00010 
+	Parameter ap_ST_st3_fsm_2 bound to: 5'b00100 
+	Parameter ap_ST_st4_fsm_3 bound to: 5'b01000 
+	Parameter ap_ST_st5_fsm_4 bound to: 5'b10000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv32_4 bound to: 4 - type: integer 
+	Parameter ap_const_lv4_0 bound to: 4'b0000 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+	Parameter ap_const_lv4_8 bound to: 4'b1000 
+	Parameter ap_const_lv4_1 bound to: 4'b0001 
+	Parameter ap_const_lv29_1000 bound to: 29'b00000000000000001000000000000 
+	Parameter ap_const_lv32_D bound to: 13 - type: integer 
+	Parameter ap_const_lv32_1C bound to: 28 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2.v:69]
+INFO: [Synth 8-638] synthesizing module 'dct_dct_1d2_dct_coeff_table' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:43]
+	Parameter DataWidth bound to: 15 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'dct_dct_1d2_dct_coeff_table_rom' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:9]
+	Parameter DWIDTH bound to: 15 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:21]
+INFO: [Synth 8-3876] $readmem data file './dct_dct_1d2_dct_coeff_table_rom.dat' is read successfully [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:24]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_1d2_dct_coeff_table_rom' (3#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:9]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_1d2_dct_coeff_table' (4#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2_dct_coeff_table.v:43]
+INFO: [Synth 8-638] synthesizing module 'dct_mac_muladd_15s_16s_32ns_32_1' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'dct_mac_muladd_15s_16s_32ns_32_1_DSP48_0' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'dct_mac_muladd_15s_16s_32ns_32_1_DSP48_0' (5#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'dct_mac_muladd_15s_16s_32ns_32_1' (6#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_mac_muladd_15s_16s_32ns_32_1.v:34]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_1d2' (7#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_1d2.v:10]
+INFO: [Synth 8-256] done synthesizing module 'dct_dct_2d' (8#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:10]
+INFO: [Synth 8-256] done synthesizing module 'dct' (9#1) [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.v:12]
+WARNING: [Synth 8-3331] design dct_dct_1d2_dct_coeff_table has unconnected port reset
+WARNING: [Synth 8-3331] design dct_dct_2d_row_outbuf has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 357.473 ; gain = 150.633
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 357.473 ; gain = 150.633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc]
+Finished Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 662.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_fu_153_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_fu_191_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'tmp_4_cast_reg_420_reg[7:4]' into 'tmp_cast_reg_376_reg[7:4]' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:791]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_3_reg_438_reg' and it is trimmed from '8' to '6' bits. [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:366]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_2_reg_399_reg' and it is trimmed from '8' to '6' bits. [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct_dct_2d.v:360]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_fu_285_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond5_fu_186_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond4_fu_198_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond3_fu_226_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond2_fu_273_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_fu_313_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'tmp_1_i5_reg_355_reg[2:0]' into 'tmp_i_reg_314_reg[2:0]' [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.v:608]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_14_reg_337_reg' and it is trimmed from '8' to '6' bits. [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.v:278]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_i3_fu_231_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond1_i_fu_156_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_i_fu_196_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_i7_fu_271_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 11    
+	   2 Input      4 Bit       Adders := 12    
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	               15 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 27    
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	             1024 Bit         RAMs := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dct 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module dct_dct_2d_row_outbuf_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module dct_dct_1d2_dct_coeff_table_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
+Module dct_dct_1d2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module dct_dct_2d 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 6     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 15    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+DSP Report: Generating DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg, operation Mode is: (P or 0)+(A2*B'' or 0).
+DSP Report: register grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dct_coeff_table_U/dct_dct_1d2_dct_coeff_table_rom_U/q0_reg is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+DSP Report: register grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dct_coeff_table_load_reg_308_reg is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+DSP Report: register grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/src_load_reg_313_reg is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+DSP Report: register grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+DSP Report: operator grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dct_mac_muladd_15s_16s_32ns_32_1_U0/dct_mac_muladd_15s_16s_32ns_32_1_DSP48_0_U/p is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+DSP Report: operator grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dct_mac_muladd_15s_16s_32ns_32_1_U0/dct_mac_muladd_15s_16s_32ns_32_1_DSP48_0_U/m is absorbed into DSP grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp1_reg_117_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 662.898 ; gain = 456.059
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------------------------+------------+---------------+----------------+
+|Module Name                     | RTL Object | Depth x Width | Implemented As | 
++--------------------------------+------------+---------------+----------------+
+|dct_dct_1d2_dct_coeff_table_rom | p_0_out    | 64x15         | LUT            | 
+|dct                             | p_0_out    | 64x15         | LUT            | 
++--------------------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dct_dct_2d_row_outbuf_ram | ram_reg    | 64 x 16(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dct_dct_2d_row_outbuf_ram | ram_reg    | 64 x 16(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dct_dct_2d_row_outbuf_ram | ram_reg    | 64 x 16(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dct_dct_2d_row_outbuf_ram | ram_reg    | 64 x 16(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dct_dct_2d_row_outbuf_ram | ram_reg    | 64 x 16(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dct         | (P or 0)+(A2*B'' or 0) | 16     | 15     | -      | -      | 32     | 1    | 2    | -    | -    | -     | 0    | 1    | 
++------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[0]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[1]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[2]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[6]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[2]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[4]' (FDE) to 'tmp_i_reg_314_reg[4]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[2]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[3]' (FDE) to 'tmp_i_reg_314_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_28_cast_reg_319_reg[5]' (FDE) to 'tmp_i_reg_314_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[4]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[2]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[3]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[5]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[2]' (FDR) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[0]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[1]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[2]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[6]' (FDE) to 'grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[4]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[7]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[6]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[5]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[0]' (FDR) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[1]' (FDR) to 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[2]' (FDR) to 'tmp_30_cast_reg_350_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_30_cast_reg_350_reg[4]' (FDE) to 'tmp_1_i5_reg_355_reg[4]'
+INFO: [Synth 8-3886] merging instance 'tmp_30_cast_reg_350_reg[0]' (FDR) to 'tmp_30_cast_reg_350_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_30_cast_reg_350_reg[1]' (FDR) to 'tmp_30_cast_reg_350_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tmp_30_cast_reg_350_reg[2] )
+INFO: [Synth 8-3886] merging instance 'tmp_30_cast_reg_350_reg[3]' (FDE) to 'tmp_1_i5_reg_355_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_30_cast_reg_350_reg[5]' (FDE) to 'tmp_1_i5_reg_355_reg[5]'
+INFO: [Synth 8-3886] merging instance 'tmp_i_reg_314_reg[0]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_i_reg_314_reg[1]' (FD) to 'tmp_i_reg_314_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tmp_i_reg_314_reg[2] )
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[5]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dst_addr_reg_280_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[4]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dst_addr_reg_280_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[3]' (FDE) to 'grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/dst_addr_reg_280_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_i_reg_314_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[4]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[7]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[5]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_i_reg_314_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_i_reg_314_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_cast_reg_376_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_2_cast_reg_381_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[4]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[3]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_28_cast_reg_319_reg[5]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[4]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[3]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_20_cast_reg_267_reg[5]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_18_cast_reg_262_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_4_cast_reg_420_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[6]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/tmp_12_cast_reg_425_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[2]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[4]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[0]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[1]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[3]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (tmp_30_cast_reg_350_reg[5]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[5]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[4]) is unused and will be removed from module dct.
+WARNING: [Synth 8-3332] Sequential element (grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/tmp_24_cast_reg_285_reg[3]) is unused and will be removed from module dct.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 662.898 ; gain = 456.059
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 662.898 ; gain = 456.059
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 663.848 ; gain = 457.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 680.773 ; gain = 473.934
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance buf_2d_in_U/dct_dct_2d_row_outbuf_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance buf_2d_out_U/dct_dct_2d_row_outbuf_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance grp_dct_dct_2d_fu_148/row_outbuf_U/dct_dct_2d_row_outbuf_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance grp_dct_dct_2d_fu_148/col_outbuf_U/dct_dct_2d_row_outbuf_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance grp_dct_dct_2d_fu_148/col_inbuf_U/dct_dct_2d_row_outbuf_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 689.027 ; gain = 482.188
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |     5|
+|2     |DSP48E1_1 |     1|
+|3     |LUT1      |    30|
+|4     |LUT2      |    20|
+|5     |LUT3      |    63|
+|6     |LUT4      |    25|
+|7     |LUT5      |    33|
+|8     |LUT6      |    46|
+|9     |RAMB18E1  |     5|
+|10    |FDRE      |   166|
+|11    |FDSE      |     3|
++------+----------+------+
+
+Report Instance Areas: 
++------+----------------------------------+----------------------------+------+
+|      |Instance                          |Module                      |Cells |
++------+----------------------------------+----------------------------+------+
+|1     |top                               |                            |   397|
+|2     |  buf_2d_in_U                     |dct_dct_2d_row_outbuf       |     1|
+|3     |    dct_dct_2d_row_outbuf_ram_U   |dct_dct_2d_row_outbuf_ram_7 |     1|
+|4     |  buf_2d_out_U                    |dct_dct_2d_row_outbuf_0     |     1|
+|5     |    dct_dct_2d_row_outbuf_ram_U   |dct_dct_2d_row_outbuf_ram_6 |     1|
+|6     |  grp_dct_dct_2d_fu_148           |dct_dct_2d                  |   294|
+|7     |    col_inbuf_U                   |dct_dct_2d_row_outbuf_1     |    17|
+|8     |      dct_dct_2d_row_outbuf_ram_U |dct_dct_2d_row_outbuf_ram_5 |    17|
+|9     |    col_outbuf_U                  |dct_dct_2d_row_outbuf_2     |     1|
+|10    |      dct_dct_2d_row_outbuf_ram_U |dct_dct_2d_row_outbuf_ram_4 |     1|
+|11    |    grp_dct_dct_1d2_fu_171        |dct_dct_1d2                 |   133|
+|12    |    row_outbuf_U                  |dct_dct_2d_row_outbuf_3     |     1|
+|13    |      dct_dct_2d_row_outbuf_ram_U |dct_dct_2d_row_outbuf_ram   |     1|
++------+----------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 689.027 ; gain = 482.188
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 689.027 ; gain = 117.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 689.027 ; gain = 482.188
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+107 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 689.027 ; gain = 422.996
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 689.027 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 15:48:07 2016...
+[Tue May 31 15:48:12 2016] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:00 . Memory (MB): peak = 279.809 ; gain = 5.648
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 512.094 ; gain = 232.285
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 512.094 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 905.219 ; gain = 393.125
+[Tue May 31 15:48:41 2016] Launched impl_1...
+Run output will be captured here: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/runme.log
+[Tue May 31 15:48:41 2016] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log dct.vdi -applog -m64 -messageDb vivado.pb -mode batch -source dct.tcl -notrace
+
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source dct.tcl -notrace
+Command: open_checkpoint C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/dct.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.035 . Memory (MB): peak = 255.363 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/.Xil/Vivado-15024-XHDCBALAKR30/dcp/dct.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/.Xil/Vivado-15024-XHDCBALAKR30/dcp/dct.xdc]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.1 (64-bit) build 1538259
+open_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 509.160 ; gain = 257.266
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 512.484 ; gain = 3.324
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 9960792e
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 9960792e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 901.977 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 9960792e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 901.977 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 27 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: c72ac345
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.165 . Memory (MB): peak = 901.977 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 901.977 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: c72ac345
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.171 . Memory (MB): peak = 901.977 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 5 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 10
+Ending PowerOpt Patch Enables Task | Checksum: c72ac345
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Ending Power Optimization Task | Checksum: c72ac345
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 106.016
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1007.992 ; gain = 498.832
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/dct_drc_opted.rpt.
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 Pre-Place Cells
+Phase 1.1.1 Pre-Place Cells | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.1.2 IO and Clk Clean Up
+Phase 1.1.2 IO and Clk Clean Up | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.851 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.1.3 Implementation Feasibility check On IDelay
+Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.854 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.1.4 Commit IO Placement
+Phase 1.1.4 Commit IO Placement | Checksum: 00000000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.856 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a6077c36
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.857 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Init Lut Pin Assignment
+Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: d0aa774b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 1.2.1 Place Init Design | Checksum: dca55113
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 1.2 Build Placer Netlist Model | Checksum: dca55113
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 1.3 Constrain Clocks/Macros
+Phase 1.3 Constrain Clocks/Macros | Checksum: dca55113
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: dca55113
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 15db378e8
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 15db378e8
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2441c8c4f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 223ad8966
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 223ad8966
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 17d67b42f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 17d67b42f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 1bee34fc3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 205e0b2de
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 205e0b2de
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 205e0b2de
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 205e0b2de
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 updateClock Trees: PCOPT
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 270be9af9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4.1.2 Post Placement Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.281. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 2a24c5771
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 2a24c5771
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 2a24c5771
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4.3 Post Placement Cleanup
+Phase 4.3 Post Placement Cleanup | Checksum: 2a24c5771
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4.4 Placer Reporting
+Phase 4.4 Placer Reporting | Checksum: 2a24c5771
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+
+Phase 4.5 Final Placement Cleanup
+Phase 4.5 Final Placement Cleanup | Checksum: 1ea206c87
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1ea206c87
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Ending Placer Task | Checksum: fdafa545
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1007.992 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1007.992 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1007.992 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: 867a6ef8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Ending Physical Synthesis Task | Checksum: 155564b65
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1007.992 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1007.992 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: edf1282f ConstDB: 0 ShapeSum: 17f1e889 RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-198] Port "ap_rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "input_r_q0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "input_r_q0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: d317d0aa
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1075.773 ; gain = 67.781
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: d317d0aa
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1075.773 ; gain = 67.781
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: d317d0aa
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1082.652 ; gain = 74.660
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: d317d0aa
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1082.652 ; gain = 74.660
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 15e4d9bbf
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 1086.305 ; gain = 78.313
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.219  | TNS=0.000  | WHS=-0.131 | THS=-6.126 |
+
+Phase 2 Router Initialization | Checksum: 15946811b
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.305 ; gain = 78.313
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: d5e1c412
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.305 ; gain = 78.313
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 16ea795c4
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.383 ; gain = 78.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.863  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1cdf207b7
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.383 ; gain = 78.391
+Phase 4 Rip-up And Reroute | Checksum: 1cdf207b7
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.383 ; gain = 78.391
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 18e99641b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.406 ; gain = 78.414
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.978  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 18e99641b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.406 ; gain = 78.414
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 18e99641b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.406 ; gain = 78.414
+Phase 5 Delay and Skew Optimization | Checksum: 18e99641b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.406 ; gain = 78.414
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1a70753ae
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.414 ; gain = 78.422
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.978  | TNS=0.000  | WHS=0.117  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1a70753ae
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.414 ; gain = 78.422
+Phase 6 Post Hold Fix | Checksum: 1a70753ae
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.441 ; gain = 78.449
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0414725 %
+  Global Horizontal Routing Utilization  = 0.0540061 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1f56f6411
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1086.441 ; gain = 78.449
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1f56f6411
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1088.508 ; gain = 80.516
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a551569b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1088.508 ; gain = 80.516
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.978  | TNS=0.000  | WHS=0.117  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1a551569b
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1088.508 ; gain = 80.516
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 1088.508 ; gain = 80.516
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+60 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:43 . Memory (MB): peak = 1088.508 ; gain = 80.516
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1088.508 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/project.runs/impl_1/dct_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 15:50:25 2016...
+[Tue May 31 15:50:27 2016] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:46 . Memory (MB): peak = 913.223 ; gain = 6.457
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/.Xil/Vivado-15332-XHDCBALAKR30/dcp/dct.xdc]
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/dct.xdc:2]
+Finished Parsing XDC File [C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/impl/verilog/.Xil/Vivado-15332-XHDCBALAKR30/dcp/dct.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1002.707 ; gain = 0.020
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1002.707 ; gain = 0.020
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1027.195 ; gain = 0.000
+
+
+Implementation tool: Xilinx Vivado v.2016.1
+Project:             dct_prj
+Solution:            solution1
+Device target:       xc7z020clg484-1
+Report date:         Tue May 31 15:50:29 +0530 2016
+
+#=== Resource usage ===
+SLICE:           67
+LUT:            165
+FF:             169
+DSP:              1
+BRAM:             5
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved:    5.022
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 15:50:30 2016...

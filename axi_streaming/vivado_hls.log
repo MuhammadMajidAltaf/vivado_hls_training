@@ -1,0 +1,70 @@
+INFO: [HLS 200-10] Running 'E:/Tools/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'fdb' on host 'arclt8' (Windows NT_amd64 version 6.1) on Tue Aug 09 13:56:30 +0200 2016
+INFO: [HLS 200-10] In directory 'C:/training/Vivado_2016.1/hls/demos/axi_streaming'
+INFO: [HLS 200-10] Opening project 'C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj'.
+INFO: [HLS 200-10] Adding design file 'axi_interfaces.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'axi_interfaces_test.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'result.golden.dat' to the project
+INFO: [HLS 200-10] Opening solution 'C:/training/Vivado_2016.1/hls/demos/axi_streaming/axi_interfaces_prj/solution4'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [HLS 200-10] Analyzing design file 'axi_interfaces.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-501] Unrolling loop 'For_Loop' (axi_interfaces.c:64) in function 'axi_interfaces' partially with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'd_o' (axi_interfaces.c:57) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'd_i' (axi_interfaces.c:57) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-531] Rewinding loop 'For_Loop' (axi_interfaces.c:64) in function 'axi_interfaces'.
+INFO: [HLS 200-111] Elapsed time: 11.582 seconds; current memory usage: 72.7 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'axi_interfaces' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'axi_interfaces' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'For_Loop'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (axi_interfaces.c:66) of variable 'tmp_3', axi_interfaces.c:66 on array 'acc' and 'load' operation ('acc_load', axi_interfaces.c:66) on array 'acc'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('acc_load_4', axi_interfaces.c:66) on array 'acc' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 8, Depth: 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.121 seconds; current memory usage: 73.6 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'axi_interfaces' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.073 seconds; current memory usage: 73.4 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axi_interfaces' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_0' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_1' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_2' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_3' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_4' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_5' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_6' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_o_7' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_0' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_1' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_2' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_3' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_4' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_5' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_6' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axi_interfaces/d_i_7' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'axi_interfaces' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axi_interfaces'.
+INFO: [HLS 200-111] Elapsed time: 0.167 seconds; current memory usage: 73.5 MB.
+INFO: [RTMG 210-278] Implementing memory 'axi_interfaces_acc_ram' using block RAMs with power-on initialization.
+INFO: [HLS 200-10] Finished generating all RTL models.
+INFO: [SYSC 207-301] Generating SystemC RTL for axi_interfaces.
+INFO: [VHDL 208-304] Generating VHDL RTL for axi_interfaces.
+INFO: [VLOG 209-307] Generating Verilog RTL for axi_interfaces.
+INFO: [HLS 200-112] Total elapsed time: 12.957 seconds; peak memory usage: 73.6 MB.

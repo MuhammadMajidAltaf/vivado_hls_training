@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_dct_1d2'
+================================================================
+* Date:           Tue May 31 11:50:13 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        dct_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.38|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  209|  209|  209|  209|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                   |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- DCT_Outer_Loop   |  208|  208|        26|          -|          -|     8|    no    |
+        | + DCT_Inner_Loop  |   24|   24|         3|          -|          -|     8|    no    |
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	5  / true
+5 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: tmp_21_read [1/1] 1.04ns
+:0  %tmp_21_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_21)
+
+ST_1: tmp_2_read [1/1] 1.04ns
+:1  %tmp_2_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_2)
+
+ST_1: tmp_6 [1/1] 0.00ns
+:2  %tmp_6 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_21_read, i3 0)
+
+ST_1: tmp_18_cast [1/1] 0.00ns
+:3  %tmp_18_cast = zext i7 %tmp_6 to i8
+
+ST_1: tmp_8 [1/1] 0.00ns
+:4  %tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_2_read, i3 0)
+
+ST_1: tmp_20_cast [1/1] 0.00ns
+:5  %tmp_20_cast = zext i7 %tmp_8 to i8
+
+ST_1: stg_12 [1/1] 1.57ns
+:6  br label %1
+
+
+ <State 2>: 1.88ns
+ST_2: k [1/1] 0.00ns
+:0  %k = phi i4 [ 0, %0 ], [ %k_1, %5 ]
+
+ST_2: exitcond1 [1/1] 1.88ns
+:1  %exitcond1 = icmp eq i4 %k, -8
+
+ST_2: empty [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_2: k_1 [1/1] 0.80ns
+:3  %k_1 = add i4 %k, 1
+
+ST_2: stg_17 [1/1] 0.00ns
+:4  br i1 %exitcond1, label %6, label %2
+
+ST_2: stg_18 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str) nounwind
+
+ST_2: tmp_4 [1/1] 0.00ns
+:1  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str) nounwind
+
+ST_2: tmp_cast [1/1] 0.00ns
+:2  %tmp_cast = zext i4 %k to i8
+
+ST_2: tmp_9 [1/1] 1.72ns
+:3  %tmp_9 = add i8 %tmp_cast, %tmp_18_cast
+
+ST_2: tmp_22_cast [1/1] 0.00ns
+:4  %tmp_22_cast = zext i8 %tmp_9 to i64
+
+ST_2: dst_addr [1/1] 0.00ns
+:5  %dst_addr = getelementptr [64 x i16]* %dst, i64 0, i64 %tmp_22_cast
+
+ST_2: tmp_10 [1/1] 0.00ns
+:6  %tmp_10 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %k, i3 0)
+
+ST_2: tmp_24_cast [1/1] 0.00ns
+:7  %tmp_24_cast = zext i7 %tmp_10 to i8
+
+ST_2: stg_26 [1/1] 1.57ns
+:8  br label %3
+
+ST_2: stg_27 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 3>: 5.15ns
+ST_3: n [1/1] 0.00ns
+:0  %n = phi i4 [ 0, %2 ], [ %n_1, %4 ]
+
+ST_3: tmp1 [1/1] 0.00ns
+:1  %tmp1 = phi i32 [ 0, %2 ], [ %tmp_3, %4 ]
+
+ST_3: exitcond [1/1] 1.88ns
+:2  %exitcond = icmp eq i4 %n, -8
+
+ST_3: empty_12 [1/1] 0.00ns
+:3  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_3: n_1 [1/1] 0.80ns
+:4  %n_1 = add i4 %n, 1
+
+ST_3: stg_33 [1/1] 0.00ns
+:5  br i1 %exitcond, label %5, label %4
+
+ST_3: tmp_8_cast [1/1] 0.00ns
+:1  %tmp_8_cast = zext i4 %n to i8
+
+ST_3: tmp_11 [1/1] 1.72ns
+:2  %tmp_11 = add i8 %tmp_20_cast, %tmp_8_cast
+
+ST_3: tmp_25_cast [1/1] 0.00ns
+:3  %tmp_25_cast = zext i8 %tmp_11 to i64
+
+ST_3: src_addr [1/1] 0.00ns
+:4  %src_addr = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_25_cast
+
+ST_3: tmp_12 [1/1] 1.72ns
+:5  %tmp_12 = add i8 %tmp_24_cast, %tmp_8_cast
+
+ST_3: tmp_26_cast [1/1] 0.00ns
+:6  %tmp_26_cast = zext i8 %tmp_12 to i64
+
+ST_3: dct_coeff_table_addr [1/1] 0.00ns
+:7  %dct_coeff_table_addr = getelementptr [64 x i15]* @dct_coeff_table, i64 0, i64 %tmp_26_cast
+
+ST_3: dct_coeff_table_load [2/2] 2.39ns
+:8  %dct_coeff_table_load = load i15* %dct_coeff_table_addr, align 2
+
+ST_3: src_load [2/2] 2.71ns
+:10  %src_load = load i16* %src_addr, align 2
+
+ST_3: tmp [1/1] 0.00ns
+:0  %tmp = trunc i32 %tmp1 to i29
+
+ST_3: tmp_s [1/1] 2.44ns
+:1  %tmp_s = add i29 4096, %tmp
+
+ST_3: tmp_7 [1/1] 0.00ns
+:2  %tmp_7 = call i16 @_ssdm_op_PartSelect.i16.i29.i32.i32(i29 %tmp_s, i32 13, i32 28)
+
+ST_3: stg_46 [1/1] 2.71ns
+:3  store i16 %tmp_7, i16* %dst_addr, align 2
+
+ST_3: empty_13 [1/1] 0.00ns
+:4  %empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str, i32 %tmp_4) nounwind
+
+ST_3: stg_48 [1/1] 0.00ns
+:5  br label %1
+
+
+ <State 4>: 2.71ns
+ST_4: dct_coeff_table_load [1/2] 2.39ns
+:8  %dct_coeff_table_load = load i15* %dct_coeff_table_addr, align 2
+
+ST_4: src_load [1/2] 2.71ns
+:10  %src_load = load i16* %src_addr, align 2
+
+
+ <State 5>: 6.38ns
+ST_5: stg_51 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1) nounwind
+
+ST_5: coeff_cast [1/1] 0.00ns
+:9  %coeff_cast = sext i15 %dct_coeff_table_load to i31
+
+ST_5: tmp_9_cast [1/1] 0.00ns
+:11  %tmp_9_cast = sext i16 %src_load to i31
+
+ST_5: tmp_1 [1/1] 3.36ns
+:12  %tmp_1 = mul i31 %coeff_cast, %tmp_9_cast
+
+ST_5: tmp_1_cast [1/1] 0.00ns
+:13  %tmp_1_cast = sext i31 %tmp_1 to i32
+
+ST_5: tmp_3 [1/1] 3.02ns
+:14  %tmp_3 = add nsw i32 %tmp1, %tmp_1_cast
+
+ST_5: stg_57 [1/1] 0.00ns
+:15  br label %3
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1464689921">
+  <File Type="OPT-TIMING" Name="dct_timing_summary_opted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="dct_physopt.dcp"/>
+  <File Type="PA-DCP" Name="dct.dcp"/>
+  <File Type="OPT-DCP" Name="dct_opt.dcp"/>
+  <File Type="ROUTE-STATUS-PB" Name="dct_route_status.pb"/>
+  <File Type="PA-TCL" Name="dct.tcl"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="dct_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="dct_timing_summary_init.rpt"/>
+  <File Type="OPT-DRC" Name="dct_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="dct_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="dct.hwdef"/>
+  <File Type="RDI-RDI" Name="dct.vdi"/>
+  <File Type="PWROPT-DRC" Name="dct_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="dct_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="dct_placed.dcp"/>
+  <File Type="PLACE-IO" Name="dct_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="dct_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="dct_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="dct_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="dct_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="dct_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="dct_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="dct_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="dct_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="dct_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="dct_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="dct_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="dct_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="dct_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="dct_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="dct_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="dct_methodology_drc_routed.rpt"/>
+  <File Type="BG-BIT" Name="dct.bit"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dct_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="dct_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="dct_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="dct_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="dct_route_status.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="dct_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="dct_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="dct_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="dct_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="dct_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dct_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dct_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dct_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dct_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dct_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIN" Name="dct.bin"/>
+  <File Type="BITSTR-MSK" Name="dct.msk"/>
+  <File Type="BITSTR-RBT" Name="dct.rbt"/>
+  <File Type="BITSTR-NKY" Name="dct.nky"/>
+  <File Type="BITSTR-BMM" Name="dct_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="dct.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="dct.sysdef"/>
+  <File Type="BG-BGN" Name="dct.bgn"/>
+  <File Type="BG-DRC" Name="dct.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/dct_dct_1d2_dct_coeff_table.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/dct_mac_muladd_15s_16s_32ns_32_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/dct_dct_1d2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/dct_dct_2d_row_outbuf.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/dct_dct_2d.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/dct.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="dct"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/dct.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

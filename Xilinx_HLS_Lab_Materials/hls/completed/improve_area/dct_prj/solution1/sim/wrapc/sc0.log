@@ -1,0 +1,19 @@
+   Build using "C:/Xilinx/Vivado_HLS/2016.1/msys/bin/g++.exe"
+   Compiling apatb_dct.cpp
+   Compiling (apcc) dct.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Sat Jun 11 12:02:17 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_area/dct_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/22763507774538
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) dct_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Sat Jun 11 12:02:20 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_area/dct_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/117683510888662
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

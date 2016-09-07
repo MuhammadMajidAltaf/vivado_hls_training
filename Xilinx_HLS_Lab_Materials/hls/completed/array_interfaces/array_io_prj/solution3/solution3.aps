@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <schedule model="array_io"/>
+    </config>
+    <name>
+        <value string="solution3"/>
+    </name>
+    <project>
+        <value string="array_io_prj"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7k160t:fbg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
+        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="4"/>
+    </clockList>
+</AutoPilot:solution>
+

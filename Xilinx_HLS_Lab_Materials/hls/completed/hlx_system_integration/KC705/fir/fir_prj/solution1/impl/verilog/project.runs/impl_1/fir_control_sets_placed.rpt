@@ -1,0 +1,66 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Fri Apr 29 12:40:05 2016
+| Host         : XHDVENKATE30 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file fir_control_sets_placed.rpt
+| Design       : fir
+| Device       : xc7k325t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    34 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              17 |            9 |
+| Yes          | No                    | No                     |              78 |           30 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             150 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------+--------------------------------------+------------------+----------------+
+| Clock Signal |               Enable Signal              |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------+--------------------------------------+------------------+----------------+
+|  ap_clk      |                                          |                                      |                1 |              1 |
+|  ap_clk      | tmp_4_reg_199[3]_i_1_n_2                 |                                      |                2 |              4 |
+|  ap_clk      | fir_fir_io_s_axi_U/waddr                 |                                      |                1 |              5 |
+|  ap_clk      | ap_sig_128                               |                                      |                2 |              5 |
+|  ap_clk      |                                          | fir_fir_io_s_axi_U/SR[0]             |                9 |             17 |
+|  ap_clk      | p_pn_reg_12204_out                       | p_pn_reg_122                         |                3 |             17 |
+|  ap_clk      | fir_fir_io_s_axi_U/int_x[31]_i_1_n_2     | fir_fir_io_s_axi_U/SR[0]             |                7 |             32 |
+|  ap_clk      | fir_fir_io_s_axi_U/int_y[31]_i_1_n_2     | fir_fir_io_s_axi_U/SR[0]             |                6 |             32 |
+|  ap_clk      | fir_fir_io_s_axi_U/rdata[31]_i_2_n_2     | fir_fir_io_s_axi_U/rdata[31]_i_1_n_2 |               10 |             32 |
+|  ap_clk      | fir_fir_io_s_axi_U/E[0]                  |                                      |                9 |             32 |
+|  ap_clk      | shift_reg_U/fir_shift_reg_ram_U/p_0_in_0 |                                      |                8 |             32 |
+|  ap_clk      | shift_reg_U/fir_shift_reg_ram_U/E[0]     |                                      |               16 |             32 |
+|  ap_clk      | ap_sig_141                               | fir_fir_io_s_axi_U/acc_reg_97        |                9 |             37 |
++--------------+------------------------------------------+--------------------------------------+------------------+----------------+
+
+

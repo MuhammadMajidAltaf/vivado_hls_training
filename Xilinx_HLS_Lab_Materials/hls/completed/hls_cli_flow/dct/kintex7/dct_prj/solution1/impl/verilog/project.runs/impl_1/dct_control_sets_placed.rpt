@@ -1,0 +1,86 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Wed Jun 01 16:46:54 2016
+| Host         : XHDCBALAKR30 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file dct_control_sets_placed.rpt
+| Design       : dct
+| Device       : xc7k70t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   128 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              25 |           10 |
+| Yes          | No                    | No                     |              86 |           28 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              48 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                  Enable Signal                                  |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_79                                                 |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_95                                                 |                                                                  |                2 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/ap_sig_62                          |                                                                  |                2 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/ap_sig_95                          | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/n_reg_106           |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/grp_dct_dct_1d2_fu_171_dst_we0     | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/k_reg_95            |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/grp_dct_dct_2d_fu_148_in_block_ce0 |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_203                                                | grp_dct_dct_2d_fu_148/i_1_reg_126                                |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/E[0]                               | grp_dct_dct_2d_fu_148/i_2_reg_1370                               |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/i_reg_103_reg[3][0]                | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/i_reg_103_reg[0][0] |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_53                                                 |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_62                                                 |                                                                  |                2 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_104                                                |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_sig_120                                                |                                                                  |                2 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_2d_fu_148_out_block_we0                       | grp_dct_dct_2d_fu_148/i_3_reg_160                                |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/i_1_reg_1260                                              |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/i_3_reg_1600                                              |                                                                  |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/j_1_reg_14905_out                                         | grp_dct_dct_2d_fu_148/j_1_reg_1490                               |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/j_reg_11503_out                                           | grp_dct_dct_2d_fu_148/j_reg_1150                                 |                2 |              4 |
+|  ap_clk      | ap_sig_50                                                                       |                                                                  |                1 |              4 |
+|  ap_clk      | ap_sig_155                                                                      | c_i_reg_115                                                      |                1 |              4 |
+|  ap_clk      | ap_sig_83                                                                       |                                                                  |                1 |              4 |
+|  ap_clk      | ap_sig_99                                                                       |                                                                  |                1 |              4 |
+|  ap_clk      | input_r_ce0                                                                     |                                                                  |                1 |              4 |
+|  ap_clk      | output_r_we0                                                                    | c_i6_reg_137                                                     |                1 |              4 |
+|  ap_clk      | r_i2_reg_1260                                                                   | grp_dct_dct_2d_fu_148/SR[0]                                      |                1 |              4 |
+|  ap_clk      | r_i_reg_1040                                                                    | r_i_reg_104                                                      |                1 |              4 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_CS_fsm[10]_i_1_n_8                                     |                                                                  |                1 |              6 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/ap_CS_fsm[5]_i_1__0_n_8                                   |                                                                  |                3 |              6 |
+|  ap_clk      | ap_NS_fsm[3]                                                                    |                                                                  |                1 |              6 |
+|  ap_clk      | grp_dct_dct_2d_fu_148/grp_dct_dct_1d2_fu_171/n_reg_1060                         |                                                                  |                2 |              6 |
+|  ap_clk      | tmp_4_i_reg_373[5]_i_1_n_8                                                      |                                                                  |                3 |              6 |
+|  ap_clk      |                                                                                 |                                                                  |                3 |              9 |
+|  ap_clk      |                                                                                 | ap_rst                                                           |               10 |             25 |
++--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+
+

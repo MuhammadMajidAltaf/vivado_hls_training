@@ -1,0 +1,485 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter_rgb2yuv'
+================================================================
+* Date:           Fri Jun 10 18:37:24 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        yuv_filter_prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.34|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  40009|  2457609|  40009|  2457609|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |                                 |     Latency     | Iteration|  Initiation Interval  |       Trip      |          |
+        |            Loop Name            |  min  |   max   |  Latency |  achieved |   target  |      Count      | Pipelined|
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |- RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y  |  40007|  2457607|         9|          1|          1| 40000 ~ 2457600 |    yes   |
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 11
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 9, States = { 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	11  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	2  / true
+11 --> 
+* FSM state operations: 
+
+ <State 1>: 6.38ns
+ST_1: in_height_read11 [1/1] 0.00ns
+:0  %in_height_read11 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_height_read)
+
+ST_1: in_width_read_2 [1/1] 0.00ns
+:1  %in_width_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_width_read)
+
+ST_1: cast [1/1] 0.00ns
+:2  %cast = zext i16 %in_width_read_2 to i32
+
+ST_1: cast1 [1/1] 0.00ns
+:3  %cast1 = zext i16 %in_height_read11 to i32
+
+ST_1: bound [1/1] 6.38ns
+:4  %bound = mul i32 %cast1, %cast
+
+ST_1: stg_17 [1/1] 1.57ns
+:5  br label %1
+
+
+ <State 2>: 7.35ns
+ST_2: indvar_flatten [1/1] 0.00ns
+:0  %indvar_flatten = phi i32 [ 0, %0 ], [ %indvar_flatten_next, %.reset ]
+
+ST_2: x [1/1] 0.00ns
+:1  %x = phi i16 [ 0, %0 ], [ %tmp_mid2_v, %.reset ]
+
+ST_2: y [1/1] 0.00ns
+:2  %y = phi i16 [ 0, %0 ], [ %y_2, %.reset ]
+
+ST_2: exitcond_flatten [1/1] 2.52ns
+:3  %exitcond_flatten = icmp eq i32 %indvar_flatten, %bound
+
+ST_2: indvar_flatten_next [1/1] 2.44ns
+:4  %indvar_flatten_next = add i32 %indvar_flatten, 1
+
+ST_2: stg_23 [1/1] 0.00ns
+:5  br i1 %exitcond_flatten, label %2, label %.reset
+
+ST_2: x_2 [1/1] 1.96ns
+.reset:0  %x_2 = add i16 1, %x
+
+ST_2: exitcond9 [1/1] 2.28ns
+.reset:3  %exitcond9 = icmp eq i16 %y, %in_height_read11
+
+ST_2: y_mid2 [1/1] 1.37ns
+.reset:4  %y_mid2 = select i1 %exitcond9, i16 0, i16 %y
+
+ST_2: tmp_mid2_v [1/1] 1.37ns
+.reset:5  %tmp_mid2_v = select i1 %exitcond9, i16 %x_2, i16 %x
+
+ST_2: tmp [1/1] 0.00ns
+.reset:6  %tmp = trunc i16 %tmp_mid2_v to i13
+
+ST_2: p_shl_cast [1/1] 0.00ns
+.reset:7  %p_shl_cast = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp, i10 0)
+
+ST_2: tmp_20 [1/1] 0.00ns
+.reset:8  %tmp_20 = trunc i16 %tmp_mid2_v to i15
+
+ST_2: p_shl7_cast [1/1] 0.00ns
+.reset:9  %p_shl7_cast = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_20, i8 0)
+
+ST_2: tmp_s [1/1] 1.85ns
+.reset:10  %tmp_s = add i23 %p_shl_cast, %p_shl7_cast
+
+ST_2: tmp_cast [1/1] 0.00ns
+.reset:14  %tmp_cast = zext i16 %y_mid2 to i23
+
+ST_2: tmp_22 [1/1] 1.85ns
+.reset:15  %tmp_22 = add i23 %tmp_cast, %tmp_s
+
+ST_2: y_2 [1/1] 1.96ns
+.reset:79  %y_2 = add i16 1, %y_mid2
+
+
+ <State 3>: 2.61ns
+ST_3: tmp_24_cast [1/1] 0.00ns
+.reset:16  %tmp_24_cast = zext i23 %tmp_22 to i64
+
+ST_3: in_channels_ch1_addr [1/1] 0.00ns
+.reset:17  %in_channels_ch1_addr = getelementptr [2457600 x i8]* %in_channels_ch1, i64 0, i64 %tmp_24_cast
+
+ST_3: in_channels_ch2_addr [1/1] 0.00ns
+.reset:18  %in_channels_ch2_addr = getelementptr [2457600 x i8]* %in_channels_ch2, i64 0, i64 %tmp_24_cast
+
+ST_3: R [4/4] 2.61ns
+.reset:23  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_3: G [4/4] 2.61ns
+.reset:24  %G = load i8* %in_channels_ch2_addr, align 1
+
+
+ <State 4>: 2.61ns
+ST_4: in_channels_ch3_addr [1/1] 0.00ns
+.reset:19  %in_channels_ch3_addr = getelementptr [2457600 x i8]* %in_channels_ch3, i64 0, i64 %tmp_24_cast
+
+ST_4: R [3/4] 2.61ns
+.reset:23  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_4: G [3/4] 2.61ns
+.reset:24  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_4: B [4/4] 2.61ns
+.reset:25  %B = load i8* %in_channels_ch3_addr, align 1
+
+
+ <State 5>: 2.61ns
+ST_5: R [2/4] 2.61ns
+.reset:23  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_5: G [2/4] 2.61ns
+.reset:24  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_5: B [3/4] 2.61ns
+.reset:25  %B = load i8* %in_channels_ch3_addr, align 1
+
+
+ <State 6>: 2.61ns
+ST_6: R [1/4] 2.61ns
+.reset:23  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_6: G [1/4] 2.61ns
+.reset:24  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_6: B [2/4] 2.61ns
+.reset:25  %B = load i8* %in_channels_ch3_addr, align 1
+
+
+ <State 7>: 6.38ns
+ST_7: B [1/4] 2.61ns
+.reset:25  %B = load i8* %in_channels_ch3_addr, align 1
+
+ST_7: tmp_33_cast1 [1/1] 0.00ns
+.reset:26  %tmp_33_cast1 = zext i8 %R to i16
+
+ST_7: tmp_35_cast1 [1/1] 0.00ns
+.reset:32  %tmp_35_cast1 = zext i8 %G to i16
+
+ST_7: tmp_27 [1/1] 6.38ns
+.reset:50  %tmp_27 = mul i16 -74, %tmp_35_cast1
+
+ST_7: tmp_31 [1/1] 6.38ns
+.reset:62  %tmp_31 = mul i16 122, %tmp_33_cast1
+
+
+ <State 8>: 8.34ns
+ST_8: tmp_33_cast2 [1/1] 0.00ns
+.reset:27  %tmp_33_cast2 = zext i8 %R to i15
+
+ST_8: p_shl5 [1/1] 0.00ns
+.reset:28  %p_shl5 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %R, i6 0)
+
+ST_8: p_shl5_cast [1/1] 0.00ns
+.reset:29  %p_shl5_cast = zext i14 %p_shl5 to i15
+
+ST_8: p_shl6 [1/1] 0.00ns
+.reset:30  %p_shl6 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %R, i1 false)
+
+ST_8: p_shl6_cast [1/1] 0.00ns
+.reset:31  %p_shl6_cast = zext i9 %p_shl6 to i15
+
+ST_8: tmp_35_cast2 [1/1] 0.00ns
+.reset:33  %tmp_35_cast2 = zext i8 %G to i9
+
+ST_8: p_shl4 [1/1] 0.00ns
+.reset:34  %p_shl4 = call i15 @_ssdm_op_BitConcatenate.i15.i8.i7(i8 %G, i7 0)
+
+ST_8: p_shl4_cast [1/1] 0.00ns
+.reset:35  %p_shl4_cast = zext i15 %p_shl4 to i16
+
+ST_8: tmp_37_cast1 [1/1] 0.00ns
+.reset:36  %tmp_37_cast1 = zext i8 %B to i13
+
+ST_8: tmp_23 [1/1] 3.36ns
+.reset:37  %tmp_23 = mul i13 25, %tmp_37_cast1
+
+ST_8: tmp2 [1/1] 1.96ns
+.reset:38  %tmp2 = add i15 %p_shl6_cast, %p_shl5_cast
+
+ST_8: tmp2_cast [1/1] 0.00ns
+.reset:39  %tmp2_cast = zext i15 %tmp2 to i16
+
+ST_8: tmp1 [1/1] 1.73ns
+.reset:40  %tmp1 = add i16 %tmp2_cast, %p_shl4_cast
+
+ST_8: tmp4 [1/1] 1.84ns
+.reset:41  %tmp4 = add i9 128, %tmp_35_cast2
+
+ST_8: tmp4_cast [1/1] 0.00ns
+.reset:42  %tmp4_cast = zext i9 %tmp4 to i13
+
+ST_8: tmp3 [1/1] 3.02ns
+.reset:43  %tmp3 = add i13 %tmp4_cast, %tmp_23
+
+ST_8: tmp3_cast [1/1] 0.00ns
+.reset:44  %tmp3_cast = zext i13 %tmp3 to i16
+
+ST_8: tmp_24 [1/1] 1.73ns
+.reset:45  %tmp_24 = add i16 %tmp3_cast, %tmp1
+
+ST_8: tmp_25 [1/1] 0.00ns
+.reset:46  %tmp_25 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_24, i32 8, i32 15)
+
+ST_8: tmp_26 [1/1] 3.36ns
+.reset:48  %tmp_26 = mul i15 -38, %tmp_33_cast2
+
+ST_8: tmp_44_cast [1/1] 0.00ns
+.reset:49  %tmp_44_cast = sext i15 %tmp_26 to i16
+
+ST_8: p_shl2 [1/1] 0.00ns
+.reset:51  %p_shl2 = call i15 @_ssdm_op_BitConcatenate.i15.i8.i7(i8 %B, i7 0)
+
+ST_8: p_shl2_cast [1/1] 0.00ns
+.reset:52  %p_shl2_cast = zext i15 %p_shl2 to i16
+
+ST_8: p_shl3 [1/1] 0.00ns
+.reset:53  %p_shl3 = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %B, i4 0)
+
+ST_8: p_shl3_cast9 [1/1] 0.00ns
+.reset:54  %p_shl3_cast9 = zext i12 %p_shl3 to i13
+
+ST_8: p_shl3_cast [1/1] 0.00ns
+.reset:55  %p_shl3_cast = zext i12 %p_shl3 to i16
+
+ST_8: tmp_28 [1/1] 1.96ns
+.reset:56  %tmp_28 = sub i16 %p_shl2_cast, %p_shl3_cast
+
+ST_8: tmp5 [1/1] 3.02ns
+.reset:57  %tmp5 = add i16 %tmp_44_cast, %tmp_27
+
+ST_8: tmp6 [1/1] 1.73ns
+.reset:58  %tmp6 = add i16 128, %tmp_28
+
+ST_8: tmp_29 [1/1] 1.73ns
+.reset:59  %tmp_29 = add i16 %tmp6, %tmp5
+
+ST_8: tmp_30 [1/1] 0.00ns
+.reset:60  %tmp_30 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_29, i32 8, i32 15)
+
+ST_8: tmp_32 [1/1] 3.36ns
+.reset:63  %tmp_32 = mul i16 -94, %tmp_35_cast1
+
+ST_8: p_neg [1/1] 1.84ns
+.reset:64  %p_neg = sub i13 0, %p_shl3_cast9
+
+ST_8: p_neg_cast [1/1] 0.00ns
+.reset:65  %p_neg_cast = sext i13 %p_neg to i14
+
+ST_8: p_shl1 [1/1] 0.00ns
+.reset:66  %p_shl1 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %B, i1 false)
+
+ST_8: p_shl1_cast [1/1] 0.00ns
+.reset:67  %p_shl1_cast = zext i9 %p_shl1 to i14
+
+ST_8: tmp_33 [1/1] 1.73ns
+.reset:68  %tmp_33 = sub i14 %p_neg_cast, %p_shl1_cast
+
+ST_8: tmp7 [1/1] 3.02ns
+.reset:69  %tmp7 = add i16 %tmp_31, %tmp_32
+
+ST_8: tmp8 [1/1] 1.73ns
+.reset:70  %tmp8 = add i14 128, %tmp_33
+
+ST_8: tmp8_cast [1/1] 0.00ns
+.reset:71  %tmp8_cast = sext i14 %tmp8 to i16
+
+ST_8: tmp_34 [1/1] 1.96ns
+.reset:72  %tmp_34 = add i16 %tmp8_cast, %tmp7
+
+ST_8: tmp_35 [1/1] 0.00ns
+.reset:73  %tmp_35 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_34, i32 8, i32 15)
+
+
+ <State 9>: 4.33ns
+ST_9: out_channels_ch1_addr [1/1] 0.00ns
+.reset:20  %out_channels_ch1_addr = getelementptr [2457600 x i8]* %out_channels_ch1, i64 0, i64 %tmp_24_cast
+
+ST_9: out_channels_ch2_addr [1/1] 0.00ns
+.reset:21  %out_channels_ch2_addr = getelementptr [2457600 x i8]* %out_channels_ch2, i64 0, i64 %tmp_24_cast
+
+ST_9: out_channels_ch3_addr [1/1] 0.00ns
+.reset:22  %out_channels_ch3_addr = getelementptr [2457600 x i8]* %out_channels_ch3, i64 0, i64 %tmp_24_cast
+
+ST_9: Y [1/1] 1.72ns
+.reset:47  %Y = add i8 16, %tmp_25
+
+ST_9: U [1/1] 1.37ns
+.reset:61  %U = xor i8 %tmp_30, -128
+
+ST_9: V [1/1] 1.37ns
+.reset:74  %V = xor i8 %tmp_35, -128
+
+ST_9: stg_104 [2/2] 2.61ns
+.reset:75  store i8 %Y, i8* %out_channels_ch1_addr, align 1
+
+ST_9: stg_105 [2/2] 2.61ns
+.reset:76  store i8 %U, i8* %out_channels_ch2_addr, align 1
+
+ST_9: stg_106 [2/2] 2.61ns
+.reset:77  store i8 %V, i8* %out_channels_ch3_addr, align 1
+
+
+ <State 10>: 2.61ns
+ST_10: stg_107 [1/1] 0.00ns
+.reset:1  call void (...)* @_ssdm_op_SpecLoopName([30 x i8]* @RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_s)
+
+ST_10: stg_108 [1/1] 0.00ns
+.reset:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 40000, i64 2457600, i64 784400)
+
+ST_10: stg_109 [1/1] 0.00ns
+.reset:11  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str2) nounwind
+
+ST_10: tmp_21 [1/1] 0.00ns
+.reset:12  %tmp_21 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str2)
+
+ST_10: stg_111 [1/1] 0.00ns
+.reset:13  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_10: stg_112 [1/2] 2.61ns
+.reset:75  store i8 %Y, i8* %out_channels_ch1_addr, align 1
+
+ST_10: stg_113 [1/2] 2.61ns
+.reset:76  store i8 %U, i8* %out_channels_ch2_addr, align 1
+
+ST_10: stg_114 [1/2] 2.61ns
+.reset:77  store i8 %V, i8* %out_channels_ch3_addr, align 1
+
+ST_10: empty [1/1] 0.00ns
+.reset:78  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str2, i32 %tmp_21)
+
+ST_10: stg_116 [1/1] 0.00ns
+.reset:80  br label %1
+
+
+ <State 11>: 0.00ns
+ST_11: mrv [1/1] 0.00ns
+:0  %mrv = insertvalue { i16, i16 } undef, i16 %in_width_read_2, 0
+
+ST_11: mrv_1 [1/1] 0.00ns
+:1  %mrv_1 = insertvalue { i16, i16 } %mrv, i16 %in_height_read11, 1
+
+ST_11: stg_119 [1/1] 0.00ns
+:2  ret { i16, i16 } %mrv_1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

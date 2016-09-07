@@ -1,0 +1,459 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Fri Jun 10 13:58:14 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        yuv_filter_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     11.19|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+----------+--------+----------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min  |    max   |   min  |    max   |   Type  |
+    +--------+----------+--------+----------+---------+
+    |  921205|  56536325|  921206|  56536326|   none  |
+    +--------+----------+--------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |                     |      Latency      |  Iteration  |  Initiation Interval  |    Trip    |          |
+        |      Loop Name      |   min  |    max   |   Latency   |  achieved |   target  |    Count   | Pipelined|
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |- YUV_SCALE_LOOP_X   |  280400|  17207040| 1402 ~ 8962 |          -|          -| 200 ~ 1920 |    no    |
+        | + YUV_SCALE_LOOP_Y  |    1400|      8960|            7|          -|          -| 200 ~ 1280 |    no    |
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 11
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	11  / (exitcond1_i)
+	4  / (!exitcond1_i)
+4 --> 
+	5  / (!exitcond_i)
+	3  / (exitcond_i)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	4  / true
+11 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: p_yuv_channels_ch1 [1/1] 0.00ns
+:17  %p_yuv_channels_ch1 = alloca [2457600 x i8], align 1
+
+ST_1: p_yuv_channels_ch2 [1/1] 0.00ns
+:18  %p_yuv_channels_ch2 = alloca [2457600 x i8], align 1
+
+ST_1: p_yuv_channels_ch3 [1/1] 0.00ns
+:19  %p_yuv_channels_ch3 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch1 [1/1] 0.00ns
+:20  %p_scale_channels_ch1 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch2 [1/1] 0.00ns
+:21  %p_scale_channels_ch2 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch3 [1/1] 0.00ns
+:22  %p_scale_channels_ch3 = alloca [2457600 x i8], align 1
+
+ST_1: in_width_read [1/1] 0.00ns
+:23  %in_width_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_width)
+
+ST_1: in_height_read [1/1] 0.00ns
+:24  %in_height_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_height)
+
+ST_1: call_ret [2/2] 0.00ns
+:25  %call_ret = call fastcc { i16, i16 } @yuv_filter_rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)
+
+
+ <State 2>: 1.57ns
+ST_2: stg_21 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch1), !map !0
+
+ST_2: stg_22 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch2), !map !7
+
+ST_2: stg_23 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch3), !map !11
+
+ST_2: stg_24 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_width), !map !15
+
+ST_2: stg_25 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_height), !map !21
+
+ST_2: stg_26 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch1), !map !25
+
+ST_2: stg_27 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch2), !map !29
+
+ST_2: stg_28 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch3), !map !33
+
+ST_2: stg_29 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_width), !map !37
+
+ST_2: stg_30 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_height), !map !41
+
+ST_2: stg_31 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Y_scale), !map !45
+
+ST_2: stg_32 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i8 %U_scale), !map !51
+
+ST_2: stg_33 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i8 %V_scale), !map !55
+
+ST_2: stg_34 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @yuv_filter_str) nounwind
+
+ST_2: V_scale_read [1/1] 0.00ns
+:14  %V_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %V_scale)
+
+ST_2: U_scale_read [1/1] 0.00ns
+:15  %U_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %U_scale)
+
+ST_2: Y_scale_read [1/1] 0.00ns
+:16  %Y_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %Y_scale)
+
+ST_2: call_ret [1/2] 0.00ns
+:25  %call_ret = call fastcc { i16, i16 } @yuv_filter_rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)
+
+ST_2: p_yuv_width [1/1] 0.00ns
+:26  %p_yuv_width = extractvalue { i16, i16 } %call_ret, 0
+
+ST_2: p_yuv_height [1/1] 0.00ns
+:27  %p_yuv_height = extractvalue { i16, i16 } %call_ret, 1
+
+ST_2: tmp_i_cast [1/1] 0.00ns
+:28  %tmp_i_cast = zext i8 %Y_scale_read to i15
+
+ST_2: tmp_1_i_cast [1/1] 0.00ns
+:29  %tmp_1_i_cast = zext i8 %U_scale_read to i15
+
+ST_2: tmp_2_i_cast [1/1] 0.00ns
+:30  %tmp_2_i_cast = zext i8 %V_scale_read to i15
+
+ST_2: stg_44 [1/1] 1.57ns
+:31  br label %1
+
+
+ <State 3>: 2.28ns
+ST_3: x_i [1/1] 0.00ns
+:0  %x_i = phi i16 [ 0, %0 ], [ %x, %5 ]
+
+ST_3: exitcond1_i [1/1] 2.28ns
+:1  %exitcond1_i = icmp eq i16 %x_i, %p_yuv_width
+
+ST_3: x [1/1] 1.96ns
+:2  %x = add i16 %x_i, 1
+
+ST_3: stg_48 [1/1] 0.00ns
+:3  br i1 %exitcond1_i, label %yuv_scale.exit, label %2
+
+ST_3: stg_49 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str5) nounwind
+
+ST_3: tmp_13_i [1/1] 0.00ns
+:1  %tmp_13_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str5)
+
+ST_3: stg_51 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1920, i32 1060, [1 x i8]* @p_str1) nounwind
+
+ST_3: tmp [1/1] 0.00ns
+:3  %tmp = trunc i16 %x_i to i13
+
+ST_3: p_shl_cast [1/1] 0.00ns
+:4  %p_shl_cast = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp, i10 0)
+
+ST_3: tmp_1 [1/1] 0.00ns
+:5  %tmp_1 = trunc i16 %x_i to i15
+
+ST_3: p_shl3_cast [1/1] 0.00ns
+:6  %p_shl3_cast = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_1, i8 0)
+
+ST_3: tmp_2 [1/1] 2.20ns
+:7  %tmp_2 = add i23 %p_shl_cast, %p_shl3_cast
+
+ST_3: stg_57 [1/1] 1.57ns
+:8  br label %3
+
+ST_3: call_ret1 [2/2] 0.00ns
+yuv_scale.exit:0  %call_ret1 = call fastcc { i16, i16 } @yuv_filter_yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)
+
+
+ <State 4>: 4.81ns
+ST_4: y_i [1/1] 0.00ns
+:0  %y_i = phi i16 [ 0, %2 ], [ %y, %4 ]
+
+ST_4: exitcond_i [1/1] 2.28ns
+:1  %exitcond_i = icmp eq i16 %y_i, %p_yuv_height
+
+ST_4: y [1/1] 1.96ns
+:2  %y = add i16 %y_i, 1
+
+ST_4: stg_62 [1/1] 0.00ns
+:3  br i1 %exitcond_i, label %5, label %4
+
+ST_4: tmp_5_i_cast [1/1] 0.00ns
+:3  %tmp_5_i_cast = zext i16 %y_i to i23
+
+ST_4: tmp_3 [1/1] 2.20ns
+:4  %tmp_3 = add i23 %tmp_2, %tmp_5_i_cast
+
+ST_4: tmp_3_cast [1/1] 0.00ns
+:5  %tmp_3_cast = zext i23 %tmp_3 to i64
+
+ST_4: yuv_channels_ch3_addr [1/1] 0.00ns
+:6  %yuv_channels_ch3_addr = getelementptr [2457600 x i8]* %p_yuv_channels_ch3, i64 0, i64 %tmp_3_cast
+
+ST_4: yuv_channels_ch1_addr [1/1] 0.00ns
+:10  %yuv_channels_ch1_addr = getelementptr [2457600 x i8]* %p_yuv_channels_ch1, i64 0, i64 %tmp_3_cast
+
+ST_4: yuv_channels_ch2_addr [1/1] 0.00ns
+:11  %yuv_channels_ch2_addr = getelementptr [2457600 x i8]* %p_yuv_channels_ch2, i64 0, i64 %tmp_3_cast
+
+ST_4: Y [4/4] 2.61ns
+:12  %Y = load i8* %yuv_channels_ch1_addr, align 1
+
+ST_4: U [4/4] 2.61ns
+:13  %U = load i8* %yuv_channels_ch2_addr, align 1
+
+ST_4: V [4/4] 2.61ns
+:14  %V = load i8* %yuv_channels_ch3_addr, align 1
+
+ST_4: empty_15 [1/1] 0.00ns
+:0  %empty_15 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str5, i32 %tmp_13_i)
+
+ST_4: stg_73 [1/1] 0.00ns
+:1  br label %1
+
+
+ <State 5>: 2.61ns
+ST_5: Y [3/4] 2.61ns
+:12  %Y = load i8* %yuv_channels_ch1_addr, align 1
+
+ST_5: U [3/4] 2.61ns
+:13  %U = load i8* %yuv_channels_ch2_addr, align 1
+
+ST_5: V [3/4] 2.61ns
+:14  %V = load i8* %yuv_channels_ch3_addr, align 1
+
+
+ <State 6>: 2.61ns
+ST_6: Y [2/4] 2.61ns
+:12  %Y = load i8* %yuv_channels_ch1_addr, align 1
+
+ST_6: U [2/4] 2.61ns
+:13  %U = load i8* %yuv_channels_ch2_addr, align 1
+
+ST_6: V [2/4] 2.61ns
+:14  %V = load i8* %yuv_channels_ch3_addr, align 1
+
+
+ <State 7>: 2.61ns
+ST_7: Y [1/4] 2.61ns
+:12  %Y = load i8* %yuv_channels_ch1_addr, align 1
+
+ST_7: U [1/4] 2.61ns
+:13  %U = load i8* %yuv_channels_ch2_addr, align 1
+
+ST_7: V [1/4] 2.61ns
+:14  %V = load i8* %yuv_channels_ch3_addr, align 1
+
+
+ <State 8>: 6.38ns
+ST_8: tmp_6_i_cast [1/1] 0.00ns
+:15  %tmp_6_i_cast = zext i8 %Y to i15
+
+ST_8: tmp_7_i [1/1] 6.38ns
+:16  %tmp_7_i = mul i15 %tmp_i_cast, %tmp_6_i_cast
+
+ST_8: tmp_9_i_cast [1/1] 0.00ns
+:17  %tmp_9_i_cast = zext i8 %U to i15
+
+ST_8: tmp_i [1/1] 6.38ns
+:18  %tmp_i = mul i15 %tmp_1_i_cast, %tmp_9_i_cast
+
+ST_8: tmp_4_i_cast [1/1] 0.00ns
+:19  %tmp_4_i_cast = zext i8 %V to i15
+
+ST_8: tmp_8_i [1/1] 6.38ns
+:20  %tmp_8_i = mul i15 %tmp_2_i_cast, %tmp_4_i_cast
+
+ST_8: tmp_10_i [1/1] 0.00ns
+:21  %tmp_10_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_7_i, i32 7, i32 14)
+
+ST_8: tmp_11_i [1/1] 0.00ns
+:23  %tmp_11_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_i, i32 7, i32 14)
+
+ST_8: tmp_12_i [1/1] 0.00ns
+:25  %tmp_12_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_8_i, i32 7, i32 14)
+
+
+ <State 9>: 2.61ns
+ST_9: scale_channels_ch3_addr [1/1] 0.00ns
+:7  %scale_channels_ch3_addr = getelementptr [2457600 x i8]* %p_scale_channels_ch3, i64 0, i64 %tmp_3_cast
+
+ST_9: scale_channels_ch1_addr [1/1] 0.00ns
+:8  %scale_channels_ch1_addr = getelementptr [2457600 x i8]* %p_scale_channels_ch1, i64 0, i64 %tmp_3_cast
+
+ST_9: scale_channels_ch2_addr [1/1] 0.00ns
+:9  %scale_channels_ch2_addr = getelementptr [2457600 x i8]* %p_scale_channels_ch2, i64 0, i64 %tmp_3_cast
+
+ST_9: stg_95 [2/2] 2.61ns
+:22  store i8 %tmp_10_i, i8* %scale_channels_ch1_addr, align 1
+
+ST_9: stg_96 [2/2] 2.61ns
+:24  store i8 %tmp_11_i, i8* %scale_channels_ch2_addr, align 1
+
+ST_9: stg_97 [2/2] 2.61ns
+:26  store i8 %tmp_12_i, i8* %scale_channels_ch3_addr, align 1
+
+
+ <State 10>: 2.61ns
+ST_10: stg_98 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str6) nounwind
+
+ST_10: tmp_14_i [1/1] 0.00ns
+:1  %tmp_14_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str6)
+
+ST_10: stg_100 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1280, i32 740, [1 x i8]* @p_str1) nounwind
+
+ST_10: stg_101 [1/2] 2.61ns
+:22  store i8 %tmp_10_i, i8* %scale_channels_ch1_addr, align 1
+
+ST_10: stg_102 [1/2] 2.61ns
+:24  store i8 %tmp_11_i, i8* %scale_channels_ch2_addr, align 1
+
+ST_10: stg_103 [1/2] 2.61ns
+:26  store i8 %tmp_12_i, i8* %scale_channels_ch3_addr, align 1
+
+ST_10: empty [1/1] 0.00ns
+:27  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str6, i32 %tmp_14_i)
+
+ST_10: stg_105 [1/1] 0.00ns
+:28  br label %3
+
+
+ <State 11>: 0.00ns
+ST_11: call_ret1 [1/2] 0.00ns
+yuv_scale.exit:0  %call_ret1 = call fastcc { i16, i16 } @yuv_filter_yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)
+
+ST_11: out_width_ret [1/1] 0.00ns
+yuv_scale.exit:1  %out_width_ret = extractvalue { i16, i16 } %call_ret1, 0
+
+ST_11: stg_108 [1/1] 0.00ns
+yuv_scale.exit:2  call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_width, i16 %out_width_ret)
+
+ST_11: out_height_ret [1/1] 0.00ns
+yuv_scale.exit:3  %out_height_ret = extractvalue { i16, i16 } %call_ret1, 1
+
+ST_11: stg_110 [1/1] 0.00ns
+yuv_scale.exit:4  call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_height, i16 %out_height_ret)
+
+ST_11: stg_111 [1/1] 0.00ns
+yuv_scale.exit:5  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

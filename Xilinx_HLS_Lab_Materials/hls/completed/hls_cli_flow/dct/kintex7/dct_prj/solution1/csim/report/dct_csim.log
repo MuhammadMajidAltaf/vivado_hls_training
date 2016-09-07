@@ -1,0 +1,17 @@
+   Compiling(apcc) ../../../../dct_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Wed Jun 01 16:11:51 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/8400590244618
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../dct.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Wed Jun 01 16:11:54 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/hls_cli_flow/dct/kintex7/dct_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/2748593301001
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+    *** *** *** *** 
+    Results are good 
+    *** *** *** *** 
+INFO: [SIM 1] CSim done with 0 errors.

@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2016.1
+Project:             fir_prj
+Solution:            solution1
+Device target:       xc7k325tffg900-2
+Report date:         Fri Apr 29 12:40:49 +0530 2016
+
+#=== Resource usage ===
+SLICE:           84
+LUT:            230
+FF:             246
+DSP:              2
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved:    4.057
+Timing met

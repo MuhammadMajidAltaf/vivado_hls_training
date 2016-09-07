@@ -1,0 +1,518 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_dct_1d2'
+================================================================
+* Date:           Mon Jun 13 09:16:47 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        dct_prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   36|   36|   36|   36|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                  |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- DCT_Outer_Loop  |   34|   34|         7|          4|          1|     8|    yes   |
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 9
+* Pipeline: 1
+  Pipeline-0: II = 4, D = 7, States = { 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	9  / (exitcond1)
+	3  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	2  / true
+9 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: tmp_21_read [1/1] 1.04ns
+:0  %tmp_21_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_21)
+
+ST_1: tmp_2_read [1/1] 1.04ns
+:1  %tmp_2_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_2)
+
+ST_1: tmp_5 [1/1] 0.00ns
+:2  %tmp_5 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_21_read, i3 0)
+
+ST_1: tmp_17_cast [1/1] 0.00ns
+:3  %tmp_17_cast = zext i7 %tmp_5 to i8
+
+ST_1: tmp_6 [1/1] 0.00ns
+:4  %tmp_6 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_2_read, i3 0)
+
+ST_1: tmp_8 [1/1] 0.00ns
+:5  %tmp_8 = zext i7 %tmp_6 to i64
+
+ST_1: src_addr [1/1] 0.00ns
+:6  %src_addr = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_8
+
+ST_1: tmp_9 [1/1] 0.00ns
+:7  %tmp_9 = or i7 %tmp_6, 1
+
+ST_1: tmp_10 [1/1] 0.00ns
+:8  %tmp_10 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_9)
+
+ST_1: src_addr_1 [1/1] 0.00ns
+:9  %src_addr_1 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_10
+
+ST_1: tmp_11 [1/1] 0.00ns
+:10  %tmp_11 = or i7 %tmp_6, 2
+
+ST_1: tmp_12 [1/1] 0.00ns
+:11  %tmp_12 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_11)
+
+ST_1: src_addr_2 [1/1] 0.00ns
+:12  %src_addr_2 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_12
+
+ST_1: tmp_13 [1/1] 0.00ns
+:13  %tmp_13 = or i7 %tmp_6, 3
+
+ST_1: tmp_14 [1/1] 0.00ns
+:14  %tmp_14 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_13)
+
+ST_1: src_addr_3 [1/1] 0.00ns
+:15  %src_addr_3 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_14
+
+ST_1: tmp_15 [1/1] 0.00ns
+:16  %tmp_15 = or i7 %tmp_6, 4
+
+ST_1: tmp_16 [1/1] 0.00ns
+:17  %tmp_16 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_15)
+
+ST_1: src_addr_4 [1/1] 0.00ns
+:18  %src_addr_4 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_16
+
+ST_1: tmp_17 [1/1] 0.00ns
+:19  %tmp_17 = or i7 %tmp_6, 5
+
+ST_1: tmp_18 [1/1] 0.00ns
+:20  %tmp_18 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_17)
+
+ST_1: src_addr_5 [1/1] 0.00ns
+:21  %src_addr_5 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_18
+
+ST_1: tmp_19 [1/1] 0.00ns
+:22  %tmp_19 = or i7 %tmp_6, 6
+
+ST_1: tmp_20 [1/1] 0.00ns
+:23  %tmp_20 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_19)
+
+ST_1: src_addr_6 [1/1] 0.00ns
+:24  %src_addr_6 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_20
+
+ST_1: tmp_22 [1/1] 0.00ns
+:25  %tmp_22 = or i7 %tmp_6, 7
+
+ST_1: tmp_23 [1/1] 0.00ns
+:26  %tmp_23 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_22)
+
+ST_1: src_addr_7 [1/1] 0.00ns
+:27  %src_addr_7 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_23
+
+ST_1: stg_38 [1/1] 1.57ns
+:28  br label %1
+
+
+ <State 2>: 2.71ns
+ST_2: k [1/1] 0.00ns
+:0  %k = phi i4 [ 0, %0 ], [ %k_1, %2 ]
+
+ST_2: exitcond1 [1/1] 1.88ns
+:1  %exitcond1 = icmp eq i4 %k, -8
+
+ST_2: k_1 [1/1] 0.80ns
+:2  %k_1 = add i4 %k, 1
+
+ST_2: stg_42 [1/1] 0.00ns
+:3  br i1 %exitcond1, label %3, label %2
+
+ST_2: tmp [1/1] 0.00ns
+:4  %tmp = zext i4 %k to i64
+
+ST_2: tmp_cast [1/1] 0.00ns
+:5  %tmp_cast = zext i4 %k to i8
+
+ST_2: tmp_24 [1/1] 1.72ns
+:6  %tmp_24 = add i8 %tmp_17_cast, %tmp_cast
+
+ST_2: dct_coeff_table_1_addr [1/1] 0.00ns
+:15  %dct_coeff_table_1_addr = getelementptr [8 x i15]* @dct_coeff_table_1, i64 0, i64 %tmp
+
+ST_2: dct_coeff_table_1_load [2/2] 2.39ns
+:16  %dct_coeff_table_1_load = load i15* %dct_coeff_table_1_addr, align 2
+
+ST_2: src_load_1 [2/2] 2.71ns
+:18  %src_load_1 = load i16* %src_addr_1, align 2
+
+ST_2: dct_coeff_table_3_addr [1/1] 0.00ns
+:27  %dct_coeff_table_3_addr = getelementptr [8 x i15]* @dct_coeff_table_3, i64 0, i64 %tmp
+
+ST_2: dct_coeff_table_3_load [2/2] 2.39ns
+:28  %dct_coeff_table_3_load = load i15* %dct_coeff_table_3_addr, align 2
+
+ST_2: src_load_3 [2/2] 2.71ns
+:30  %src_load_3 = load i16* %src_addr_3, align 2
+
+
+ <State 3>: 2.71ns
+ST_3: dct_coeff_table_0_addr [1/1] 0.00ns
+:9  %dct_coeff_table_0_addr = getelementptr [8 x i14]* @dct_coeff_table_0, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_0_load [2/2] 2.39ns
+:10  %dct_coeff_table_0_load = load i14* %dct_coeff_table_0_addr, align 2
+
+ST_3: src_load [2/2] 2.71ns
+:12  %src_load = load i16* %src_addr, align 2
+
+ST_3: dct_coeff_table_1_load [1/2] 2.39ns
+:16  %dct_coeff_table_1_load = load i15* %dct_coeff_table_1_addr, align 2
+
+ST_3: src_load_1 [1/2] 2.71ns
+:18  %src_load_1 = load i16* %src_addr_1, align 2
+
+ST_3: dct_coeff_table_2_addr [1/1] 0.00ns
+:21  %dct_coeff_table_2_addr = getelementptr [8 x i15]* @dct_coeff_table_2, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_2_load [2/2] 2.39ns
+:22  %dct_coeff_table_2_load = load i15* %dct_coeff_table_2_addr, align 2
+
+ST_3: dct_coeff_table_3_load [1/2] 2.39ns
+:28  %dct_coeff_table_3_load = load i15* %dct_coeff_table_3_addr, align 2
+
+ST_3: src_load_3 [1/2] 2.71ns
+:30  %src_load_3 = load i16* %src_addr_3, align 2
+
+ST_3: dct_coeff_table_4_addr [1/1] 0.00ns
+:33  %dct_coeff_table_4_addr = getelementptr [8 x i15]* @dct_coeff_table_4, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_4_load [2/2] 2.39ns
+:34  %dct_coeff_table_4_load = load i15* %dct_coeff_table_4_addr, align 2
+
+ST_3: dct_coeff_table_5_addr [1/1] 0.00ns
+:39  %dct_coeff_table_5_addr = getelementptr [8 x i15]* @dct_coeff_table_5, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_5_load [2/2] 2.39ns
+:40  %dct_coeff_table_5_load = load i15* %dct_coeff_table_5_addr, align 2
+
+ST_3: src_load_5 [2/2] 2.71ns
+:42  %src_load_5 = load i16* %src_addr_5, align 2
+
+ST_3: dct_coeff_table_6_addr [1/1] 0.00ns
+:45  %dct_coeff_table_6_addr = getelementptr [8 x i15]* @dct_coeff_table_6, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_6_load [2/2] 2.39ns
+:46  %dct_coeff_table_6_load = load i15* %dct_coeff_table_6_addr, align 2
+
+ST_3: dct_coeff_table_7_addr [1/1] 0.00ns
+:51  %dct_coeff_table_7_addr = getelementptr [8 x i15]* @dct_coeff_table_7, i64 0, i64 %tmp
+
+ST_3: dct_coeff_table_7_load [2/2] 2.39ns
+:52  %dct_coeff_table_7_load = load i15* %dct_coeff_table_7_addr, align 2
+
+
+ <State 4>: 6.38ns
+ST_4: dct_coeff_table_0_load [1/2] 2.39ns
+:10  %dct_coeff_table_0_load = load i14* %dct_coeff_table_0_addr, align 2
+
+ST_4: src_load [1/2] 2.71ns
+:12  %src_load = load i16* %src_addr, align 2
+
+ST_4: coeff_1_cast [1/1] 0.00ns
+:17  %coeff_1_cast = sext i15 %dct_coeff_table_1_load to i29
+
+ST_4: tmp_9_1_cast [1/1] 0.00ns
+:19  %tmp_9_1_cast = sext i16 %src_load_1 to i29
+
+ST_4: tmp_10_1 [1/1] 6.38ns
+:20  %tmp_10_1 = mul i29 %tmp_9_1_cast, %coeff_1_cast
+
+ST_4: dct_coeff_table_2_load [1/2] 2.39ns
+:22  %dct_coeff_table_2_load = load i15* %dct_coeff_table_2_addr, align 2
+
+ST_4: src_load_2 [2/2] 2.71ns
+:24  %src_load_2 = load i16* %src_addr_2, align 2
+
+ST_4: coeff_3_cast [1/1] 0.00ns
+:29  %coeff_3_cast = sext i15 %dct_coeff_table_3_load to i29
+
+ST_4: tmp_9_3_cast [1/1] 0.00ns
+:31  %tmp_9_3_cast = sext i16 %src_load_3 to i29
+
+ST_4: tmp_10_3 [1/1] 6.38ns
+:32  %tmp_10_3 = mul i29 %tmp_9_3_cast, %coeff_3_cast
+
+ST_4: dct_coeff_table_4_load [1/2] 2.39ns
+:34  %dct_coeff_table_4_load = load i15* %dct_coeff_table_4_addr, align 2
+
+ST_4: src_load_4 [2/2] 2.71ns
+:36  %src_load_4 = load i16* %src_addr_4, align 2
+
+ST_4: dct_coeff_table_5_load [1/2] 2.39ns
+:40  %dct_coeff_table_5_load = load i15* %dct_coeff_table_5_addr, align 2
+
+ST_4: src_load_5 [1/2] 2.71ns
+:42  %src_load_5 = load i16* %src_addr_5, align 2
+
+ST_4: dct_coeff_table_6_load [1/2] 2.39ns
+:46  %dct_coeff_table_6_load = load i15* %dct_coeff_table_6_addr, align 2
+
+ST_4: dct_coeff_table_7_load [1/2] 2.39ns
+:52  %dct_coeff_table_7_load = load i15* %dct_coeff_table_7_addr, align 2
+
+
+ <State 5>: 6.38ns
+ST_5: coeff_cast [1/1] 0.00ns
+:11  %coeff_cast = zext i14 %dct_coeff_table_0_load to i29
+
+ST_5: tmp_9_cast [1/1] 0.00ns
+:13  %tmp_9_cast = sext i16 %src_load to i29
+
+ST_5: tmp_3 [1/1] 3.36ns
+:14  %tmp_3 = mul i29 %tmp_9_cast, %coeff_cast
+
+ST_5: src_load_2 [1/2] 2.71ns
+:24  %src_load_2 = load i16* %src_addr_2, align 2
+
+ST_5: src_load_4 [1/2] 2.71ns
+:36  %src_load_4 = load i16* %src_addr_4, align 2
+
+ST_5: coeff_5_cast [1/1] 0.00ns
+:41  %coeff_5_cast = sext i15 %dct_coeff_table_5_load to i29
+
+ST_5: tmp_9_5_cast [1/1] 0.00ns
+:43  %tmp_9_5_cast = sext i16 %src_load_5 to i29
+
+ST_5: tmp_10_5 [1/1] 6.38ns
+:44  %tmp_10_5 = mul i29 %tmp_9_5_cast, %coeff_5_cast
+
+ST_5: src_load_6 [2/2] 2.71ns
+:48  %src_load_6 = load i16* %src_addr_6, align 2
+
+ST_5: src_load_7 [2/2] 2.71ns
+:54  %src_load_7 = load i16* %src_addr_7, align 2
+
+ST_5: tmp2 [1/1] 3.02ns
+:57  %tmp2 = add i29 %tmp_10_1, %tmp_3
+
+
+ <State 6>: 8.82ns
+ST_6: coeff_2_cast [1/1] 0.00ns
+:23  %coeff_2_cast = sext i15 %dct_coeff_table_2_load to i29
+
+ST_6: tmp_9_2_cast [1/1] 0.00ns
+:25  %tmp_9_2_cast = sext i16 %src_load_2 to i29
+
+ST_6: tmp_10_2 [1/1] 3.36ns
+:26  %tmp_10_2 = mul i29 %tmp_9_2_cast, %coeff_2_cast
+
+ST_6: coeff_4_cast [1/1] 0.00ns
+:35  %coeff_4_cast = sext i15 %dct_coeff_table_4_load to i29
+
+ST_6: tmp_9_4_cast [1/1] 0.00ns
+:37  %tmp_9_4_cast = sext i16 %src_load_4 to i29
+
+ST_6: tmp_10_4 [1/1] 3.36ns
+:38  %tmp_10_4 = mul i29 %tmp_9_4_cast, %coeff_4_cast
+
+ST_6: src_load_6 [1/2] 2.71ns
+:48  %src_load_6 = load i16* %src_addr_6, align 2
+
+ST_6: src_load_7 [1/2] 2.71ns
+:54  %src_load_7 = load i16* %src_addr_7, align 2
+
+ST_6: tmp3 [1/1] 3.02ns
+:58  %tmp3 = add i29 %tmp_10_3, %tmp_10_2
+
+ST_6: tmp1 [1/1] 2.44ns
+:59  %tmp1 = add i29 %tmp2, %tmp3
+
+ST_6: tmp5 [1/1] 3.02ns
+:60  %tmp5 = add i29 %tmp_10_5, %tmp_10_4
+
+
+ <State 7>: 9.40ns
+ST_7: coeff_6_cast [1/1] 0.00ns
+:47  %coeff_6_cast = sext i15 %dct_coeff_table_6_load to i29
+
+ST_7: tmp_9_6_cast [1/1] 0.00ns
+:49  %tmp_9_6_cast = sext i16 %src_load_6 to i29
+
+ST_7: tmp_10_6 [1/1] 3.36ns
+:50  %tmp_10_6 = mul i29 %tmp_9_6_cast, %coeff_6_cast
+
+ST_7: coeff_7_cast [1/1] 0.00ns
+:53  %coeff_7_cast = sext i15 %dct_coeff_table_7_load to i29
+
+ST_7: tmp_9_7_cast [1/1] 0.00ns
+:55  %tmp_9_7_cast = sext i16 %src_load_7 to i29
+
+ST_7: tmp_10_7 [1/1] 3.36ns
+:56  %tmp_10_7 = mul i29 %tmp_9_7_cast, %coeff_7_cast
+
+ST_7: tmp7 [1/1] 3.02ns
+:61  %tmp7 = add i29 %tmp_10_7, 4096
+
+ST_7: tmp6 [1/1] 3.02ns
+:62  %tmp6 = add i29 %tmp_10_6, %tmp7
+
+
+ <State 8>: 6.65ns
+ST_8: empty [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_8: stg_117 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str) nounwind
+
+ST_8: tmp_1 [1/1] 0.00ns
+:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str) nounwind
+
+ST_8: stg_119 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_8: tmp_35_cast [1/1] 0.00ns
+:7  %tmp_35_cast = zext i8 %tmp_24 to i64
+
+ST_8: dst_addr [1/1] 0.00ns
+:8  %dst_addr = getelementptr [64 x i16]* %dst, i64 0, i64 %tmp_35_cast
+
+ST_8: tmp4 [1/1] 1.97ns
+:63  %tmp4 = add i29 %tmp5, %tmp6
+
+ST_8: tmp_s [1/1] 1.97ns
+:64  %tmp_s = add i29 %tmp1, %tmp4
+
+ST_8: tmp_7 [1/1] 0.00ns
+:65  %tmp_7 = call i16 @_ssdm_op_PartSelect.i16.i29.i32.i32(i29 %tmp_s, i32 13, i32 28)
+
+ST_8: stg_125 [1/1] 2.71ns
+:66  store i16 %tmp_7, i16* %dst_addr, align 2
+
+ST_8: empty_10 [1/1] 0.00ns
+:67  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str, i32 %tmp_1) nounwind
+
+ST_8: stg_127 [1/1] 0.00ns
+:68  br label %1
+
+
+ <State 9>: 0.00ns
+ST_9: stg_128 [1/1] 0.00ns
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 6>: 8.82ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10_2', dct.c:17) (3.36 ns)
+	'add' operation ('tmp3', dct.c:19) (3.02 ns)
+	'add' operation ('tmp1', dct.c:19) (2.44 ns)
+
+ <State 7>: 9.4ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10_7', dct.c:17) (3.36 ns)
+	'add' operation ('tmp7', dct.c:19) (3.02 ns)
+	'add' operation ('tmp6', dct.c:19) (3.02 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

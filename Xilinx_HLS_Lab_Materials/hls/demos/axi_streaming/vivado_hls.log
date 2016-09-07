@@ -1,0 +1,32 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2016.1
+  Build 1538259 on Fri Apr 08 16:12:49 MDT 2016
+  Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Tue Jun 14 16:48:35 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/axi_streaming'
+INFO: [HLS 200-10] Creating and opening project 'C:/training/hls/demos/axi_streaming/axi_interfaces_prj'.
+INFO: [HLS 200-10] Adding design file 'axi_interfaces.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'axi_interfaces_test.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'result.golden.dat' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/training/hls/demos/axi_streaming/axi_interfaces_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+   Compiling(apcc) ../../../../axi_interfaces_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Tue Jun 14 16:48:38 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/axi_streaming/axi_interfaces_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/5364716161551
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../axi_interfaces.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Tue Jun 14 16:48:41 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/demos/axi_streaming/axi_interfaces_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/4656718814172
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Test passed !
+INFO: [SIM 211-1] CSim done with 0 errors.

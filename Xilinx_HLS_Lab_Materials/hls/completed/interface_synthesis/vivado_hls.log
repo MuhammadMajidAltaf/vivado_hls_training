@@ -1,0 +1,45 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Tue Jun 14 15:16:12 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/interface_synthesis'
+INFO: [HLS 200-10] Opening project 'C:/training/hls/labs/interface_synthesis/adders_io_prj'.
+INFO: [HLS 200-10] Adding design file 'adders_io.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'adders_io_test.c' to the project
+INFO: [HLS 200-10] Opening solution 'C:/training/hls/labs/interface_synthesis/adders_io_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [HLS 200-10] Analyzing design file 'adders_io.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Elapsed time: 4.772 seconds; current memory usage: 71.8 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'adders_io' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'adders_io' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.037 seconds; current memory usage: 72 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'adders_io' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.049 seconds; current memory usage: 72 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'adders_io' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'adders_io/in1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'adders_io/in2' to 'ap_ack'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'adders_io/in_out1' to 'ap_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'adders_io' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'adders_io'.
+INFO: [HLS 200-111] Elapsed time: 0.072 seconds; current memory usage: 72 MB.
+INFO: [HLS 200-10] Finished generating all RTL models.
+INFO: [SYSC 207-301] Generating SystemC RTL for adders_io.
+INFO: [VHDL 208-304] Generating VHDL RTL for adders_io.
+INFO: [VLOG 209-307] Generating Verilog RTL for adders_io.
+INFO: [HLS 200-112] Total elapsed time: 5.529 seconds; peak memory usage: 72 MB.

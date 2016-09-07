@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2016.1
+Project:             dct_prj
+Solution:            solution1
+Device target:       xc7k70tfbg484-2
+Report date:         Wed Jun 01 16:47:11 +0530 2016
+
+#=== Resource usage ===
+SLICE:           63
+LUT:            165
+FF:             168
+DSP:              1
+BRAM:             5
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved:    5.862
+Timing met

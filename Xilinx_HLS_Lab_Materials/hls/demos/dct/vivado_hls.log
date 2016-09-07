@@ -1,0 +1,21 @@
+@I [LIC-101] Checked out feature [VIVADO_HLS]
+@I [HLS-10] Running 'C:/Xilinx/Vivado_HLS/2014.1/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'frankn' on host 'xsjfranknw7' (Windows NT_amd64 version 6.1) on Fri Jul 25 15:25:58 -0700 2014
+            in directory 'C:/training/hls/demo/dct'
+@I [HLS-10] Opening project 'C:/training/hls/demo/dct/dct_prj'.
+@I [HLS-10] Opening solution 'C:/training/hls/demo/dct/dct_prj/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Setting target device to 'xc7k325tffg900-2'
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2014.1 (64-bit)
+  **** SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+  **** IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/Vivado/2014.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 25 15:26:10 2014...
+@I [LIC-101] Checked in feature [VIVADO_HLS]

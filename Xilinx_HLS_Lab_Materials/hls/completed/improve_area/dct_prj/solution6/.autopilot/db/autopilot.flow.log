@@ -1,0 +1,1367 @@
+@I [HLS-0] Workspace C:/training/hls/labs/improve_area/dct_prj/solution6 opened at Mon Jun 13 11:45:26 +0530 2016
+@I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 1.9 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.12 sec.
+@I [HLS-100] Command "import_lib C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.18 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.19 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.20 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.22 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.24 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 1.24 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.25 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.27 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.28 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.29 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017Total elapsed time: 1.31 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.34 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.36 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.44 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.46 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.47 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 1.48 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.50 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 1.50 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005Total elapsed time: 1.56 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.57 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.57 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.58 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.048Total elapsed time: 1.60 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.67 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.69 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 1.72 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006Total elapsed time: 1.80 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 1.90 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017Total elapsed time: 1.90 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012Total elapsed time: 1.104 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011Total elapsed time: 1.116 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 1.121 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.123 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.233Total elapsed time: 1.357 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.360 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.296Total elapsed time: 1.361 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.365 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.302Total elapsed time: 1.366 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.304Total elapsed time: 1.367 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.368 sec.
+@I [HLS-100] Command "import_lib C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_hp.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.373 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 1.377 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.411 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.413 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.414 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.414 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 1.416 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.027Total elapsed time: 1.417 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.03Total elapsed time: 1.419 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_hp.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.421 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.059Total elapsed time: 1.428 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 1.433 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 1.434 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.443 sec.
+@I [HLS-100] Command "license_isbetapart xc7z020 "
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.03Total elapsed time: 1.476 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.479 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.480 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.481 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.047Total elapsed time: 1.489 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.499 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.011Total elapsed time: 1.502 sec.
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.067Total elapsed time: 1.503 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.504 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.506 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.506 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.549Total elapsed time: 1.515 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.528 sec.
+@I [HLS-100] Command "license_isbetapart xc7z020 "
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0Total elapsed time: 1.529 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.532 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.533 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.533 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.014Total elapsed time: 1.541 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.548 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.011Total elapsed time: 1.552 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.037Total elapsed time: 1.553 sec.
+@I [HLS-100] Command "create_clock -period 10 -name default "
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.009Total elapsed time: 1.563 sec.
+@I [HLS-100] Command "source ./dct_prj/solution6/directives.tcl "
+@I [HLS-100] Command "set_directive_pipeline dct_2d/Xpose_Row_Inner_Loop "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.004Total elapsed time: 1.571 sec.
+@I [HLS-100] Command "set_directive_pipeline dct_2d/Xpose_Col_Inner_Loop "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.008Total elapsed time: 1.580 sec.
+@I [HLS-100] Command "set_directive_pipeline read_data/RD_Loop_Col "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.007Total elapsed time: 1.587 sec.
+@I [HLS-100] Command "set_directive_pipeline write_data/WR_Loop_Col "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.006Total elapsed time: 1.594 sec.
+@I [HLS-100] Command "set_directive_pipeline dct_1d/DCT_Outer_Loop "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.007Total elapsed time: 1.602 sec.
+@I [HLS-100] Command "set_directive_array_partition -type complete -dim 2 dct buf_2d_in "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuf_2d_in complete=positionBoolean0type dim=2 
+@I [HLS-100] Command 'set_directive_array_partition' returned 0; elapsed 0.006Total elapsed time: 1.609 sec.
+@I [HLS-100] Command "set_directive_array_partition -type complete -dim 2 dct_2d col_inbuf "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuf_2d_in complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredcol_inbuf complete=positionBoolean0type dim=2 
+@I [HLS-100] Command 'set_directive_array_partition' returned 0; elapsed 0.009Total elapsed time: 1.622 sec.
+@I [HLS-100] Command "set_directive_dataflow dct "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuf_2d_in complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredcol_inbuf complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-100] Command 'set_directive_dataflow' returned 0; elapsed 0.008Total elapsed time: 1.632 sec.
+@I [HLS-100] Command "set_directive_inline dct_2d "
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuf_2d_in complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredcol_inbuf complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.01Total elapsed time: 1.643 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.079Total elapsed time: 1.644 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file 'dct.c' ... 
+@0 [HLS-0] Analyzing design file 'dct.c' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2016.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  "dct.c"  -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 2.257 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2016.1/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "dct.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuf_2d_in complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredcol_inbuf complete=positionBoolean0type dim=2 
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 2.636 sec.
+@I [HLS-0] Marker-Pragma convertor: C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c.ap-line.c C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c.ap-line.c.CXX 1
+@I [HLS-0] 
+Source processor: exec C:/Xilinx/Vivado_HLS/2016.1/tps/win64/jre/bin/java -Xmx512m -classpath   "C:/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar;C:/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar;C:/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar;C:/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar;C:/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar;C:/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar;C:/Xilinx/Vivado_HLS/2016.1/win64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar;C:/Xilinx/Vivado_HLS/2016.1/win64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar;C:/Xilinx/Vivado_HLS/2016.1/win64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar;C:/Xilinx/Vivado_HLS/2016.1/win64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar;C:/Xilinx/Vivado_HLS/2016.1/win64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c.ap-line.c"  -m "dct" -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c.ap-cdt.c" -c --pp --directive C:/training/hls/labs/improve_area/dct_prj/solution6/solution6.directive --source C:/training/hls/labs/improve_area/dct.c --error C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db --sd --scff C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Marker-Pragma convertor: C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pp.0.c.ap-cdt.c C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pragma.0.c C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 3.809 sec.
+@I [HLS-0] CDT processor time: 1 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2016.1/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pragma.2.c"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2016.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.g.bc"
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 4.602 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.bc"  -disable-opt  -LC:/Xilinx/Vivado_HLS/2016.1/win64/lib -lm_basic -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.g.bc"  -disable-opt  -LC:/Xilinx/Vivado_HLS/2016.1/win64/lib -lm_basic -o "C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 5.315 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top dct  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.0.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [XFORM-603] Inlining function 'dct_2d' into 'dct' (dct.c:87).
+@I [HLS-0] Std xform time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.003Total elapsed time: 5.620 sec.
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.1.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.2.prechk.bc -f
+@I [HLS-0] Syn check 1/2 time: 0 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.2.prechk.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.g.1.bc to C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.1.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-502] Unrolling all sub-loops inside loop 'DCT_Outer_Loop' (dct.c:13) in function 'dct_1d' for pipelining.
+@I [XFORM-501] Unrolling loop 'DCT_Inner_Loop' (dct.c:15) in function 'dct_1d' completely.
+@I [XFORM-102] Partitioning array 'dct_coeff_table' in dimension 2 automatically.
+@I [XFORM-101] Partitioning array 'buf_2d_in' (dct.c:81) in dimension 2 completely.
+@I [XFORM-101] Partitioning array 'col_inbuf' (dct.c:27) in dimension 2 completely.
+@I [XFORM-721] Changing loop 'Loop_Row_DCT_Loop_proc' (dct.c:32) to a process function for dataflow in function 'dct'.
+@I [XFORM-721] Changing loop 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:38) to a process function for dataflow in function 'dct'.
+@I [XFORM-721] Changing loop 'Loop_Col_DCT_Loop_proc' (dct.c:43) to a process function for dataflow in function 'dct'.
+@I [XFORM-721] Changing loop 'Loop_Xpose_Col_Outer_Loop_proc' (dct.c:49) to a process function for dataflow in function 'dct'.
+@W [XFORM-713] All the elements of global array 'col_outbuf.i' should be updated in process function 'Loop_Col_DCT_Loop_proc' (dct.c:43:61), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'row_outbuf.i' should be updated in process function 'Loop_Row_DCT_Loop_proc' (dct.c:32:60), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[4]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[5]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[0]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[1]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[6]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[7]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[0]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[1]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[3]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'buf_2d_in[2]' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[4]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[5]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[3]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[7]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[2]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@W [XFORM-713] All the elements of global array 'col_inbuf[6]' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+@I [XFORM-712] Applying dataflow to function 'dct' (dct.c:78), detected/extracted 6 process function(s):
+	 'read_data'
+	 'Loop_Row_DCT_Loop_proc'
+	 'Loop_Xpose_Row_Outer_Loop_proc'
+	 'Loop_Col_DCT_Loop_proc'
+	 'Loop_Xpose_Col_Outer_Loop_proc'
+	 'write_data'.
+@I [HLS-0] Presyn 1 time: 0 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.1.tmp.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [XFORM-602] Inlining function 'dct_1d' into 'Loop_Row_DCT_Loop_proc' (dct.c:33->dct.c:87) automatically.
+@I [XFORM-602] Inlining function 'dct_1d' into 'Loop_Col_DCT_Loop_proc' (dct.c:44->dct.c:87) automatically.
+@I [XFORM-11] Balancing expressions in function 'Loop_Row_DCT_Loop_proc' (dct.c:13:61)...8 expression(s) balanced.
+@I [XFORM-11] Balancing expressions in function 'Loop_Col_DCT_Loop_proc' (dct.c:13:61)...8 expression(s) balanced.
+@I [HLS-0] Presyn 2 time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.004Total elapsed time: 6.456 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.2.bc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [XFORM-541] Flattening a loop nest 'WR_Loop_Row' (dct.c:71:67) in function 'write_data'.
+@I [XFORM-541] Flattening a loop nest 'RD_Loop_Row' (dct.c:59:67) in function 'read_data'.
+@I [XFORM-541] Flattening a loop nest 'Xpose_Row_Outer_Loop' (dct.c:38:1) in function 'Loop_Xpose_Row_Outer_Loop_proc'.
+@I [XFORM-541] Flattening a loop nest 'Xpose_Col_Outer_Loop' (dct.c:49:1) in function 'Loop_Xpose_Col_Outer_Loop_proc'.
+@W [XFORM-542] Cannot flatten a loop nest 'Row_DCT_Loop' (dct.c:32:66) in function 'Loop_Row_DCT_Loop_proc' : 
+               the outer loop is not a perfect loop.
+@W [XFORM-542] Cannot flatten a loop nest 'Col_DCT_Loop' (dct.c:43:67) in function 'Loop_Col_DCT_Loop_proc' : 
+               the outer loop is not a perfect loop.
+@I [HLS-0] Build ssdm time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.002Total elapsed time: 6.745 sec.
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 1.452Total elapsed time: 6.767 sec.
+@I [HLS-111] Elapsed time: 6.776 seconds; current memory usage: 131 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 5.129Total elapsed time: 6.775 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'dct' ...
+@0 [HLS-0] Synthesizing 'dct' ...
+@I [HLS-100] Command "ap_set_top_model dct "
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 6.789 sec.
+@I [HLS-100] Command "get_model_list dct -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 6.790 sec.
+@I [HLS-100] Command "preproc_iomode -model dct "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.001Total elapsed time: 6.791 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_write_data "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 6.791 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 6.792 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 6.792 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 6.792 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.001Total elapsed time: 6.793 sec.
+@I [HLS-100] Command "preproc_iomode -model dct_read_data "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.001Total elapsed time: 6.794 sec.
+@I [HLS-100] Command "get_model_list dct -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 6.795 sec.
+@I [HLS-0] Model list for configure: dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-0] Configuring Module : dct_read_data ...
+@I [HLS-100] Command "set_default_model dct_read_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.796 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_read_data "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.797 sec.
+@I [HLS-0] Configuring Module : dct_Loop_Row_DCT_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.798 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.798 sec.
+@I [HLS-0] Configuring Module : dct_Loop_Xpose_Row_Outer_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.799 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.800 sec.
+@I [HLS-0] Configuring Module : dct_Loop_Col_DCT_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.800 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.801 sec.
+@I [HLS-0] Configuring Module : dct_Loop_Xpose_Col_Outer_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.802 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.802 sec.
+@I [HLS-0] Configuring Module : dct_write_data ...
+@I [HLS-100] Command "set_default_model dct_write_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.803 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct_write_data "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.804 sec.
+@I [HLS-0] Configuring Module : dct ...
+@I [HLS-100] Command "set_default_model dct "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.804 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dct "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 6.805 sec.
+@I [HLS-0] Model list for preprocess: dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-0] Preprocessing Module: dct_read_data ...
+@I [HLS-100] Command "set_default_model dct_read_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.805 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_read_data "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.003Total elapsed time: 6.809 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_read_data "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.002Total elapsed time: 6.812 sec.
+@I [HLS-0] Preprocessing Module: dct_Loop_Row_DCT_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.813 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 6.814 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 6.815 sec.
+@I [HLS-0] Preprocessing Module: dct_Loop_Xpose_Row_Outer_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.815 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.001Total elapsed time: 6.816 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 6.816 sec.
+@I [HLS-0] Preprocessing Module: dct_Loop_Col_DCT_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.817 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 6.817 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 6.818 sec.
+@I [HLS-0] Preprocessing Module: dct_Loop_Xpose_Col_Outer_Loop_proc ...
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.818 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.001Total elapsed time: 6.819 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 6.819 sec.
+@I [HLS-0] Preprocessing Module: dct_write_data ...
+@I [HLS-100] Command "set_default_model dct_write_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.819 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct_write_data "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 6.820 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_write_data "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 6.821 sec.
+@I [HLS-0] Preprocessing Module: dct ...
+@I [HLS-100] Command "set_default_model dct "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.821 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dct "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 6.822 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 6.823 sec.
+@I [HLS-0] Model list for synthesis: dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_read_data' 
+@0 [HLS-0] -- Scheduling module 'dct_read_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_read_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.824 sec.
+@I [HLS-100] Command "schedule -model dct_read_data "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'RD_Loop_Row_RD_Loop_Col'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.038Total elapsed time: 6.862 sec.
+@I [HLS-111] Elapsed time: 0.093 seconds; current memory usage: 133 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004Total elapsed time: 6.884 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.011Total elapsed time: 6.896 sec.
+@I [HLS-0] Finish scheduling dct_read_data.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_read_data' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_read_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_read_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.901 sec.
+@I [HLS-100] Command "bind -model dct_read_data "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_read_data
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.007Total elapsed time: 6.910 sec.
+@I [HLS-111] Elapsed time: 0.049 seconds; current memory usage: 133 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.012Total elapsed time: 6.930 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.018Total elapsed time: 6.950 sec.
+@I [HLS-0] Finish binding dct_read_data.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_Loop_Row_DCT_Loop_proc' 
+@0 [HLS-0] -- Scheduling module 'dct_Loop_Row_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 6.951 sec.
+@I [HLS-100] Command "schedule -model dct_Loop_Row_DCT_Loop_proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'DCT_Outer_Loop'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 5.
+@W [SCHED-21] Estimated clock period (10.8ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'mul' operation ('tmp_6_i', dct.c:17->dct.c:33->dct.c:87) (3.36 ns)
+	'add' operation ('tmp1', dct.c:19->dct.c:33->dct.c:87) (3.02 ns)
+	'add' operation ('tmp', dct.c:19->dct.c:33->dct.c:87) (2.44 ns)
+	'add' operation ('tmp_i_17', dct.c:19->dct.c:33->dct.c:87) (1.97 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.032Total elapsed time: 6.983 sec.
+@I [HLS-111] Elapsed time: 0.076 seconds; current memory usage: 134 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.008Total elapsed time: 7.15 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 7.36 sec.
+@I [HLS-0] Finish scheduling dct_Loop_Row_DCT_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_Loop_Row_DCT_Loop_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_Loop_Row_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.40 sec.
+@I [HLS-100] Command "bind -model dct_Loop_Row_DCT_Loop_proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_Loop_Row_DCT_Loop_proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.009Total elapsed time: 7.50 sec.
+@I [HLS-111] Elapsed time: 0.063 seconds; current memory usage: 134 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.011Total elapsed time: 7.69 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.019Total elapsed time: 7.90 sec.
+@I [HLS-0] Finish binding dct_Loop_Row_DCT_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@0 [HLS-0] -- Scheduling module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.91 sec.
+@I [HLS-100] Command "schedule -model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Xpose_Row_Outer_Loop_Xpose_Row_Inner_Loop'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.021Total elapsed time: 7.113 sec.
+@I [HLS-111] Elapsed time: 0.063 seconds; current memory usage: 134 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004Total elapsed time: 7.128 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.013Total elapsed time: 7.142 sec.
+@I [HLS-0] Finish scheduling dct_Loop_Xpose_Row_Outer_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.150 sec.
+@I [HLS-100] Command "bind -model dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_Loop_Xpose_Row_Outer_Loop_proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.003Total elapsed time: 7.154 sec.
+@I [HLS-111] Elapsed time: 0.041 seconds; current memory usage: 134 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 7.171 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.013Total elapsed time: 7.185 sec.
+@I [HLS-0] Finish binding dct_Loop_Xpose_Row_Outer_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_Loop_Col_DCT_Loop_proc' 
+@0 [HLS-0] -- Scheduling module 'dct_Loop_Col_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.186 sec.
+@I [HLS-100] Command "schedule -model dct_Loop_Col_DCT_Loop_proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'DCT_Outer_Loop'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 5.
+@W [SCHED-21] Estimated clock period (10.8ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'mul' operation ('tmp_6_i', dct.c:17->dct.c:44->dct.c:87) (3.36 ns)
+	'add' operation ('tmp1', dct.c:19->dct.c:44->dct.c:87) (3.02 ns)
+	'add' operation ('tmp', dct.c:19->dct.c:44->dct.c:87) (2.44 ns)
+	'add' operation ('tmp_i_20', dct.c:19->dct.c:44->dct.c:87) (1.97 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.034Total elapsed time: 7.220 sec.
+@I [HLS-111] Elapsed time: 0.065 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.005Total elapsed time: 7.248 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.015Total elapsed time: 7.265 sec.
+@I [HLS-0] Finish scheduling dct_Loop_Col_DCT_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_Loop_Col_DCT_Loop_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_Loop_Col_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.269 sec.
+@I [HLS-100] Command "bind -model dct_Loop_Col_DCT_Loop_proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_Loop_Col_DCT_Loop_proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.007Total elapsed time: 7.278 sec.
+@I [HLS-111] Elapsed time: 0.059 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.013Total elapsed time: 7.301 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.019Total elapsed time: 7.322 sec.
+@I [HLS-0] Finish binding dct_Loop_Col_DCT_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@0 [HLS-0] -- Scheduling module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.324 sec.
+@I [HLS-100] Command "schedule -model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Xpose_Col_Outer_Loop_Xpose_Col_Inner_Loop'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.018Total elapsed time: 7.342 sec.
+@I [HLS-111] Elapsed time: 0.062 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004Total elapsed time: 7.360 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.009Total elapsed time: 7.370 sec.
+@I [HLS-0] Finish scheduling dct_Loop_Xpose_Col_Outer_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.378 sec.
+@I [HLS-100] Command "bind -model dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_Loop_Xpose_Col_Outer_Loop_proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.005Total elapsed time: 7.383 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.008Total elapsed time: 7.400 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.009Total elapsed time: 7.410 sec.
+@I [HLS-0] Finish binding dct_Loop_Xpose_Col_Outer_Loop_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_write_data' 
+@0 [HLS-0] -- Scheduling module 'dct_write_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_write_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.411 sec.
+@I [HLS-100] Command "schedule -model dct_write_data "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'WR_Loop_Row_WR_Loop_Col'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.022Total elapsed time: 7.433 sec.
+@I [HLS-111] Elapsed time: 0.052 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.005Total elapsed time: 7.455 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.007Total elapsed time: 7.463 sec.
+@I [HLS-0] Finish scheduling dct_write_data.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_write_data' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct_write_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct_write_data "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0.001Total elapsed time: 7.468 sec.
+@I [HLS-100] Command "bind -model dct_write_data "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct_write_data
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.004Total elapsed time: 7.473 sec.
+@I [HLS-111] Elapsed time: 0.038 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.007Total elapsed time: 7.490 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 7.502 sec.
+@I [HLS-0] Finish binding dct_write_data.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct' 
+@0 [HLS-0] -- Scheduling module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.503 sec.
+@I [HLS-100] Command "schedule -model dct "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.011Total elapsed time: 7.515 sec.
+@I [HLS-111] Elapsed time: 0.041 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.003Total elapsed time: 7.530 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 7.542 sec.
+@I [HLS-0] Finish scheduling dct.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dct "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 7.552 sec.
+@I [HLS-100] Command "bind -model dct "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dct
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.069Total elapsed time: 7.621 sec.
+@I [HLS-111] Elapsed time: 0.106 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "report -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.037Total elapsed time: 7.669 sec.
+@I [HLS-100] Command "db_write -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.012Total elapsed time: 7.682 sec.
+@I [HLS-0] Finish binding dct.
+@I [HLS-100] Command "get_model_list dct -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 7.683 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess dct_read_data "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 7.684 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 7.685 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 7.685 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 7.686 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 7.686 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct_write_data "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 7.687 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dct "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001Total elapsed time: 7.688 sec.
+@I [HLS-0] Model list for RTL generation: dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_read_data' 
+@0 [HLS-0] -- Generating RTL for module 'dct_read_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_read_data -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'dct_read_data'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.021Total elapsed time: 7.725 sec.
+@I [HLS-111] Elapsed time: 0.104 seconds; current memory usage: 135 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 7.741 sec.
+@I [HLS-100] Command "gen_rtl dct_read_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_read_data -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 7.746 sec.
+@I [HLS-100] Command "gen_rtl dct_read_data -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_read_data "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 7.750 sec.
+@I [HLS-100] Command "gen_rtl dct_read_data -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_read_data "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 7.753 sec.
+@I [HLS-100] Command "gen_tb_info dct_read_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.019Total elapsed time: 7.773 sec.
+@I [HLS-100] Command "report -model dct_read_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_read_data_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 7.784 sec.
+@I [HLS-100] Command "report -model dct_read_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_read_data_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 7.794 sec.
+@I [HLS-100] Command "report -model dct_read_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.022Total elapsed time: 7.817 sec.
+@I [HLS-100] Command "db_write -model dct_read_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.021Total elapsed time: 7.840 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_Loop_Row_DCT_Loop_proc' 
+@0 [HLS-0] -- Generating RTL for module 'dct_Loop_Row_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_Loop_Row_DCT_Loop_proc -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.compgen.tcl "
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_14ns_16s_29s_29_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_15s_16s_14ns_29_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_15s_16s_29s_29_1': 3 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mul_mul_15s_16s_29_1': 3 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dct_Loop_Row_DCT_Loop_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.021Total elapsed time: 7.932 sec.
+@I [HLS-111] Elapsed time: 0.207 seconds; current memory usage: 136 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 7.944 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Row_DCT_Loop_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_Loop_Row_DCT_Loop_proc -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.004Total elapsed time: 7.948 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Row_DCT_Loop_proc -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 7.952 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Row_DCT_Loop_proc -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_Loop_Row_DCT_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 7.956 sec.
+@I [HLS-100] Command "gen_tb_info dct_Loop_Row_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.007Total elapsed time: 7.964 sec.
+@I [HLS-100] Command "report -model dct_Loop_Row_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Row_DCT_Loop_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 7.974 sec.
+@I [HLS-100] Command "report -model dct_Loop_Row_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Row_DCT_Loop_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.008Total elapsed time: 7.984 sec.
+@I [HLS-100] Command "report -model dct_Loop_Row_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.021Total elapsed time: 8.6 sec.
+@I [HLS-100] Command "db_write -model dct_Loop_Row_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.027Total elapsed time: 8.34 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@0 [HLS-0] -- Generating RTL for module 'dct_Loop_Xpose_Row_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_Loop_Xpose_Row_Outer_Loop_proc -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'dct_Loop_Xpose_Row_Outer_Loop_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.009Total elapsed time: 8.169 sec.
+@I [HLS-111] Elapsed time: 0.236 seconds; current memory usage: 137 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 8.188 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Row_Outer_Loop_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_Loop_Xpose_Row_Outer_Loop_proc -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.004Total elapsed time: 8.193 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Row_Outer_Loop_proc -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.196 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Row_Outer_Loop_proc -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_Loop_Xpose_Row_Outer_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.198 sec.
+@I [HLS-100] Command "gen_tb_info dct_Loop_Xpose_Row_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.005Total elapsed time: 8.206 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Row_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Xpose_Row_Outer_Loop_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.005Total elapsed time: 8.212 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Row_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Xpose_Row_Outer_Loop_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004Total elapsed time: 8.217 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Row_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.011Total elapsed time: 8.229 sec.
+@I [HLS-100] Command "db_write -model dct_Loop_Xpose_Row_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.015Total elapsed time: 8.246 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_Loop_Col_DCT_Loop_proc' 
+@0 [HLS-0] -- Generating RTL for module 'dct_Loop_Col_DCT_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_Loop_Col_DCT_Loop_proc -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.compgen.tcl "
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_14ns_16s_29s_29_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_15s_16s_14ns_29_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_15s_16s_29s_29_1': 3 instance(s).
+@I [RTGEN-100] Generating core module 'dct_mul_mul_15s_16s_29_1': 3 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dct_Loop_Col_DCT_Loop_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.021Total elapsed time: 8.341 sec.
+@I [HLS-111] Elapsed time: 0.173 seconds; current memory usage: 137 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 8.355 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Col_DCT_Loop_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_Loop_Col_DCT_Loop_proc -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.004Total elapsed time: 8.360 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Col_DCT_Loop_proc -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 8.363 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Col_DCT_Loop_proc -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_Loop_Col_DCT_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 8.367 sec.
+@I [HLS-100] Command "gen_tb_info dct_Loop_Col_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.009Total elapsed time: 8.377 sec.
+@I [HLS-100] Command "report -model dct_Loop_Col_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Col_DCT_Loop_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 8.387 sec.
+@I [HLS-100] Command "report -model dct_Loop_Col_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Col_DCT_Loop_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.005Total elapsed time: 8.393 sec.
+@I [HLS-100] Command "report -model dct_Loop_Col_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.022Total elapsed time: 8.416 sec.
+@I [HLS-100] Command "db_write -model dct_Loop_Col_DCT_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.029Total elapsed time: 8.446 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@0 [HLS-0] -- Generating RTL for module 'dct_Loop_Xpose_Col_Outer_Loop_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_Loop_Xpose_Col_Outer_Loop_proc -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'dct_Loop_Xpose_Col_Outer_Loop_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.006Total elapsed time: 8.583 sec.
+@I [HLS-111] Elapsed time: 0.24 seconds; current memory usage: 138 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 8.596 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Col_Outer_Loop_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_Loop_Xpose_Col_Outer_Loop_proc -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.004Total elapsed time: 8.600 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Col_Outer_Loop_proc -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.603 sec.
+@I [HLS-100] Command "gen_rtl dct_Loop_Xpose_Col_Outer_Loop_proc -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_Loop_Xpose_Col_Outer_Loop_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.606 sec.
+@I [HLS-100] Command "gen_tb_info dct_Loop_Xpose_Col_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.006Total elapsed time: 8.613 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Col_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Xpose_Col_Outer_Loop_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.005Total elapsed time: 8.619 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Col_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_Loop_Xpose_Col_Outer_Loop_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.003Total elapsed time: 8.623 sec.
+@I [HLS-100] Command "report -model dct_Loop_Xpose_Col_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.011Total elapsed time: 8.635 sec.
+@I [HLS-100] Command "db_write -model dct_Loop_Xpose_Col_Outer_Loop_proc -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.012Total elapsed time: 8.648 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_write_data' 
+@0 [HLS-0] -- Generating RTL for module 'dct_write_data' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct_write_data -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'dct_write_data'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.008Total elapsed time: 8.697 sec.
+@I [HLS-111] Elapsed time: 0.114 seconds; current memory usage: 138 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 8.710 sec.
+@I [HLS-100] Command "gen_rtl dct_write_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct_write_data -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003Total elapsed time: 8.713 sec.
+@I [HLS-100] Command "gen_rtl dct_write_data -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct_write_data "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.716 sec.
+@I [HLS-100] Command "gen_rtl dct_write_data -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct_write_data "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002Total elapsed time: 8.719 sec.
+@I [HLS-100] Command "gen_tb_info dct_write_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.007Total elapsed time: 8.727 sec.
+@I [HLS-100] Command "report -model dct_write_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_write_data_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.006Total elapsed time: 8.734 sec.
+@I [HLS-100] Command "report -model dct_write_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_write_data_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004Total elapsed time: 8.739 sec.
+@I [HLS-100] Command "report -model dct_write_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.012Total elapsed time: 8.752 sec.
+@I [HLS-100] Command "db_write -model dct_write_data -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.013Total elapsed time: 8.766 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct' 
+@0 [HLS-0] -- Generating RTL for module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dct -vendor xilinx -mg_file C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'dct'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.138Total elapsed time: 8.947 sec.
+@I [HLS-111] Elapsed time: 0.251 seconds; current memory usage: 139 MB.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 8.961 sec.
+@I [HLS-100] Command "gen_rtl dct -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/systemc/dct -synmodules dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.008Total elapsed time: 8.970 sec.
+@I [HLS-100] Command "gen_rtl dct -istop -style xilinx -f -lang vhdl -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/vhdl/dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.019Total elapsed time: 8.990 sec.
+@I [HLS-100] Command "gen_rtl dct -istop -style xilinx -f -lang vlog -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/verilog/dct "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.011Total elapsed time: 9.2 sec.
+@I [HLS-100] Command "export_constraint_db -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 9.3 sec.
+@I [HLS-100] Command "report -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.058Total elapsed time: 9.62 sec.
+@I [HLS-100] Command "report -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.026Total elapsed time: 9.89 sec.
+@I [HLS-100] Command "gen_tb_info dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct -p C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.013Total elapsed time: 9.103 sec.
+@I [HLS-100] Command "report -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.013Total elapsed time: 9.118 sec.
+@I [HLS-100] Command "report -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/syn/report/dct_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009Total elapsed time: 9.128 sec.
+@I [HLS-100] Command "report -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.045Total elapsed time: 9.174 sec.
+@I [HLS-100] Command "db_write -model dct -o C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.026Total elapsed time: 9.201 sec.
+@I [HLS-100] Command "sc_get_clocks dct "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 9.242 sec.
+@I [HLS-100] Command "sc_get_portdomain dct "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 9.243 sec.
+@I [HLS-0] Model list for RTL component generation: dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-0] Handling components in module [dct_read_data] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 9.266 sec.
+@I [HLS-0] Handling components in module [dct_Loop_Row_DCT_Loop_proc] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.compgen.tcl "
+@I [HLS-0] Found component dct_mac_muladd_15s_16s_29s_29_1.
+@I [HLS-0] Append model dct_mac_muladd_15s_16s_29s_29_1
+@I [HLS-0] Found component dct_mac_muladd_15s_16s_14ns_29_1.
+@I [HLS-0] Append model dct_mac_muladd_15s_16s_14ns_29_1
+@I [HLS-0] Found component dct_mac_muladd_14ns_16s_29s_29_1.
+@I [HLS-0] Append model dct_mac_muladd_14ns_16s_29s_29_1
+@I [HLS-0] Found component dct_mul_mul_15s_16s_29_1.
+@I [HLS-0] Append model dct_mul_mul_15s_16s_29_1
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_0.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_0
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_1.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_1
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_2.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_2
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_3.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_3
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_4.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_4
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_5.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_5
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_6.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_6
+@I [HLS-0] Found component dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_7.
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_7
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009Total elapsed time: 9.276 sec.
+@I [HLS-0] Handling components in module [dct_Loop_Xpose_Row_Outer_Loop_proc] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 9.293 sec.
+@I [HLS-0] Handling components in module [dct_Loop_Col_DCT_Loop_proc] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 9.302 sec.
+@I [HLS-0] Handling components in module [dct_Loop_Xpose_Col_Outer_Loop_proc] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 9.310 sec.
+@I [HLS-0] Handling components in module [dct_write_data] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 9.319 sec.
+@I [HLS-0] Handling components in module [dct] ... 
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007Total elapsed time: 9.327 sec.
+@I [HLS-0] Append model dct_read_data
+@I [HLS-0] Append model dct_Loop_Row_DCT_Loop_proc
+@I [HLS-0] Append model dct_Loop_Xpose_Row_Outer_Loop_proc
+@I [HLS-0] Append model dct_Loop_Col_DCT_Loop_proc
+@I [HLS-0] Append model dct_Loop_Xpose_Col_Outer_Loop_proc
+@I [HLS-0] Append model dct_write_data
+@I [HLS-0] Append model dct
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: dct_mac_muladd_15s_16s_29s_29_1 dct_mac_muladd_15s_16s_14ns_29_1 dct_mac_muladd_14ns_16s_29s_29_1 dct_mul_mul_15s_16s_29_1 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_0 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_1 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_2 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_3 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_4 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_5 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_6 dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_7 dct_read_data dct_Loop_Row_DCT_Loop_proc dct_Loop_Xpose_Row_Outer_Loop_proc dct_Loop_Col_DCT_Loop_proc dct_Loop_Xpose_Col_Outer_Loop_proc dct_write_data dct
+@I [HLS-0] To file: write model dct_mac_muladd_15s_16s_29s_29_1
+@I [HLS-0] To file: write model dct_mac_muladd_15s_16s_14ns_29_1
+@I [HLS-0] To file: write model dct_mac_muladd_14ns_16s_29s_29_1
+@I [HLS-0] To file: write model dct_mul_mul_15s_16s_29_1
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_0
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_1
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_2
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_3
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_4
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_5
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_6
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_7
+@I [HLS-0] To file: write model dct_read_data
+@I [HLS-0] To file: write model dct_Loop_Row_DCT_Loop_proc
+@I [HLS-0] To file: write model dct_Loop_Xpose_Row_Outer_Loop_proc
+@I [HLS-0] To file: write model dct_Loop_Col_DCT_Loop_proc
+@I [HLS-0] To file: write model dct_Loop_Xpose_Col_Outer_Loop_proc
+@I [HLS-0] To file: write model dct_write_data
+@I [HLS-0] To file: write model dct
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.002Total elapsed time: 9.340 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.350 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.353 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.353 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.354 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.356 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 9.357 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.358 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.361 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 9.362 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 9.365 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004Total elapsed time: 9.369 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 9.378 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013Total elapsed time: 9.378 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 9.389 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008Total elapsed time: 9.398 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003Total elapsed time: 9.402 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 9.403 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.093Total elapsed time: 9.497 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.498 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.139Total elapsed time: 9.499 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 9.501 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.143Total elapsed time: 9.502 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.143Total elapsed time: 9.502 sec.
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source C:/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.504 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.504 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.512 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.514 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.516 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.518 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_read_data.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.524 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Row_DCT_Loop_proc.compgen.tcl "
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_0_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_1_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_2_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_3_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_4_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_5_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_6_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'dct_Loop_Row_DCT_Loop_proc_dct_coeff_table_7_rom' using distributed ROMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.352Total elapsed time: 9.876 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Row_Outer_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.878 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Col_DCT_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.881 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_Loop_Xpose_Col_Outer_Loop_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002Total elapsed time: 9.884 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct_write_data.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001Total elapsed time: 9.886 sec.
+@I [HLS-100] Command "source C:/training/hls/labs/improve_area/dct_prj/solution6/.autopilot/db/dct.compgen.tcl "
+@I [RTMG-278] Implementing memory 'dct_row_outbuf_i_memcore_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'dct_col_inbuf_0_memcore_ram' using distributed RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.108Total elapsed time: 9.994 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [SYSC-301] Generating SystemC RTL for dct.
+@I [VHDL-304] Generating VHDL RTL for dct.
+@I [VLOG-307] Generating Verilog RTL for dct.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 4.737Total elapsed time: 11.512 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 9.868Total elapsed time: 11.513 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 10.643Total elapsed time: 11.513 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.018Total elapsed time: 11.532 sec.

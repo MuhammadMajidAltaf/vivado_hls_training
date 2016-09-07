@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May 31 15:33:23 2016
+# Process ID: 7336
+# Current directory: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/dct/xsim_script.tcl}
+# Log file: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/training/hls/labs/hls_tool_flow/zc702/dct/dct_prj/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/dct/xsim_script.tcl
+source dct.tcl

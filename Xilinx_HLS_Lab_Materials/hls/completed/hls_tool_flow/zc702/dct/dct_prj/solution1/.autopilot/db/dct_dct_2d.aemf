@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1464675614430">
+  <ports id="1" name="in_block" type="PortType" originalName="in_block" coreName="RAM" bitwidth="16" iftype="IfTypeRegister" arraysize="64">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="out_block" type="PortType" originalName="out_block" coreName="RAM" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="64"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="111" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="113" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="116" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="119" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="124" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="125" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="127" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="129" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="133" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="135" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="137" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="150" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="152" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="154" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="156" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="158" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="178" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="180" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="182" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="186" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="188" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="190" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="192" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="195" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="196" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="197" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="198" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="199" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="200" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="203" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="205" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="207" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="208" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="215" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="218" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="220" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="222" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="224" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="225" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="226" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="245" source_obj="//@blocks.13/@node_objs.2" sink_obj="//@blocks.13/@node_objs.3"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.13/@node_objs.4"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.14/@node_objs.0"/>
+  <edges id="249" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="250" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="308" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="309" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="310" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="311" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1"/>
+  <edges id="312" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.8"/>
+  <edges id="313" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="314" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="315" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
+  <edges id="316" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="317" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5"/>
+  <edges id="318" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3"/>
+  <edges id="319" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.10"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="321" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8"/>
+  <edges id="322" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.15"/>
+  <edges id="323" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11"/>
+  <edges id="324" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12"/>
+  <edges id="325" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.14"/>
+  <edges id="326" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.13"/>
+  <edges id="327" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.12"/>
+  <edges id="328" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.10"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.13/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.13/@node_objs.0" sink_obj="//@blocks.13/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.13/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.13/@node_objs.1" sink_obj="//@blocks.13/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.13/@node_objs.2"/>
+  <blocks id="8" name="block_8" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_14</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="row_outbuf" rtlName="row_outbuf_U" coreName="RAM" bitwidth="16" opcode="alloca">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="col_outbuf" rtlName="col_outbuf_U" coreName="RAM" bitwidth="16" opcode="alloca">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="col_inbuf" lineNumber="27" originalName="col_inbuf" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca">
+      <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="node_7" lineNumber="32" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br">
+      <inlineStackInfo fileName="dct.c" linenumber="32" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_14</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>27</validLinenumbers>
+      <validLinenumbers>32</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="14" name="block_14" type="BlockType">
+    <controlInputObjs>block_8</controlInputObjs>
+    <controlInputObjs>block_18</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader7</controlOutputObjs>
+    <controlOutputObjs>block_18</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i" originalName="i" bitwidth="4" opcode="phi" nodeLabel="1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>block_8</controlInputObjs>
+      <controlInputObjs>block_18</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="exitcond5" lineNumber="32" fileName="dct.c" fileDirectory=".." rtlName="exitcond5_fu_186_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="1">
+      <inlineStackInfo fileName="dct.c" linenumber="32" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_4" lineNumber="32" originalName="i" fileName="dct.c" fileDirectory=".." rtlName="i_4_fu_192_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="1">
+      <inlineStackInfo fileName="dct.c" linenumber="32" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="node_13" lineNumber="32" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="1">
+      <inlineStackInfo fileName="dct.c" linenumber="32" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_18</controlInputObjs>
+      <controlInputObjs>.preheader7</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>32</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="18" name="block_18" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_14</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="node_16" lineNumber="33" fileName="dct.c" fileDirectory=".." rtlName="grp_dct_dct_1d2_fu_171" contextFuncName="dct_2d" opcode="call" nodeLabel="1" nodeLatency="1">
+      <inlineStackInfo fileName="dct.c" linenumber="33" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>in_block</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <constName>dct_dct_1d2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="node_17" lineNumber="32" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="2">
+      <inlineStackInfo fileName="dct.c" linenumber="32" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_14</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>32</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="24" name=".preheader7" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlInputObjs>block_54</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader6</controlOutputObjs>
+    <controlOutputObjs>block_31</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="j" originalName="j" bitwidth="4" opcode="phi" nodeLabel="2">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_54</controlInputObjs>
+      <controlInputObjs>block_14</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="exitcond4" lineNumber="37" fileName="dct.c" fileDirectory=".." rtlName="exitcond4_fu_198_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="2">
+      <inlineStackInfo fileName="dct.c" linenumber="37" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="j_2" lineNumber="37" originalName="j" fileName="dct.c" fileDirectory=".." rtlName="j_2_fu_204_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="2">
+      <inlineStackInfo fileName="dct.c" linenumber="37" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="node_23" lineNumber="37" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="2">
+      <inlineStackInfo fileName="dct.c" linenumber="37" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_31</controlInputObjs>
+      <controlInputObjs>.preheader6</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="31" name="block_31" type="BlockType">
+    <controlInputObjs>.preheader7</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_37</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="node_30" lineNumber="39" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="2">
+      <inlineStackInfo fileName="dct.c" linenumber="39" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_37</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>39</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="37" name="block_37" type="BlockType">
+    <controlInputObjs>block_31</controlInputObjs>
+    <controlInputObjs>block_51</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_54</controlOutputObjs>
+    <controlOutputObjs>block_51</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="i_1" originalName="i" bitwidth="4" opcode="phi" nodeLabel="3">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_31</controlInputObjs>
+      <controlInputObjs>block_51</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="exitcond3" lineNumber="39" fileName="dct.c" fileDirectory=".." rtlName="exitcond3_fu_226_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="39" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="i_6" lineNumber="39" originalName="i" fileName="dct.c" fileDirectory=".." rtlName="i_6_fu_232_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="39" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="node_36" lineNumber="39" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="39" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_51</controlInputObjs>
+      <controlInputObjs>block_54</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>39</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="51" name="block_51" type="BlockType">
+    <controlInputObjs>block_37</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_37</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp_9" lineNumber="40" fileName="dct.c" fileDirectory=".." rtlName="tmp_9_fu_254_p2" contextFuncName="dct_2d" bitwidth="8" opcode="add" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="40" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_2" lineNumber="40" fileName="dct.c" fileDirectory=".." rtlName="tmp_2_fu_264_p2" contextFuncName="dct_2d" bitwidth="8" opcode="add" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="40" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="row_outbuf_load" lineNumber="40" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" bitwidth="16" opcode="load" nodeLabel="3" nodeLatency="1">
+      <inlineStackInfo fileName="dct.c" linenumber="40" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="node_49" lineNumber="40" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="store" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="40" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="node_50" lineNumber="39" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="39" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_37</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>40</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="54" name="block_54" type="BlockType">
+    <controlInputObjs>block_37</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader7</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="node_53" lineNumber="37" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="37" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>.preheader7</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="60" name=".preheader6" type="BlockType">
+    <controlInputObjs>.preheader7</controlInputObjs>
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <controlOutputObjs>block_64</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="i_2" originalName="i" bitwidth="4" opcode="phi" nodeLabel="3">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <controlInputObjs>.preheader7</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="exitcond2" lineNumber="43" fileName="dct.c" fileDirectory=".." rtlName="exitcond2_fu_273_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="43" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="i_5" lineNumber="43" originalName="i" fileName="dct.c" fileDirectory=".." rtlName="i_5_fu_279_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="43" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="node_59" lineNumber="43" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="dct.c" linenumber="43" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>43</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="block_64" type="BlockType">
+    <controlInputObjs>.preheader6</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader6</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="node_62" lineNumber="44" fileName="dct.c" fileDirectory=".." rtlName="grp_dct_dct_1d2_fu_171" contextFuncName="dct_2d" opcode="call" nodeLabel="3" nodeLatency="1">
+      <inlineStackInfo fileName="dct.c" linenumber="44" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <constName>dct_dct_1d2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="node_63" lineNumber="43" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="43" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>.preheader6</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>44</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="70" name=".preheader" type="BlockType">
+    <controlInputObjs>.preheader6</controlInputObjs>
+    <controlInputObjs>block_100</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_102</controlOutputObjs>
+    <controlOutputObjs>block_77</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="j_1" originalName="j" bitwidth="4" opcode="phi" nodeLabel="4">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <controlInputObjs>.preheader6</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="exitcond1" lineNumber="48" fileName="dct.c" fileDirectory=".." rtlName="exitcond1_fu_285_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="48" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="j_3" lineNumber="48" originalName="j" fileName="dct.c" fileDirectory=".." rtlName="j_3_fu_291_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="48" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="node_69" lineNumber="48" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="48" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_77</controlInputObjs>
+      <controlInputObjs>block_102</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>48</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="77" name="block_77" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_83</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="node_76" lineNumber="50" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="50" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_83</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>50</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="83" name="block_83" type="BlockType">
+    <controlInputObjs>block_77</controlInputObjs>
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_100</controlOutputObjs>
+    <controlOutputObjs>block_97</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="i_3" originalName="i" bitwidth="4" opcode="phi" nodeLabel="5">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_77</controlInputObjs>
+      <controlInputObjs>block_97</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="exitcond" lineNumber="50" fileName="dct.c" fileDirectory=".." rtlName="exitcond_fu_313_p2" contextFuncName="dct_2d" bitwidth="1" opcode="icmp" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="50" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="i_7" lineNumber="50" originalName="i" fileName="dct.c" fileDirectory=".." rtlName="i_7_fu_319_p2" contextFuncName="dct_2d" bitwidth="4" opcode="add" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="50" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="node_82" lineNumber="50" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="50" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_97</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>50</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="97" name="block_97" type="BlockType">
+    <controlInputObjs>block_83</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_83</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="tmp_3" lineNumber="51" fileName="dct.c" fileDirectory=".." rtlName="tmp_3_fu_329_p2" contextFuncName="dct_2d" bitwidth="8" opcode="add" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="51" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp_5" lineNumber="51" fileName="dct.c" fileDirectory=".." rtlName="tmp_5_fu_346_p2" contextFuncName="dct_2d" bitwidth="8" opcode="add" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="51" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="col_outbuf_load" lineNumber="51" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" bitwidth="16" opcode="load" nodeLabel="5" nodeLatency="1">
+      <inlineStackInfo fileName="dct.c" linenumber="51" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="node_95" lineNumber="51" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="store" nodeLabel="6">
+      <inlineStackInfo fileName="dct.c" linenumber="51" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="node_96" lineNumber="50" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="6">
+      <inlineStackInfo fileName="dct.c" linenumber="50" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>block_83</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="100" name="block_100" type="BlockType">
+    <controlInputObjs>block_83</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="node_99" lineNumber="48" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="br" nodeLabel="5">
+      <inlineStackInfo fileName="dct.c" linenumber="48" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>48</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="102" name="block_102" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="node_101" lineNumber="52" fileName="dct.c" fileDirectory=".." contextFuncName="dct_2d" opcode="ret" nodeLabel="4">
+      <inlineStackInfo fileName="dct.c" linenumber="52" fileDirectory="C:\training\hls\labs\hls_tool_flow\zc702\dct" functionName="dct_2d"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="dct.c">
+      <validLinenumbers>52</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="tmp_3_reg_438">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_cast_reg_376">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="col_outbuf_addr_reg_443">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="i_7_reg_433">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_4_cast_reg_420">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_reg_399">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="i_1_reg_126">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="i_3_reg_160">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_115">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_103">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_cast_reg_381">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="i_6_reg_389">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="i_5_reg_407">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="j_3_reg_415">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="i_2_reg_137">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="j_2_reg_371">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_cast_reg_425">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="row_outbuf_addr_reg_394">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="j_1_reg_149">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="i_4_reg_363">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <expressionNodes realName="exitcond_fu_313">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_2_phi_fu_141">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_214">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_alloca_fu_52">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_4_fu_192">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_cast_fu_222">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_cast_fu_325">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond3_fu_226">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_phi_fu_153">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_outbuf_alloca_fu_48">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_7_fu_319">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_334">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_phi_fu_130">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_2_fu_204">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_107">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_cast_fu_269">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_3_phi_fu_164">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_242">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_block_addr_gep_fu_90">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond5_fu_186">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond1_fu_285">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_outbuf_addr_gep_fu_79">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_cast_fu_309">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_3_fu_291">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_15_cast_fu_342">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_301">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_outbuf_alloca_fu_44">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_329">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_addr_gep_fu_67">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_13_cast_fu_356">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_cast_fu_259">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_fu_346">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_outbuf_addr_gep_fu_56">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_fu_254">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_264">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond4_fu_198">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond2_fu_273">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_cast_fu_250">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_16_cast_fu_351">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_5_fu_279">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_cast_fu_210">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_phi_fu_119">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_cast_fu_297">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_cast_fu_238">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_6_fu_232">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_dct_dct_1d2_fu_171">
+    <nodeIds>16</nodeIds>
+    <nodeIds>62</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="col_inbuf">
+    <nodeIds>49</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="col_inbuf" portID="100">
+    <nodeIds>62</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="col_outbuf">
+    <nodeIds>94</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="col_outbuf" portID="100">
+    <nodeIds>62</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table" portID="100">
+    <nodeIds>16</nodeIds>
+    <nodeIds>62</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_block">
+    <nodeIds>95</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="row_outbuf">
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="row_outbuf" portID="100">
+    <nodeIds>16</nodeIds>
+  </memoryPorts>
+  <ioPorts name="out_block(p0)">
+    <contents name="store">
+      <nodeIds>95</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="16" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="2"/>
+      <operations id="17" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="48" stage="2" latency="2"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="2"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="62" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="2"/>
+      <operations id="63" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="2" latency="2"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="2"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="30"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="33"/>
+    </transitions>
+    <transitions inState="2" outState="4">
+      <condition id="32"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="36"/>
+    </transitions>
+    <transitions inState="4" outState="7">
+      <condition id="38"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="40"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="41"/>
+    </transitions>
+    <transitions inState="6" outState="5">
+      <condition id="44"/>
+    </transitions>
+    <transitions inState="5" outState="4">
+      <condition id="46"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="49"/>
+    </transitions>
+    <transitions inState="7" outState="9">
+      <condition id="48"/>
+    </transitions>
+    <transitions inState="8" outState="7">
+      <condition id="52"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="54"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="55"/>
+    </transitions>
+    <transitions inState="11" outState="10">
+      <condition id="58"/>
+    </transitions>
+    <transitions inState="10" outState="9">
+      <condition id="60"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dct_dct_2d" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3668" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>9</subRegions>
+      <subRegions>13</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Row_DCT_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="1688" mMaxLatency="-1" mType="1">
+      <basicBlocks>14</basicBlocks>
+      <basicBlocks>18</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Xpose_Row_Outer_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="144" mMaxLatency="-1" mType="1">
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>24</basicBlocks>
+      <basicBlocks>31</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Xpose_Row_Inner_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="16" mMaxLatency="-1" mType="1">
+      <basicBlocks>37</basicBlocks>
+      <basicBlocks>51</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>54</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Col_DCT_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="1688" mMaxLatency="-1" mType="1">
+      <basicBlocks>60</basicBlocks>
+      <basicBlocks>64</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Xpose_Col_Outer_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="144" mMaxLatency="-1" mType="1">
+      <subRegions>10</subRegions>
+      <subRegions>11</subRegions>
+      <subRegions>12</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>70</basicBlocks>
+      <basicBlocks>77</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="11" mTag="Xpose_Col_Inner_Loop" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="16" mMaxLatency="-1" mType="1">
+      <basicBlocks>83</basicBlocks>
+      <basicBlocks>97</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="12" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>100</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="13" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>102</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,45 @@
+   Compiling(apcc) ../../../../yuv_filter_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Fri Jun 10 12:56:45 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_performance/yuv_filter_prj/solution1/csim/build'
+../../../../yuv_filter_test.c:25:34: warning: data argument not used by format string [-Wformat-extra-args]
+      printf("Test failed!!!\n", ret);
+             ~~~~~~~~~~~~~~~~~~  ^
+../../../../yuv_filter_test.c:28:32: warning: data argument not used by format string [-Wformat-extra-args]
+      printf("Test passed!\n", ret);
+             ~~~~~~~~~~~~~~~~  ^
+2 warnings generated.
+../../../../yuv_filter_test.c:25:34: warning: data argument not used by format string [-Wformat-extra-args]
+      printf("Test failed!!!\n", ret);
+             ~~~~~~~~~~~~~~~~~~  ^
+../../../../yuv_filter_test.c:28:32: warning: data argument not used by format string [-Wformat-extra-args]
+      printf("Test passed!\n", ret);
+             ~~~~~~~~~~~~~~~~  ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/82361980192796
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../image_aux.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Fri Jun 10 12:56:49 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_performance/yuv_filter_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/84041983948803
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../yuv_filter.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'cbalakr' on host 'xhdcbalakr30' (Windows NT_amd64 version 6.1) on Fri Jun 10 12:56:52 +0530 2016
+INFO: [HLS 200-10] In directory 'C:/training/hls/labs/improve_performance/yuv_filter_prj/solution1/csim/build'
+../../../../yuv_filter.c:14:30: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long long)'
+   image_t *yuv = (image_t *)malloc(sizeof(image_t));
+                             ^
+../../../../yuv_filter.c:14:30: note: please include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+1 warning generated.
+../../../../yuv_filter.c:14:30: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long long)'
+   image_t *yuv = (image_t *)malloc(sizeof(image_t));
+                             ^
+../../../../yuv_filter.c:14:30: note: please include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_cbalakr/126521987401411
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Test passed!
+INFO: [SIM 1] CSim done with 0 errors.

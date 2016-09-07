@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="axi_interfaces.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_axi_interfaces_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group80" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group78" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_rst_n" type="logic">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group73" type="group">
+         <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group47" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group48" type="group">
+            <obj_property name="label">d_i(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_0_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_0_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_0_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_0_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_0_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_0_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_1_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_1_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_1_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_1_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_1_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_1_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_2_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_2_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_2_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_2_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_2_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_2_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_3_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_3_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_3_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_3_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_3_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_3_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_4_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_4_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_4_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_4_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_4_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_4_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_5_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_5_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_5_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_5_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_5_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_5_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_6_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_6_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_6_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_6_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_6_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_6_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_7_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_7_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_7_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_7_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_i_7_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_7_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group28" type="group">
+            <obj_property name="label">return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_AWADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_WVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_WREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_WDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_WSTRB" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_ARADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_RVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_RREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_RDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_RRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_BVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_BREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/s_axi_AXILiteS_BRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/interrupt" type="logic">
+               <obj_property name="ElementShortName">interrupt</obj_property>
+               <obj_property name="ObjectShortName">interrupt</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">d_o(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_0_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_0_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_0_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_0_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_0_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_0_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_1_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_1_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_1_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_1_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_1_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_1_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_2_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_2_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_2_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_2_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_2_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_2_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_3_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_3_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_3_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_3_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_3_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_3_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_4_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_4_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_4_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_4_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_4_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_4_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_5_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_5_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_5_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_5_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_5_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_5_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_6_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_6_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_6_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_6_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_6_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_6_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_7_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_7_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_7_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_7_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AESL_inst_axi_interfaces/d_o_7_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_7_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group82" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group150" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group151" type="group">
+            <obj_property name="label">d_i(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_0_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_0_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_0_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_0_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_0_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_0_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_0_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_1_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_1_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_1_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_1_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_1_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_1_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_1_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_2_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_2_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_2_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_2_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_2_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_2_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_2_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_3_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_3_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_3_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_3_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_3_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_3_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_3_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_4_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_4_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_4_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_4_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_4_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_4_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_4_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_5_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_5_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_5_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_5_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_5_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_5_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_5_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_6_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_6_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_6_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_6_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_6_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_6_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_6_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_7_TDATA" type="array">
+               <obj_property name="ElementShortName">d_i_7_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_7_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_i_7_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_i_7_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_i_7_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_i_7_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group105" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group131" type="group">
+            <obj_property name="label">return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_AWADDR" type="array">
+               <obj_property name="ElementShortName">AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_WVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_WREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_WDATA" type="array">
+               <obj_property name="ElementShortName">AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_WSTRB" type="array">
+               <obj_property name="ElementShortName">AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_ARADDR" type="array">
+               <obj_property name="ElementShortName">AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_RVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_RREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_RDATA" type="array">
+               <obj_property name="ElementShortName">AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_RRESP" type="array">
+               <obj_property name="ElementShortName">AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_BVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_BREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_BRESP" type="array">
+               <obj_property name="ElementShortName">AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AXILiteS_INTERRUPT" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_INTERRUPT</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_INTERRUPT</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group106" type="group">
+            <obj_property name="label">d_o(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_0_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_0_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_0_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_0_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_0_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_0_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_0_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_1_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_1_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_1_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_1_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_1_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_1_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_1_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_2_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_2_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_2_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_2_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_2_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_2_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_2_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_3_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_3_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_3_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_3_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_3_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_3_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_3_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_4_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_4_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_4_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_4_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_4_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_4_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_4_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_5_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_5_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_5_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_5_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_5_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_5_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_5_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_6_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_6_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_6_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_6_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_6_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_6_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_6_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_7_TDATA" type="array">
+               <obj_property name="ElementShortName">d_o_7_TDATA[15:0]</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_7_TVALID" type="logic">
+               <obj_property name="ElementShortName">d_o_7_TVALID</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/d_o_7_TREADY" type="logic">
+               <obj_property name="ElementShortName">d_o_7_TREADY</obj_property>
+               <obj_property name="ObjectShortName">d_o_7_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group83" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group85" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_7" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_7[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_7[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_6" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_6[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_6[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_5" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_5[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_5[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_4" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_4[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_4[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_3" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_3[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_3[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_2" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_2[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_2[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_1" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_i_0" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_i_0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_i_0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_7" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_7[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_7[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_6" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_6[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_6[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_5" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_5[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_5[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_4" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_4[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_4[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_3" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_3[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_3[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_2" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_2[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_2[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_1" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/LENGTH_d_o_0" type="array">
+               <obj_property name="ElementShortName">LENGTH_d_o_0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d_o_0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group84" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_axi_interfaces_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_axi_interfaces_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

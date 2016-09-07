@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Fri Jun 10 13:58:15 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        yuv_filter_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     11.19|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+----------+--------+----------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min  |    max   |   min  |    max   |   Type  |
+    +--------+----------+--------+----------+---------+
+    |  921205|  56536325|  921206|  56536326|   none  |
+    +--------+----------+--------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+--------------------+--------+----------+--------+----------+---------+
+        |                               |                    |      Latency      |      Interval     | Pipeline|
+        |            Instance           |       Module       |   min  |    max   |   min  |    max   |   Type  |
+        +-------------------------------+--------------------+--------+----------+--------+----------+---------+
+        |grp_yuv_filter_rgb2yuv_fu_244  |yuv_filter_rgb2yuv  |  320401|  19664641|  320401|  19664641|   none  |
+        |grp_yuv_filter_yuv2rgb_fu_264  |yuv_filter_yuv2rgb  |  320401|  19664641|  320401|  19664641|   none  |
+        +-------------------------------+--------------------+--------+----------+--------+----------+---------+
+
+        * Loop: 
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |                     |      Latency      |  Iteration  |  Initiation Interval  |    Trip    |          |
+        |      Loop Name      |   min  |    max   |   Latency   |  achieved |   target  |    Count   | Pipelined|
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+        |- YUV_SCALE_LOOP_X   |  280400|  17207040| 1402 ~ 8962 |          -|          -| 200 ~ 1920 |    no    |
+        | + YUV_SCALE_LOOP_Y  |    1400|      8960|            7|          -|          -| 200 ~ 1280 |    no    |
+        +---------------------+--------+----------+-------------+-----------+-----------+------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      3|       0|     90|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      9|     401|    491|
+|Memory           |    12288|      -|      96|      0|
+|Multiplexer      |        -|      -|       -|    179|
+|Register         |        -|      -|     219|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |    12288|     12|     716|    760|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |     4388|      5|   ~0   |      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+--------------------+---------+-------+-----+-----+
+    |            Instance           |       Module       | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------------+--------------------+---------+-------+-----+-----+
+    |grp_yuv_filter_rgb2yuv_fu_244  |yuv_filter_rgb2yuv  |        0|      5|  198|  253|
+    |grp_yuv_filter_yuv2rgb_fu_264  |yuv_filter_yuv2rgb  |        0|      4|  203|  238|
+    +-------------------------------+--------------------+---------+-------+-----+-----+
+    |Total                          |                    |        0|      9|  401|  491|
+    +-------------------------------+--------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------------------+-------------------------------+---------+----+----+---------+-----+------+-------------+
+    |         Memory         |             Module            | BRAM_18K| FF | LUT|  Words  | Bits| Banks| W*Bits*Banks|
+    +------------------------+-------------------------------+---------+----+----+---------+-----+------+-------------+
+    |p_yuv_channels_ch1_U    |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    |p_yuv_channels_ch2_U    |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    |p_yuv_channels_ch3_U    |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    |p_scale_channels_ch1_U  |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    |p_scale_channels_ch2_U  |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    |p_scale_channels_ch3_U  |yuv_filter_p_yuv_channels_ch1  |     2048|  16|   0|  2457600|    8|     1|     19660800|
+    +------------------------+-------------------------------+---------+----+----+---------+-----+------+-------------+
+    |Total                   |                               |    12288|  96|   0| 14745600|   48|     6|    117964800|
+    +------------------------+-------------------------------+---------+----+----+---------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |tmp_7_i_fu_370_p2      |     *    |      1|  0|   0|           8|           8|
+    |tmp_8_i_fu_386_p2      |     *    |      1|  0|   0|           8|           8|
+    |tmp_i_fu_378_p2        |     *    |      1|  0|   0|           8|           8|
+    |tmp_2_fu_334_p2        |     +    |      0|  0|  23|          23|          23|
+    |tmp_3_fu_355_p2        |     +    |      0|  0|  23|          23|          23|
+    |x_fu_304_p2            |     +    |      0|  0|  16|          16|           1|
+    |y_fu_345_p2            |     +    |      0|  0|  16|          16|           1|
+    |exitcond1_i_fu_299_p2  |   icmp   |      0|  0|   6|          16|          16|
+    |exitcond_i_fu_340_p2   |   icmp   |      0|  0|   6|          16|          16|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      3|  0|  90|         134|         104|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |   6|         12|    1|         12|
+    |p_scale_channels_ch1_address0  |  22|          3|   22|         66|
+    |p_scale_channels_ch1_ce0       |   1|          3|    1|          3|
+    |p_scale_channels_ch2_address0  |  22|          3|   22|         66|
+    |p_scale_channels_ch2_ce0       |   1|          3|    1|          3|
+    |p_scale_channels_ch3_address0  |  22|          3|   22|         66|
+    |p_scale_channels_ch3_ce0       |   1|          3|    1|          3|
+    |p_yuv_channels_ch1_address0    |  22|          3|   22|         66|
+    |p_yuv_channels_ch1_ce0         |   1|          3|    1|          3|
+    |p_yuv_channels_ch1_we0         |   1|          2|    1|          2|
+    |p_yuv_channels_ch2_address0    |  22|          3|   22|         66|
+    |p_yuv_channels_ch2_ce0         |   1|          3|    1|          3|
+    |p_yuv_channels_ch2_we0         |   1|          2|    1|          2|
+    |p_yuv_channels_ch3_address0    |  22|          3|   22|         66|
+    |p_yuv_channels_ch3_ce0         |   1|          3|    1|          3|
+    |p_yuv_channels_ch3_we0         |   1|          2|    1|          2|
+    |x_i_reg_222                    |  16|          2|   16|         32|
+    |y_i_reg_233                    |  16|          2|   16|         32|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 179|         58|  174|        496|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+----+----+-----+-----------+
+    |                      Name                     | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |U_reg_516                                      |   8|   0|    8|          0|
+    |V_reg_521                                      |   8|   0|    8|          0|
+    |Y_reg_511                                      |   8|   0|    8|          0|
+    |ap_CS_fsm                                      |  11|   0|   11|          0|
+    |ap_reg_grp_yuv_filter_rgb2yuv_fu_244_ap_start  |   1|   0|    1|          0|
+    |ap_reg_grp_yuv_filter_yuv2rgb_fu_264_ap_start  |   1|   0|    1|          0|
+    |p_yuv_height_reg_447                           |  16|   0|   16|          0|
+    |p_yuv_width_reg_441                            |  16|   0|   16|          0|
+    |tmp_10_i_reg_526                               |   8|   0|    8|          0|
+    |tmp_11_i_reg_531                               |   8|   0|    8|          0|
+    |tmp_12_i_reg_536                               |   8|   0|    8|          0|
+    |tmp_1_i_cast_reg_458                           |   8|   0|   15|          7|
+    |tmp_2_i_cast_reg_463                           |   8|   0|   15|          7|
+    |tmp_2_reg_476                                  |  15|   0|   23|          8|
+    |tmp_3_cast_reg_489                             |  23|   0|   64|         41|
+    |tmp_i_cast_reg_453                             |   8|   0|   15|          7|
+    |x_i_reg_222                                    |  16|   0|   16|          0|
+    |x_reg_471                                      |  16|   0|   16|          0|
+    |y_i_reg_233                                    |  16|   0|   16|          0|
+    |y_reg_484                                      |  16|   0|   16|          0|
+    +-----------------------------------------------+----+----+-----+-----------+
+    |Total                                          | 219|   0|  289|         70|
+    +-----------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|in_channels_ch1_address0   | out |   22|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_ce0        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_q0         |  in |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch2_address0   | out |   22|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_ce0        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_q0         |  in |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch3_address0   | out |   22|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_ce0        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_q0         |  in |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_width                   |  in |   16|   ap_none  |     in_width     |    pointer   |
+|in_height                  |  in |   16|   ap_none  |     in_height    |    pointer   |
+|out_channels_ch1_address0  | out |   22|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_ce0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_we0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_d0        | out |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch2_address0  | out |   22|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_ce0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_we0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_d0        | out |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch3_address0  | out |   22|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_ce0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_we0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_d0        | out |    8|  ap_memory | out_channels_ch3 |     array    |
+|out_width                  | out |   16|   ap_vld   |     out_width    |    pointer   |
+|out_width_ap_vld           | out |    1|   ap_vld   |     out_width    |    pointer   |
+|out_height                 | out |   16|   ap_vld   |    out_height    |    pointer   |
+|out_height_ap_vld          | out |    1|   ap_vld   |    out_height    |    pointer   |
+|Y_scale                    |  in |    8|   ap_none  |      Y_scale     |    scalar    |
+|U_scale                    |  in |    8|   ap_none  |      U_scale     |    scalar    |
+|V_scale                    |  in |    8|   ap_none  |      V_scale     |    scalar    |
++---------------------------+-----+-----+------------+------------------+--------------+
+

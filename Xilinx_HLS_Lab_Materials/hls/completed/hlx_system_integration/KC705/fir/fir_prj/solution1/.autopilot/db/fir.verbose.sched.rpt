@@ -1,0 +1,245 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir'
+================================================================
+* Date:           Fri Apr 29 12:36:26 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        fir_prj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k325tffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.70|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   34|   45|   35|   46|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Shift_Accum_Loop  |   33|   44|   3 ~ 4  |          -|          -|    11|    no    |
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp & !tmp_1)
+	4  / (!tmp & tmp_1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.00ns
+ST_1: stg_6 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %y) nounwind, !map !0
+
+ST_1: stg_7 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 %x) nounwind, !map !6
+
+ST_1: stg_8 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @fir_str) nounwind
+
+ST_1: x_read [1/1] 1.00ns
+:3  %x_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %x) nounwind
+
+ST_1: stg_10 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecInterface(i32* %y, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_1: stg_11 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_1: stg_12 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecInterface(i32 %x, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [7 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_1: stg_13 [1/1] 0.89ns
+:7  br label %1
+
+
+ <State 2>: 3.63ns
+ST_2: acc [1/1] 0.00ns
+:0  %acc = phi i32 [ 0, %0 ], [ %acc_1, %5 ]
+
+ST_2: i [1/1] 0.00ns
+:1  %i = phi i5 [ 10, %0 ], [ %i_1, %5 ]
+
+ST_2: i_cast [1/1] 0.00ns
+:2  %i_cast = sext i5 %i to i32
+
+ST_2: tmp [1/1] 0.00ns
+:3  %tmp = call i1 @_ssdm_op_BitSelect.i1.i5.i32(i5 %i, i32 4)
+
+ST_2: empty [1/1] 0.00ns
+:4  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 11, i64 11, i64 11) nounwind
+
+ST_2: stg_19 [1/1] 0.00ns
+:5  br i1 %tmp, label %6, label %2
+
+ST_2: stg_20 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str3) nounwind
+
+ST_2: tmp_1 [1/1] 1.17ns
+:1  %tmp_1 = icmp eq i5 %i, 0
+
+ST_2: stg_22 [1/1] 0.00ns
+:2  br i1 %tmp_1, label %3, label %4
+
+ST_2: tmp_2 [1/1] 1.24ns
+:0  %tmp_2 = add i5 %i, -1
+
+ST_2: tmp_3 [1/1] 0.00ns
+:1  %tmp_3 = zext i5 %tmp_2 to i64
+
+ST_2: shift_reg_addr [1/1] 0.00ns
+:2  %shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_3
+
+ST_2: shift_reg_load [2/2] 2.39ns
+:3  %shift_reg_load = load i32* %shift_reg_addr, align 4
+
+ST_2: tmp_4 [1/1] 0.00ns
+:4  %tmp_4 = zext i32 %i_cast to i64
+
+ST_2: c_addr [1/1] 0.00ns
+:7  %c_addr = getelementptr [11 x i7]* @c, i64 0, i64 %tmp_4
+
+ST_2: c_load [2/2] 2.39ns
+:8  %c_load = load i7* %c_addr, align 1
+
+ST_2: stg_30 [1/1] 2.39ns
+:0  store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i64 0, i64 0), align 16
+
+ST_2: stg_31 [1/1] 0.89ns
+:1  br label %5
+
+ST_2: stg_32 [1/1] 1.00ns
+:0  call void @_ssdm_op_Write.s_axilite.i32P(i32* %y, i32 %acc) nounwind
+
+ST_2: stg_33 [1/1] 0.00ns
+:1  ret void
+
+
+ <State 3>: 4.78ns
+ST_3: shift_reg_load [1/2] 2.39ns
+:3  %shift_reg_load = load i32* %shift_reg_addr, align 4
+
+ST_3: shift_reg_addr_1 [1/1] 0.00ns
+:5  %shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_4
+
+ST_3: stg_36 [1/1] 2.39ns
+:6  store i32 %shift_reg_load, i32* %shift_reg_addr_1, align 4
+
+ST_3: c_load [1/2] 2.39ns
+:8  %c_load = load i7* %c_addr, align 1
+
+
+ <State 4>: 7.70ns
+ST_4: c_load_cast [1/1] 0.00ns
+:9  %c_load_cast = sext i7 %c_load to i32
+
+ST_4: tmp_5 [1/1] 6.81ns
+:10  %tmp_5 = mul nsw i32 %shift_reg_load, %c_load_cast
+
+ST_4: stg_40 [1/1] 0.89ns
+:11  br label %5
+
+ST_4: i_1 [1/1] 1.24ns
+:2  %i_1 = add i5 %i, -1
+
+
+ <State 5>: 1.60ns
+ST_5: p_pn [1/1] 0.00ns (grouped into LUT with out node acc_1)
+:0  %p_pn = phi i32 [ 0, %3 ], [ %tmp_5, %4 ]
+
+ST_5: acc_1 [1/1] 1.60ns (out node of the LUT)
+:1  %acc_1 = add nsw i32 %p_pn, %acc
+
+ST_5: stg_44 [1/1] 0.00ns
+:3  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
